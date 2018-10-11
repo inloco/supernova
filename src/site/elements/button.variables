@@ -5,8 +5,11 @@
 
 @verticalPadding: 11.5px; //To make the button total height ~36px
 @horizontalMargin: 0;
+@verticalPadding: 0;
+@horizontalPadding: 12px;
 @fontWeight: 500;
-@hoverBoxShadow: 0;
+@fontSpacing: 0.33px;
+@lineHeight: 36px;
 @hoverColor: inherit;
 @focusColor: inherit;
 @focusBoxShadow: inset 0 0 0px 1px rgba(62, 73, 101, .2) !important;
