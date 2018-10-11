@@ -30,3 +30,7 @@
 @secondaryColorFocus: rgba(62,73,101,0.12);
 @secondaryColorDown:  rgba(62,73,101,0.2);
 
+@basicHoverBackground: rgba(62,73,101,0.08);
+@basicFocusBackground: rgba(62,73,101,0.08);
+@basicDownBackground: rgba(62,73,101,0.12);
+

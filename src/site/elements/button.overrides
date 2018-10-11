@@ -9,3 +9,21 @@
 .ui.secondary.button:hover {
   box-shadow: @hoverBoxShadow !important; 
 }
+
+.ui.basic.blue.button:hover, 
+.ui.basic.green.button:hover,  
+.ui.basic.pink.button:hover {
+  background: @basicHoverBackground !important;
+}
+
+.ui.basic.blue.button:focus, 
+.ui.basic.green.button:focus,  
+.ui.basic.pink.button:focus {
+  background: @basicFocusBackground !important;
+}
+
+.ui.basic.blue.button:active, 
+.ui.basic.green.button:active,  
+.ui.basic.pink.button:active {
+  background: @basicDownBackground !important;
+}
