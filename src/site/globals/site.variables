@@ -70,4 +70,4 @@
     Disabled
 --------------------*/
 
-@disabledOpacity: 0.4;
+@disabledOpacity: 0.33;

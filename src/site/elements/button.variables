@@ -10,6 +10,7 @@
 @fontWeight: 500;
 @fontSpacing: 0.33px;
 @lineHeight: 36px;
+@hoverBoxShadow: none;
 @hoverColor: inherit;
 @focusColor: inherit;
 @focusBoxShadow: inset 0 0 0px 1px rgba(62, 73, 101, .2) !important;
@@ -18,7 +19,14 @@
 
 @backgroundColor: rgba(62, 73, 101, .08);
 @backgroundImage: none;
+@coloredBackgroundImage: none;
 @basicColoredBorderSize: 0;
 @borderBoxShadow: 0px 0px 0px 0px transparent;
 @hoverBackgroundColor: rgba(62, 73, 101, .12);
+@focusBoxShadow: none;
+
+@secondaryColor: rgba(62,73,101,0.08);
+@secondaryColorHover: rgba(62,73,101,0.12);
+@secondaryColorFocus: rgba(62,73,101,0.12);
+@secondaryColorDown:  rgba(62,73,101,0.2);
 

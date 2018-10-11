@@ -6,3 +6,6 @@
   font-spacing: @fontSpacing;
 }
 
+.ui.secondary.button:hover {
+  box-shadow: @hoverBoxShadow !important; 
+}
