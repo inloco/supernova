@@ -28,7 +28,14 @@
 @pinkFocus        : #EB0559;
 
 @blue             : #3A72FB;
+@blueHover        : #3063F0;
+@blueFocus        : #3063F0;
+@blueDown         : #2952E6;
+
 @green            : #A7CC0E;
+@greenHover       : #A2C204;
+@greenFocus       : #A2C204;
+@greenDown        : #98B200;
 
 @linkColor           : @blue;
 @linkHoverColor      : darken(saturate(@linkColor, 20), 15, relative);
