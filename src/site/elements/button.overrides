@@ -27,3 +27,39 @@
 .ui.basic.pink.button:active {
   background: @basicDownBackground !important;
 }
+
+/*--------------
+     Outline
+---------------*/
+
+.outlineButton(@main, @hover, @activeLight, @activeDark) {
+  background-color: #fff;
+  border: 1px solid @main;
+  color: @main;
+
+  &:hover,
+  &:focus {
+    background-color: @hover;
+  }
+
+  &:active {
+    background-color: @activeLight;
+    border-color: @activeDark;
+    color: @activeDark;
+  }
+}
+
+.ui.outline.blue.buttons .button,
+.ui.outline.blue.button {
+  .outlineButton(@blue, @b50, @b100, @b500)
+}
+
+.ui.outline.pink.buttons .button,
+.ui.outline.pink.button {
+  .outlineButton(@pink, @p50, @p100, @p500)
+}
+
+.ui.outline.green.buttons .button,
+.ui.outline.green.button {
+  .outlineButton(@green, @g50, @g100, @g500)
+}
