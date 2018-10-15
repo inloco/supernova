@@ -10,7 +10,8 @@
     "build:css": "gulp build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepublishOnly": "npm run build:css && npm run build",
-    "build": "babel ./index.js -d ./dist"
+    "build": "babel ./index.js -d ./dist",
+    "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "repository": {
     "type": "git",
@@ -23,8 +24,13 @@
     "semantic-ui-react": "^0.82.1"
   },
   "devDependencies": {
+    "@storybook/react": "^3.4.11",
     "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "babel-preset-react": "^6.24.1",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
     "semantic-ui": "^2.3.3"
   }
 }
