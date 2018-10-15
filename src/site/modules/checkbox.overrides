@@ -1,3 +1,132 @@
 /*******************************
          Site Overrides
 *******************************/
+
+.ui.checkbox label:after,
+.ui.checkbox .box:after {
+  font-family: 'Icons';
+}
+
+.ui.checkbox input:checked ~ .box:after,
+.ui.checkbox input:checked ~ label:after {
+  content: '\e876';
+}
+
+.ui.checkbox input:indeterminate ~ .box:after,
+.ui.checkbox input:indeterminate ~ label:after {
+  font-size: 12px;
+  content: '\e15b';
+}
+
+.ui.checkbox label:hover::before {
+  border: none;
+  box-shadow: inset 0px 0px 0px 2px @shadowHoverColor;
+}
+
+.ui.checkbox input:checked ~ .box:before,
+.ui.checkbox input:checked ~ label:before,
+.ui.checkbox input:indeterminate ~ .box:before,
+.ui.checkbox input:indeterminate ~ label:before  {
+  box-shadow: none;
+}
+
+.ui.checkbox .box:active::before,
+.ui.checkbox label:active::before,
+.ui.checkbox .box:active:hover::before,
+.ui.checkbox label:active:hover::before {
+  border: 1px solid @borderColor;
+  box-shadow: none;
+}
+
+.ui.disabled.checkbox {
+  .box::before,
+  label::before {
+    background-color: @disabledColor;
+  }
+
+  input:checked {
+    & ~ .box::before,
+    & ~ label::before {
+      background-color: @disabledColor;
+    }
+
+    & ~ .box::after,
+    & ~ label::after {
+      color: fade(@n600, 18%);
+    }
+  }
+}
+
+/*--------------
+     Color Mixin
+---------------*/
+
+.checkboxColor(@main, @hover, @active) {
+  .box:active::before,
+  label:active::before {
+    background-color: @active;
+  }
+
+  input {
+    &:checked,
+    &:indeterminate {
+      & ~ .box:before,
+      & ~ label:before {
+        background-color: @main;
+      }
+
+      & ~ .box:hover::before,
+      & ~ label:hover::before {
+        background-color: @hover;
+      }
+
+      & ~ .box:active::before,
+      & ~ label:active::before {
+        background-color: @active;
+      }
+
+      & ~ .box:active::after,
+      & ~ label:active::after {
+        color: @main;
+      }
+    }
+
+    &:focus,
+    &:focus:checked,
+    &:focus:indeterminate {
+      & ~ .box::before,
+      & ~ label::before {
+        background-color: @active;
+      }
+
+      & ~ .box::after,
+      & ~ label::after {
+        color: @main;
+      }
+    }
+  }
+}
+
+/*--------------
+     Blue Checkbox
+---------------*/
+
+.ui.blue.checkbox {
+  .checkboxColor(@blue, @b300, @b100)
+}
+
+/*--------------
+     Pink Checkbox
+---------------*/
+
+.ui.pink.checkbox {
+  .checkboxColor(@pink, @p300, @p100)
+}
+
+/*--------------
+     Green Checkbox
+---------------*/
+
+.ui.green.checkbox {
+  .checkboxColor(@green, @g300, @g100)
+}

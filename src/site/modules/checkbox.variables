@@ -1,3 +1,13 @@
 /*******************************
     User Variable Overrides
 *******************************/
+
+@checkboxSize: 16px;
+
+@checkboxBorder: 1px solid @borderColor;
+@checkboxHoverBorderColor: @borderHoverColor;
+
+@checkboxActiveCheckColor: #fff;
+@checkboxFocusCheckColor: #fff;
+@checkboxActiveFocusCheckColor: #fff;
+@checkboxIndeterminateCheckColor: #fff;
