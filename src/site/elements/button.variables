@@ -5,8 +5,12 @@
 
 @verticalPadding: 11.5px; //To make the button total height ~36px
 @horizontalMargin: 0;
+@verticalPadding: 0;
+@horizontalPadding: 12px;
 @fontWeight: 500;
-@hoverBoxShadow: 0;
+@fontSpacing: 0.33px;
+@lineHeight: 36px;
+@hoverBoxShadow: none;
 @hoverColor: inherit;
 @focusColor: inherit;
 @focusBoxShadow: inset 0 0 0px 1px rgba(62, 73, 101, .2) !important;
@@ -15,7 +19,16 @@
 
 @backgroundColor: rgba(62, 73, 101, .08);
 @backgroundImage: none;
+@coloredBackgroundImage: none;
 @basicColoredBorderSize: 0;
 @borderBoxShadow: 0px 0px 0px 0px transparent;
 @hoverBackgroundColor: rgba(62, 73, 101, .12);
 
+@secondaryColor: rgba(62,73,101,0.08);
+@secondaryColorHover: rgba(62,73,101,0.12);
+@secondaryColorFocus: rgba(62,73,101,0.12);
+@secondaryColorDown:  rgba(62,73,101,0.2);
+
+@basicHoverBackground: rgba(62,73,101,0.08);
+@basicFocusBackground: rgba(62,73,101,0.08);
+@basicDownBackground: rgba(62,73,101,0.12);
