@@ -2,12 +2,6 @@ import React from 'react'
 import { Checkbox } from 'semantic-ui-react'
 import { storiesOf } from '@storybook/react'
 
-const friendOptions = [
-  { text: 'Francisco Gileno', value: 1 },
-  { text: 'Rafael Nunes', value: 2 },
-  { text: 'Maira Bello', value: 3 }
-]
-
 storiesOf('Checkbox', module)
   .add('regular', () => (
     <React.Fragment>
