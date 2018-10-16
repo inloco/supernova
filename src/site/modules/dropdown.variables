@@ -12,10 +12,10 @@
 
 @selectionVisibleBorderColor: @borderColor;
 @selectionVisibleConnectingBorder: @borderRadius;
-@selectionVisibleBoxShadow: 0 0 0px 1px rgba(62, 73, 101, .5);
+@selectionVisibleBoxShadow: 0 0 0px 1px fade(@n600, 5%);
 
 @selectionActiveHoverBorderColor: @borderColor;
-@selectionActiveHoverBoxShadow: 0 0 0px 1px rgba(62, 73, 101, .5);
+@selectionActiveHoverBoxShadow: 0 0 0px 1px fade(@n600, 5%);
 
 @selectionMenuBoxShadow: 0 0 0 1px rgba(227, 228, 229, 0.45), 0 4px 6px 0 rgba(62, 73, 101, 0.16);
 @selectionVisibleMenuBoxShadow: @selectionMenuBoxShadow;
