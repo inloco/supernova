@@ -23,22 +23,42 @@
 --------------------*/
 
 /*---  Colors  ---*/
-@pink             : #FA0C64;
+
+@b100: #D9ECFF;
+@b200: #99C5FF;
+@b300: #4F95FF;
+@b400: #3A72FB;
+
+@p100: #FFD9E9;
+@p200: #FF99C2;
+@p300: #FF3385;
+@p400: #FA0C64;
+
+@g100: #E4EBC7;
+@g200: #CEE087;
+@g300: #BBD645;
+@g400: #A7CC0E;
+
+@n600: #3E4965;
+
+@pink             : @p400;
 @pinkHover        : #EB0559;
 @pinkFocus        : #EB0559;
 
-@blue             : #3A72FB;
+@blue             : @b400;
 @blueHover        : #3063F0;
 @blueFocus        : #3063F0;
 @blueDown         : #2952E6;
 
-@green            : #A7CC0E;
+@green            : @g400;
 @greenHover       : #A2C204;
 @greenFocus       : #A2C204;
 @greenDown        : #98B200;
 
 @linkColor           : @blue;
 @linkHoverColor      : darken(saturate(@linkColor, 20), 15, relative);
+
+@disabledColor: fade(@n600, 8%);
 
 /*-------------------
       Base Sizes
@@ -54,7 +74,7 @@
 --------------------*/
 
 @circularRadius                : 500rem;
-@borderColorNoAlpha: rgb(62, 73, 101);
+@borderColorNoAlpha: @n600;
 @borderHoverColor: fade(@borderColorNoAlpha, 15%);
 @borderColor: fade(@borderColorNoAlpha, 25%);
 @selectedBorderColor: fade(@borderColorNoAlpha, 35%);
