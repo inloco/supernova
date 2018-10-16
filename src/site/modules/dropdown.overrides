@@ -18,3 +18,7 @@
   padding: 18px !important;
 }
 
+.ui.selection.dropdown .menu {
+  margin-top: 8px;
+}
+

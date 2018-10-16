@@ -11,7 +11,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepublishOnly": "npm run build:css && npm run build",
     "build": "babel ./index.js -d ./dist",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "watch:css": "gulp watch"
   },
   "repository": {
     "type": "git",

@@ -54,8 +54,13 @@
 --------------------*/
 
 @circularRadius                : 500rem;
-@borderColor               : rgba(62, 73, 101, .25);
-@selectedBorderColor: rgba(62, 73, 101, .35);
+@borderColorNoAlpha: rgb(62, 73, 101);
+@borderHoverColor: fade(@borderColorNoAlpha, 15%);
+@borderColor: fade(@borderColorNoAlpha, 25%);
+@selectedBorderColor: fade(@borderColorNoAlpha, 35%);
+
+@shadowHoverColor: fade(@borderColorNoAlpha, 20%);
+@shadowFocusColor: fade(@borderColorNoAlpha, 5%);
 
 /*-------------------
     Focused Input
