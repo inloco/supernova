@@ -2,15 +2,22 @@
     User Variable Overrides
 *******************************/
 
-@selectionHoverBorderColor: @borderHoverColor;
-@selectionHoverBoxShadow: inset 0 0 0 2px @shadowHoverColor;
+@borderColor:rgba(62,73,101,.25);
+
+@selectionHoverBorderColor: @borderColor;
+@selectionHoverBoxShadow: inset 0 0 0 1px rgba(99, 115, 129, .2);
 
 @selectionFocusBorderColor: @borderColor;
 @selectionFocusBoxShadow: 0 0 0 1px @shadowFocusColor;
 
+@selectionVisibleBorderColor: @borderColor;
 @selectionVisibleConnectingBorder: @borderRadius;
+@selectionVisibleBoxShadow: 0 0 0px 1px rgba(62, 73, 101, .5);
 
-@selectionMenuBoxShadow: 0 0 0 1px rgba(227, 228, 229, 0.45);
+@selectionActiveHoverBorderColor: @borderColor;
+@selectionActiveHoverBoxShadow: 0 0 0px 1px rgba(62, 73, 101, .5);
+
+@selectionMenuBoxShadow: 0 0 0 1px rgba(227, 228, 229, 0.45), 0 4px 6px 0 rgba(62, 73, 101, 0.16);
 @selectionVisibleMenuBoxShadow: @selectionMenuBoxShadow;
 @selectionFocusMenuBoxShadow: @selectionMenuBoxShadow;
 @selectionActiveHoverMenuBoxShadow: @selectionMenuBoxShadow;
