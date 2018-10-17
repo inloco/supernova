@@ -190,7 +190,7 @@
 }
 
 .ui.pink.checkbox.radio {
-  .radioColor(@pink, @p300, @p100, @p500)
+  .radioColor(@pink, @p300, @p50, @p500)
 }
 
 /*--------------
@@ -202,5 +202,5 @@
 }
 
 .ui.green.checkbox.radio {
-  .radioColor(@green, @g300, @g100, @g500)
+  .radioColor(@green, @g300, @g50, @g500)
 }
