@@ -7,9 +7,14 @@
 @horizontalMargin: 0;
 @verticalPadding: 0;
 @horizontalPadding: 12px;
+
 @fontWeight: 500;
 @fontSpacing: 0.33px;
 @lineHeight: 36px;
+
+@textTransform: uppercase;
+@basicTextTransform: uppercase;
+
 @hoverBoxShadow: none;
 @hoverColor: inherit;
 @focusColor: inherit;
