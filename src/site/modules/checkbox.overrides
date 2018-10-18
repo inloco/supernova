@@ -18,7 +18,8 @@
   content: '\e15b';
 }
 
-.ui.checkbox label:hover::before {
+.ui.checkbox:not(.radio):not(.disabled) label:hover::before {
+  background-color: #fff;
   border: none;
   box-shadow: inset 0px 0px 0px 2px @shadowHoverColor;
 }
@@ -42,6 +43,7 @@
   .box::before,
   label::before {
     background-color: @disabledColor;
+    border-color: @borderColor;
   }
 
   input:checked {
@@ -55,6 +57,13 @@
       color: fade(@n600, 18%);
     }
   }
+
+  &.radio input:checked {
+    & ~ .box::after,
+    & ~ label::after {
+      background-color: fade(@n600, 35%);
+    }
+  }
 }
 
 /*--------------
@@ -62,46 +71,101 @@
 ---------------*/
 
 .checkboxColor(@main, @hover, @active) {
-  .box:active::before,
-  label:active::before {
-    background-color: @active;
+  &:not(.disabled) {
+    .box:active::before,
+    label:active::before {
+      background-color: @active;
+    }
+
+    input:not([type=radio]) {
+      &:checked,
+      &:indeterminate {
+        & ~ .box:before,
+        & ~ label:before {
+          background-color: @main;
+        }
+
+        & ~ .box:hover::before,
+        & ~ label:hover::before {
+          background-color: @hover;
+        }
+
+        & ~ .box:active::before,
+        & ~ label:active::before {
+          background-color: @active;
+        }
+
+        & ~ .box:active::after,
+        & ~ label:active::after {
+          color: @main;
+        }
+
+        &:focus {
+          & ~ .box:not(:active)::before,
+          & ~ label:not(:active)::before {
+            background-color: @hover;
+          }
+        }
+      }
+    }
+  }
+}
+
+.radioColor(@main, @hover, @activeLight, @activeDark) {
+  .box:active,
+  label:active {
+      &::before {
+        background-color: @activeLight;
+      }
   }
 
   input {
-    &:checked,
-    &:indeterminate {
-      & ~ .box:before,
-      & ~ label:before {
-        background-color: @main;
+    &:checked {
+      & ~ .box,
+      & ~ label {
+        &:before {
+          border: 1px solid @main;
+        }
+
+        &:after {
+          background-color: @main;
+        }
+
+        &:hover {
+          &::before {
+            border: 1px solid @hover;
+          }
+
+          &::after {
+            background-color: @hover;
+          }
+        }
+
+        &:active {
+          &::before {
+            background-color: @activeLight;
+            border: 1px solid @activeDark;
+          }
+
+          &::after {
+            background-color: @activeDark;
+          }
+        }
       }
 
-      & ~ .box:hover::before,
-      & ~ label:hover::before {
-        background-color: @hover;
-      }
+      &:focus {
+        & ~ .box,
+        & ~ label {
+          &:not(:active) {
+            &::before {
+              border: 1px solid @hover;
+            }
 
-      & ~ .box:active::before,
-      & ~ label:active::before {
-        background-color: @active;
-      }
-
-      & ~ .box:active::after,
-      & ~ label:active::after {
-        color: @main;
-      }
-    }
-
-    &:focus,
-    &:focus:checked,
-    &:focus:indeterminate {
-      & ~ .box::before,
-      & ~ label::before {
-        background-color: @active;
-      }
-
-      & ~ .box::after,
-      & ~ label::after {
-        color: @main;
+            &::after {
+              background-color: @hover;
+            }
+          }
+        }
       }
     }
   }
@@ -115,6 +179,10 @@
   .checkboxColor(@blue, @b300, @b100)
 }
 
+.ui.blue.checkbox.radio {
+  .radioColor(@blue, @b300, @b100, @b500)
+}
+
 /*--------------
      Pink Checkbox
 ---------------*/
@@ -123,10 +191,18 @@
   .checkboxColor(@pink, @p300, @p100)
 }
 
+.ui.pink.checkbox.radio {
+  .radioColor(@pink, @p300, @p50, @p500)
+}
+
 /*--------------
      Green Checkbox
 ---------------*/
 
 .ui.green.checkbox {
   .checkboxColor(@green, @g300, @g100)
+}
+
+.ui.green.checkbox.radio {
+  .radioColor(@green, @g300, @g50, @g500)
 }

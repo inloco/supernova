@@ -7,7 +7,11 @@
 @checkboxBorder: 1px solid @borderColor;
 @checkboxHoverBorderColor: @borderHoverColor;
 
+@checkboxHoverBackground: fade(@n600, 4%);
+
 @checkboxActiveCheckColor: #fff;
 @checkboxFocusCheckColor: #fff;
 @checkboxActiveFocusCheckColor: #fff;
 @checkboxIndeterminateCheckColor: #fff;
+
+@labelDistance: 24px;
