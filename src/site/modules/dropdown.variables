@@ -4,6 +4,8 @@
 
 @borderColor:rgba(62,73,101,.25);
 
+@selectionIconOpacity: unset;
+
 @selectionHoverBorderColor: @borderColor;
 @selectionHoverBoxShadow: inset 0 0 0 1px rgba(99, 115, 129, .2);
 
