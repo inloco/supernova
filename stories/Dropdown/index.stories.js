@@ -9,9 +9,12 @@ const friendOptions = [
 ]
 
 storiesOf('Dropdown', module)
-  .add('resting', () => (
+  .add('selection', () => (
     <Dropdown placeholder="Select Friend" selection options={friendOptions} />
   ))
   .add('search', () => (
     <Dropdown placeholder="Select Friend" selection search options={friendOptions} />
+  ))
+  .add('disabled', () => (
+    <Dropdown placeholder="Select Friend" selection options={friendOptions} disabled />
   ))

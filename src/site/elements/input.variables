@@ -2,3 +2,4 @@
     User Variable Overrides
 *******************************/
 
+@iconOpacity: unset;

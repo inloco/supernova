@@ -11,7 +11,7 @@
 .ui.dropdown > .dropdown.icon:before {
   font-family: 'Icons';
   content: '\e5cf'; /* expand more */
-  color: #9e9fa0;
+  color: @gray400;
 }
 
 .ui.loading.selection.dropdown>i.icon {
@@ -22,3 +22,15 @@
   margin-top: 8px;
 }
 
+.ui.selection.dropdown:active,
+.ui.selection.dropdown.active {
+  box-shadow: @selectionActiveBoxShadow;
+}
+
+.ui.disabled.dropdown {
+  background-color: @disabledBackgroundColor;
+}
+
+.ui.disabled.dropdown > .text {
+  color: @disabledColor;
+}
