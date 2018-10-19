@@ -17,3 +17,12 @@
 .ui.search.focus > .input > input {
   box-shadow: @promptActiveBoxShadow;
 }
+
+.ui.search > .disabled.input {
+  opacity: @disabledOpacity;
+}
+
+.ui.search > .disabled.input > input {
+  background-color: @disabledBackgroundColor;
+  color: @disabledColor;
+}
