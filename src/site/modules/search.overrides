@@ -1,3 +1,19 @@
 /*******************************
          Site Overrides
 *******************************/
+
+.ui.search {
+  width: fit-content;
+}
+
+.ui.fluid.search {
+  width: 100%;
+}
+
+.ui.fluid.search > .input {
+  width: 100%;
+}
+
+.ui.search.focus > .input > input {
+  box-shadow: @promptActiveBoxShadow;
+}
