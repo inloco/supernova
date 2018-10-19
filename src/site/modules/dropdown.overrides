@@ -26,3 +26,11 @@
 .ui.selection.dropdown.active {
   box-shadow: @selectionActiveBoxShadow;
 }
+
+.ui.disabled.dropdown {
+  background-color: @disabledBackgroundColor;
+}
+
+.ui.disabled.dropdown > .text {
+  color: @disabledColor;
+}
