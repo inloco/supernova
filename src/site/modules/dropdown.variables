@@ -2,7 +2,9 @@
     User Variable Overrides
 *******************************/
 
-@borderColor:rgba(62,73,101,.25);
+@borderRadius: 3px;
+@borderColor: fade(@n600, 25%);
+@textCursorSpacing: 0;
 
 @selectionIconOpacity: unset;
 
@@ -16,10 +18,12 @@
 @selectionVisibleConnectingBorder: @borderRadius;
 @selectionVisibleBoxShadow: 0 0 0px 1px fade(@n600, 5%);
 
-@selectionActiveHoverBorderColor: @borderColor;
-@selectionActiveHoverBoxShadow: 0 0 0px 1px fade(@n600, 5%);
+@selectionActiveBoxShadow: 0 0 0 1px fade(@n600, 50%);
 
-@selectionMenuBoxShadow: 0 0 0 1px rgba(227, 228, 229, 0.45), 0 4px 6px 0 rgba(62, 73, 101, 0.16);
+@selectionActiveHoverBorderColor: @borderColor;
+@selectionActiveHoverBoxShadow: @selectionActiveBoxShadow;
+
+@selectionMenuBoxShadow: 0 0 0 1px rgba(227, 228, 229, 0.45), 0 4px 6px 0 fade(@n600, 16%);
 @selectionVisibleMenuBoxShadow: @selectionMenuBoxShadow;
 @selectionFocusMenuBoxShadow: @selectionMenuBoxShadow;
 @selectionActiveHoverMenuBoxShadow: @selectionMenuBoxShadow;
