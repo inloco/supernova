@@ -6,6 +6,11 @@
 @borderColor: fade(@n600, 25%);
 @textCursorSpacing: 0;
 
+@itemDivider: none; 
+@selectionItemDivider: @itemDivider;
+@itemPadding: 10px 12px;
+@selectionItemPadding: @itemPadding;
+
 @selectionIconOpacity: unset;
 
 @selectionHoverBorderColor: @borderColor;
