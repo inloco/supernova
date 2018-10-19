@@ -6,7 +6,7 @@
             Background
 *******************************/
 
-@backgroundColor: fade(@n600, 8%);
+@backgroundColor: @n600-hex-8;
 
 /*******************************
             Text
@@ -14,11 +14,16 @@
 
 @color: @textColor;
 @fontWeight: 400;
-@medium: 14px;
 
 /*******************************
             Padding
 *******************************/
 
-@verticalPadding: 5px;
+@verticalPadding: 2px;
 @horizontalPadding: 8px;
+
+/*******************************
+            Icon
+*******************************/
+
+@iconDistance: 4px;
