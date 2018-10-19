@@ -3,7 +3,7 @@
 *******************************/
 
 @promptBorderRadius: 3px;
-@promptActiveBoxShadow: 0 0 0 1px fade(@600, 50%);
+@promptActiveBoxShadow: 0 0 0 1px fade(@n600, 50%);
 
 @resultsBorderRadius: 3px;
 @resultsBorder: none;
@@ -15,3 +15,7 @@
 @resultLineHeight: 16px;
 
 @resultTitleFontWeight: normal;
+
+@disabledOpacity: unset;
+@disabledBackgroundColor: fade(@n600, 8%);
+@disabledColor: fade(@textColor, 40%);
