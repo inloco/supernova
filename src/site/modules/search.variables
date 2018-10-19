@@ -1,3 +1,17 @@
 /*******************************
          Site Overrides
 *******************************/
+
+@promptBorderRadius: 3px;
+@promptActiveBoxShadow: 0 0 0 1px fade(@600, 50%);
+
+@resultsBorderRadius: 3px;
+@resultsBorder: none;
+@resultPadding: 10px 12px;
+@resultsWidth: 100%;
+@resultsBoxShadow: 0 0 0 1px rgba(227, 228, 229, 0.45), 0 4px 6px 0 fade(@n600, 16%);
+
+@resultDivider: none;
+@resultLineHeight: 16px;
+
+@resultTitleFontWeight: normal;
