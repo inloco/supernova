@@ -1,3 +1,54 @@
 /*******************************
          Site Overrides
 *******************************/
+
+.ui.pointing.menu {
+  margin: 0;
+}
+
+.ui.pointing.menu .item,
+.ui.secondary.pointing.menu .item {
+  line-height: 20px;
+  font-size: 14px;
+  align-self: flex-start;
+}
+
+.ui.pointing.menu .active.item:after,
+.ui.secondary.pointing.menu .active.item:after {
+  display: block;
+  content: " ";
+  width: 47px;
+  height: 4px;
+  border-radius: 3px;
+  border: none;
+  margin: 0;
+  transform: translateY(-1px) translateX(-50%);
+}
+
+.ui.secondary.pointing.menu .item {
+  border: none;
+}
+
+.ui.pointing.menu .active.item {
+  color: @n600;
+}
+
+.ui.pointing.menu .active.item:after,
+.ui.pointing.menu .active.item:hover:after {
+  background-color: @n600;
+}
+
+.ui.pointing.blue.menu .active.item:after,
+.ui.pointing.blue.menu .active.item:hover:after {
+  background-color: @blue;
+}
+
+.ui.pointing.pink.menu .active.item:after,
+.ui.pointing.pink.menu .active.item:hover:after {
+  background-color: @pink;
+}
+
+.ui.pointing.green.menu .active.item:after,
+.ui.pointing.green.menu .active.item:hover:after {
+  background-color: @green;
+}
