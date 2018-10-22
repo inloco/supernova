@@ -5,13 +5,16 @@
 .ui.label {
   align-items: center;
   display: inline-flex;
+  height: 24px;
+  line-height: 24px;
 
   &.removable {
     padding: 0;
 
-    > .icon {
+    > .removable-label-icon {
+      cursor: pointer;
       height: 100%;
-      padding: @verticalPadding 2px;
+      padding: 0 2px;
 
       &:hover,
       &:active {
@@ -23,15 +26,18 @@
       &:active {
         background-color: fade(@n600, 13%);
       }
+
+      .icon {
+        margin-top: -2px;
+      }
     }
 
     .removable-label-content {
-      padding: @verticalPadding 2px;
-      padding-left: 0;
+      padding: 0 @horizontalPadding 0 4px;
     }
   }
 }
 
 .ui.label > .icon {
-  margin-top: -2px;
+  line-height: 1;
 }

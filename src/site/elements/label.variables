@@ -15,6 +15,12 @@
 @color: @textColor;
 @fontWeight: 400;
 
+@tiny: 11px;
+@small: 12px;
+@medium: 14px;
+@large: 18px;
+@big: 20px;
+
 /*******************************
             Padding
 *******************************/
