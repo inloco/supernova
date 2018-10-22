@@ -1,3 +1,44 @@
 /*******************************
          Site Overrides
 *******************************/
+
+.ui.label {
+  align-items: center;
+  display: inline-flex;
+  height: 24px;
+  line-height: 24px;
+
+  &.removable {
+    padding: 0;
+
+    > .removable-label-icon {
+      color: @gray400;
+      cursor: pointer;
+      height: 100%;
+      padding: 0 2px;
+
+      &:hover,
+      &:active {
+        background-color: fade(@n600, 8%);
+        border-radius: 3px 0 0 3px;
+        color: @red;
+      }
+
+      &:active {
+        background-color: fade(@n600, 13%);
+      }
+
+      .icon {
+        margin-top: -2px;
+      }
+    }
+
+    .removable-label-content {
+      padding: 0 @horizontalPadding 0 4px;
+    }
+  }
+}
+
+.ui.label > .icon {
+  line-height: 1;
+}
