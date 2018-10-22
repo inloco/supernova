@@ -7,6 +7,9 @@
 @itemFontWeight: 500;
 @activeItemFontWeight: @itemFontWeight;
 
+@itemVerticalPadding: 8px;
+@itemHorizontalPadding: 32px;
+
 @secondaryPointingActiveFontWeight: @itemFontWeight;
 @secondaryPointingItemVerticalPadding: 8px;
 @secondaryPointingItemHorizontalPadding: 32px;

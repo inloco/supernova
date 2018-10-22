@@ -4,13 +4,13 @@ import { storiesOf } from "@storybook/react";
 
 const items = [
   {
-    name: "TAB 1"
+    content: "TAB #1"
   },
   {
-    name: "TAB 2"
+    content: "TAB #2"
   },
   {
-    name: "TAB 3"
+    content: "TAB #3"
   }
 ];
 
