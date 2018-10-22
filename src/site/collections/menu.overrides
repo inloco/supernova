@@ -3,7 +3,7 @@
 *******************************/
 
 /*--------------
-    Both basic and secondary pointing Menu
+    Both basic and secondary pointing Menu components
 ---------------*/
 
 .ui.pointing.menu {
@@ -60,7 +60,7 @@
 }
 
 /*--------------
-    Basic pointing Menu only
+    Basic pointing Menu component only
 ---------------*/
 
 .ui.pointing.menu:not(.secondary) > .item {
@@ -94,7 +94,7 @@
 }
 
 /*--------------
-    Secondary pointing Menu only
+    Secondary pointing Menu component only
 ---------------*/
 
 .ui.secondary.pointing.menu .item {
