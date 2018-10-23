@@ -13,8 +13,8 @@
 
 @selectionIconOpacity: unset;
 
-@selectionHoverBorderColor: fade(@n600, 35%);
-@selectionHoverBoxShadow: inset 0 0 0 1px rgba(99, 115, 129, .2);
+@selectionHoverBorderColor: @borderHoverColor;
+@selectionHoverBoxShadow: @shadowHover;
 
 @selectionFocusBorderColor: @selectionHoverBorderColor;
 @selectionFocusBoxShadow: 0 0 0 1px @shadowFocusColor;

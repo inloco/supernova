@@ -105,12 +105,14 @@
 
 @circularRadius                : 500rem;
 @borderColorNoAlpha: @n600;
-@borderHoverColor: fade(@borderColorNoAlpha, 15%);
+@borderHoverColor: fade(@borderColorNoAlpha, 35%);
 @borderColor: fade(@borderColorNoAlpha, 25%);
 @selectedBorderColor: fade(@borderColorNoAlpha, 35%);
 
 @shadowHoverColor: fade(@borderColorNoAlpha, 20%);
-@shadowFocusColor: fade(@borderColorNoAlpha, 5%);
+@shadowHover: inset 0 0 0 1px @shadowHoverColor;
+
+@shadowFocusColor: fade(@borderColorNoAlpha, 50%);
 
 /*-------------------
     Focused Input

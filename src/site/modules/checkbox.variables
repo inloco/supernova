@@ -5,7 +5,7 @@
 @checkboxSize: 16px;
 
 @checkboxBorder: 1px solid @borderColor;
-@checkboxHoverBorderColor: fade(@n600, 35%);
+@checkboxHoverBorderColor: @borderHoverColor;
 
 @checkboxHoverBackground: fade(@n600, 4%);
 

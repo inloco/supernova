@@ -21,7 +21,7 @@
 .ui.checkbox:not(.radio):not(.disabled) label:hover {
   &::before {
     background-color: #fff;
-    box-shadow: inset 0px 0px 0px 1px rgba(99, 115, 129, .2);
+    box-shadow: @shadowHover;
   }
 
   &:active::before {
