@@ -46,7 +46,7 @@
 @g500: #98B200;
 
 @n0: #FFFFFF;
-@n50: #F7F8F9;;
+@n50: #F7F8F9;
 @n100: #E8EBED;
 @n200: #DCDFE3;
 @n300: #CFD2D9;
