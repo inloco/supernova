@@ -1,3 +1,32 @@
 /*******************************
     User Variable Overrides
 *******************************/
+
+@padding: 12px 16px;
+
+/*-------------------
+        Header
+--------------------*/
+
+@headerColor: @textColor;
+@headerFontSize: 14px;
+@headerFontWeight: 400;
+
+/*-------------------
+        Meta
+--------------------*/
+
+@metaColor: fade(@gray600, 88%);
+@metaFontSize: 12px;
+
+/*-------------------
+        Description
+--------------------*/
+
+@descriptionColor: @textColor;
+
+/*-------------------
+        Divided
+--------------------*/
+
+@dividedPadding: @padding;
