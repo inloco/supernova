@@ -13,10 +13,10 @@
 
 @selectionIconOpacity: unset;
 
-@selectionHoverBorderColor: @borderColor;
-@selectionHoverBoxShadow: inset 0 0 0 1px rgba(99, 115, 129, .2);
+@selectionHoverBorderColor: @borderHoverColor;
+@selectionHoverBoxShadow: @shadowHover;
 
-@selectionFocusBorderColor: @borderColor;
+@selectionFocusBorderColor: @selectionHoverBorderColor;
 @selectionFocusBoxShadow: 0 0 0 1px @shadowFocusColor;
 
 @selectionVisibleBorderColor: @borderColor;

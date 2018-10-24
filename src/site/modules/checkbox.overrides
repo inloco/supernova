@@ -18,10 +18,15 @@
   content: '\e15b';
 }
 
-.ui.checkbox:not(.radio):not(.disabled) label:hover::before {
-  background-color: #fff;
-  border: none;
-  box-shadow: inset 0px 0px 0px 2px @shadowHoverColor;
+.ui.checkbox:not(.radio):not(.disabled) label:hover {
+  &::before {
+    background-color: #fff;
+    box-shadow: @shadowHover;
+  }
+
+  &:active::before {
+    box-shadow: none;
+  }
 }
 
 .ui.checkbox input:checked ~ .box:before,
