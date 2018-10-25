@@ -8,7 +8,7 @@ export const RemovableLabel = props => {
       <div className="removable-label-icon">
         <Icon className="clear" size="big" onClick={onRemove} />
       </div>
-      <span class="removable-label-content">{children || content}</span>
+      <span className="removable-label-content">{children || content}</span>
     </Label>
   )
 }
