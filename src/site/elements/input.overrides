@@ -3,5 +3,5 @@
 *******************************/
 
 .ui.icon.input > i.icon {
-  color: @gray400;
+  color: @gray600;
 }

@@ -12,7 +12,7 @@
     padding: 0;
 
     > .removable-label-icon {
-      color: @gray400;
+      color: @gray600;
       cursor: pointer;
       height: 100%;
       padding: 0 2px;

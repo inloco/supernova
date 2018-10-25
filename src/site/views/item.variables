@@ -16,7 +16,7 @@
         Meta
 --------------------*/
 
-@metaColor: fade(@gray600, 88%);
+@metaColor: fade(@gray800, 88%);
 @metaFontSize: 12px;
 
 /*-------------------

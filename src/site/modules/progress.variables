@@ -2,5 +2,5 @@
     User Variable Overrides
 *******************************/
 
-@boxShadow: inset 0 0 1px @gray400;
+@boxShadow: inset 0 0 1px @gray600;
 @barMinWidth: 0;
