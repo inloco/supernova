@@ -11,7 +11,7 @@
 .ui.dropdown > .dropdown.icon:before {
   font-family: 'Icons';
   content: '\e5cf'; /* expand more */
-  color: @gray400;
+  color: @gray600;
 }
 
 .ui.loading.selection.dropdown>i.icon {

@@ -3,7 +3,7 @@
 *******************************/
 
 @minHeight: 38px;
-@itemTextColor: @gray600;
+@itemTextColor: @gray800;
 @itemFontWeight: 500;
 @activeItemFontWeight: @itemFontWeight;
 
@@ -13,6 +13,6 @@
 @secondaryPointingActiveFontWeight: @itemFontWeight;
 @secondaryPointingItemVerticalPadding: 8px;
 @secondaryPointingItemHorizontalPadding: 32px;
-@secondaryPointingBorderColor: @gray100;
+@secondaryPointingBorderColor: @gray300;
 @secondaryPointingHoverTextColor: @itemTextColor;
 @secondaryPointingActiveTextColor: @n600;

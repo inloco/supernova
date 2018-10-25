@@ -45,7 +45,6 @@
 @g400: #A7CC0E;
 @g500: #98B200;
 
-@n0: #FFFFFF;
 @n50: #F7F8F9;
 @n100: #E8EBED;
 @n200: #DCDFE3;
@@ -57,17 +56,18 @@
 // Equal to fade(@n600, 8%), but necessary due to stacking elements with opacity.
 @n600-hex-8: #F0F1F3;
 
-@gray10: #FAFBFC;
-@gray30: #F5F6F7;
-@gray50: #EEEFF0;
-@gray100: #E3E4E5;
-@gray200: #D7D8D9;
-@gray300: #BDBEBF;
-@gray400: #9E9FA0;
-@gray500: #757677;
-@gray600: #616263;
-@gray700: #4A4B4C;
-@gray800: #212223;
+@gray00: #FFFFFF;
+@gray50: #FAFBFC;
+@gray100: #F5F6F7;
+@gray200: #EEEFF0;
+@gray300: #E3E4E5;
+@gray400: #D7D8D9;
+@gray500: #BDBEBF;
+@gray600: #9E9FA0;
+@gray700: #757677;
+@gray800: #616263;
+@gray900: #4A4B4C;
+@gray1000: #212223;
 
 @pink             : @p400;
 @pinkHover        : #EB0559;

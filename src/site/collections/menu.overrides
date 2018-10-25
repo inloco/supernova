@@ -9,7 +9,7 @@
 .ui.pointing.menu {
   margin: 0;
   border: 0;
-  border-bottom: 2px solid @gray100;
+  border-bottom: 2px solid @gray300;
   border-radius: 0px;
   background-color: transparent;
   box-shadow: none;
@@ -64,21 +64,21 @@
 ---------------*/
 
 .ui.pointing.menu:not(.secondary) > .item {
-  background-color: @gray30;
+  background-color: @gray100;
 }
 
 .ui.pointing.menu:not(.secondary) > .active.item {
-  background-color: @n0;
+  background-color: @gray00;
   border-radius: 3px 3px 0 0;
   border-style: solid;
-  border-color: @gray100 !important;
+  border-color: @gray300 !important;
   border-width: 1px 1px 0px;
   padding: 7px 31px 8px;
 }
 
 .ui.pointing.menu > .item:not(.active):hover {
-  color: @gray700;
-  background-color: @gray50;
+  color: @gray900;
+  background-color: @gray200;
 }
 
 .ui.pointing.menu > .item {
