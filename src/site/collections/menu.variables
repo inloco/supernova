@@ -13,6 +13,6 @@
 @secondaryPointingActiveFontWeight: @itemFontWeight;
 @secondaryPointingItemVerticalPadding: 8px;
 @secondaryPointingItemHorizontalPadding: 32px;
-@secondaryPointingBorderColor: @gray300;
+@secondaryPointingBorderColor: fade(@n600, 15%);
 @secondaryPointingHoverTextColor: @itemTextColor;
 @secondaryPointingActiveTextColor: @n600;
