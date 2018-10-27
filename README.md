@@ -20,6 +20,18 @@ To setup the project, you just need to have [Yarn](https://yarnpkg.com/en/) inst
   yarn
 ```
 
+```sh
+  yarn run build:css
+```
+
+### Watch (Hot reloading)
+
+To update css on file change:
+
+```sh
+  yarn run watch:css
+```
+
 ### Storybook
 
 We're using [Storybook](https://storybook.js.org/), to easily see and test the components.
