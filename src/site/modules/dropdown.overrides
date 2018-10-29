@@ -1,6 +1,7 @@
 /*******************************
         User Overrides
 *******************************/
+
 .ui.selection.dropdown > .search.icon,
 .ui.selection.dropdown > .delete.icon,
 .ui.selection.dropdown > .dropdown.icon {
@@ -33,4 +34,24 @@
 
 .ui.disabled.dropdown > .text {
   color: @disabledColor;
+}
+
+.ui.dropdown.error > .default.text {
+  color: @defaultTextColor;
+}
+
+.ui.dropdown.error,
+.ui.dropdown.error:hover,
+.ui.dropdown.error.active,
+.ui.dropdown.error.active:hover,
+.ui.dropdown.error:focus {
+  box-shadow: @errorBoxShadow;
+}
+
+.ui.dropdown.warning,
+.ui.dropdown.warning:hover,
+.ui.dropdown.warning.active,
+.ui.dropdown.warning.active:hover,
+.ui.dropdown.warning:focus {
+  box-shadow: @warningBoxShadow;
 }

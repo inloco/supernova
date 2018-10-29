@@ -12,6 +12,6 @@
 .ui.form input[type=tel]:hover, .ui.form input[type=text]:hover,
 .ui.form input[type=time]:hover, .ui.form input[type=url]:hover,
 .ui.form textarea:hover {
-  border: 1px solid rgba(62, 73, 101, .35);
-  box-shadow: inset 0 0rem 0px 1px rgba(99, 115, 129, .2);
+  border: 1px solid @borderHoverColor;
+  box-shadow: inset 0 0rem 0px 1px @shadowHoverColor;
 }

@@ -1,5 +1,7 @@
 # Semantic-UI Toolkit - Inloco theme
 
+You can see and interact with the components [here](https://inloco.github.io/supernova-inloco/).
+
 ## Installing
 
 ```sh
@@ -31,3 +33,35 @@ Run it with:
 ```
 
 Then open it at the url indicated on the terminal, probably: `http://localhost:9001/`.
+
+### Release
+
+To release supernova, follow these steps (let's pretend we're releasing `1.2.3`):
+
+1. Update the version in `package.json` to the new one (in this case `1.2.3`).
+2. Create a commit with the version number as the title: `v1.2.3`:
+```sh
+git commit -m v1.2.3
+```
+3. Create a new git tag:
+```sh
+git tag -a v1.2.3 -m v1.2.3
+```
+4. Push the commit and the tag to master:
+```sh
+git push origin master --tags
+```
+5. Publish to npm (you'll need to be logged in as **In Loco** for that):
+```sh
+npm publish
+```
+
+### Deploying Storybook
+
+After releasing a new version, it's important to also update the Storybook running in our gh page to display the new changes.
+
+This can be done by running a simple yarn script:
+
+```sh
+yarn deploy:storybook
+```

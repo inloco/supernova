@@ -2,31 +2,48 @@
     User Variable Overrides
 *******************************/
 
+/*----------------------
+    Input
+-----------------------*/
+
 @borderRadius: 3px;
 @borderColor: fade(@n600, 25%);
 @textCursorSpacing: 0;
+@selectionIconOpacity: unset;
+@selectionIconVerticalPadding: 6px;
+@selectionIconHorizontalPadding: 12px;
+
+@selectionHoverBorderColor: @borderHoverColor;
+@selectionHoverBoxShadow: @shadowHover;
+@selectionFocusBorderColor: @selectionHoverBorderColor;
+@selectionFocusBoxShadow: 0 0 0 1px @shadowFocusColor;
+@selectionVisibleBorderColor: @borderColor;
+@selectionVisibleConnectingBorder: @borderRadius;
+@selectionVisibleBoxShadow: 0 0 0px 1px fade(@n600, 5%);
+@selectionActiveBoxShadow: 0 0 0 1px fade(@n600, 50%);
+@selectionActiveHoverBorderColor: @borderColor;
+@selectionActiveHoverBoxShadow: @selectionActiveBoxShadow;
+
+/*----------------------
+    Disabled Input
+-----------------------*/
+
+@disabledOpacity: unset;
+@disabledBackgroundColor: fade(@n600, 8%);
+@disabledColor: fade(@textColor, 40%);
+
+/*----------------------
+    Items
+-----------------------*/
 
 @itemDivider: none; 
 @selectionItemDivider: @itemDivider;
 @itemPadding: 10px 12px;
 @selectionItemPadding: @itemPadding;
 
-@selectionIconOpacity: unset;
-
-@selectionHoverBorderColor: @borderHoverColor;
-@selectionHoverBoxShadow: @shadowHover;
-
-@selectionFocusBorderColor: @selectionHoverBorderColor;
-@selectionFocusBoxShadow: 0 0 0 1px @shadowFocusColor;
-
-@selectionVisibleBorderColor: @borderColor;
-@selectionVisibleConnectingBorder: @borderRadius;
-@selectionVisibleBoxShadow: 0 0 0px 1px fade(@n600, 5%);
-
-@selectionActiveBoxShadow: 0 0 0 1px fade(@n600, 50%);
-
-@selectionActiveHoverBorderColor: @borderColor;
-@selectionActiveHoverBoxShadow: @selectionActiveBoxShadow;
+/*----------------------
+    Selection Menu
+-----------------------*/
 
 @selectionMenuBoxShadow: 0 0 0 1px rgba(227, 228, 229, 0.45), 0 4px 6px 0 fade(@n600, 16%);
 @selectionVisibleMenuBoxShadow: @selectionMenuBoxShadow;
@@ -36,7 +53,23 @@
 @menuBorder: none;
 @menuBorderWidth: 0px;
 
-@disabledOpacity: unset;
+/*----------------------
+    Error
+-----------------------*/
 
-@disabledBackgroundColor: fade(@n600, 8%);
-@disabledColor: fade(@textColor, 40%);
+@errorBackgroundColor: @gray00;
+@errorTextColor: @textColor;
+@errorBorderColor: @borderColor;
+@errorBoxShadow: 0 0 0 1px fade(@red, 50%);
+@errorIconColor: @red;
+
+@errorItemTextColor: @itemColor;
+@errorItemHoverBackground: @hoveredItemBackground;
+@errorItemActiveBackground: @selectedBackground;
+
+/*----------------------
+    Warning
+-----------------------*/
+
+@warningBoxShadow: 0 0 0 1px fade(@yellow, 50%);
+@warningIconColor: @yellow;

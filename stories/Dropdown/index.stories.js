@@ -12,6 +12,12 @@ storiesOf('Dropdown', module)
   .add('selection', () => (
     <Dropdown placeholder="Select Friend" selection options={friendOptions} />
   ))
+  .add('selection error', () => (
+    <Dropdown placeholder="Select Friend" selection error options={friendOptions} />
+  ))
+  .add('selection warning', () => (
+    <Dropdown placeholder="Select Friend" selection className='warning' options={friendOptions} />
+  ))
   .add('search', () => (
     <Dropdown placeholder="Select Friend" selection search options={friendOptions} />
   ))
