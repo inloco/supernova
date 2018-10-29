@@ -19,6 +19,7 @@ To setup the project, you just need to have [Yarn](https://yarnpkg.com/en/) inst
 ```sh
   yarn
 ```
+Then we run the command below to update css with our customizations:
 
 ```sh
   yarn run build:css
