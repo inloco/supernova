@@ -1,5 +1,7 @@
 # Semantic-UI Toolkit - Inloco theme
 
+You can see and interact with the components [here](https://inloco.github.io/supernova-inloco/).
+
 ## Installing
 
 ```sh
@@ -19,6 +21,18 @@ To setup the project, you just need to have [Yarn](https://yarnpkg.com/en/) inst
 ```sh
   yarn
 ```
+
+### Storybook
+
+We're using [Storybook](https://storybook.js.org/), to easily see and test the components.
+
+Run it with:
+
+```sh
+  yarn storybook
+```
+
+Then open it at the url indicated on the terminal, probably: `http://localhost:9001/`.
 
 ### Release
 
@@ -42,14 +56,12 @@ git push origin master --tags
 npm publish
 ```
 
-### Storybook
+### Deploying Storybook
 
-We're using [Storybook](https://storybook.js.org/), to easily see and test the components.
+After releasing a new version, it's important to also update the Storybook running in our gh page to display the new changes.
 
-Run it with:
+This can be done by running a simple yarn script:
 
 ```sh
-  yarn storybook
+yarn deploy:storybook
 ```
-
-Then open it at the url indicated on the terminal, probably: `http://localhost:9001/`.
