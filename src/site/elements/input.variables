@@ -3,3 +3,38 @@
 *******************************/
 
 @iconOpacity: unset;
+@iconWidth: 41px;
+
+/*----------------------
+    Focus
+-----------------------*/
+
+@focusBorderColor: @borderColor;
+@focusBoxShadow: 0 0 0 1px @shadowFocusColor;
+@placeholderFocusColor: @placeholderColor;
+@downBoxShadow: @focusBoxShadow;
+
+/*----------------------
+    Disabled
+-----------------------*/
+
+@disabledOpacity: unset;
+@disabledBackgroundColor: fade(@n600, 8%);
+@disabledColor: fade(@textColor, 40%);
+
+/*----------------------
+    Error
+-----------------------*/
+
+@errorBackground: @gray00;
+@errorColor: @inputColor;
+@errorBoxShadow: 0 0 0 1px fade(@red, 50%);
+@placeholderErrorColor: @placeholderColor;
+@placeholderErrorFocusColor: @placeholderErrorColor;
+
+/*----------------------
+    Warning
+-----------------------*/
+
+@warningColor: @inputColor;
+@warningBoxShadow: 0 0 0 1px fade(@yellow, 50%);

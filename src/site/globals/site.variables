@@ -83,7 +83,8 @@
 @greenFocus       : #A2C204;
 @greenDown        : #98B200;
 
-@red: #D92400;
+@red        : #D92400;
+@yellow     : #FFAB00;
 
 @linkColor           : @blue;
 @linkHoverColor      : darken(saturate(@linkColor, 20), 15, relative);

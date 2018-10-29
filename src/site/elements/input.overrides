@@ -4,4 +4,23 @@
 
 .ui.icon.input > i.icon {
   color: @gray600;
+  font-size: 20px;
+}
+
+.ui.disabled.input > input,
+.ui.input:not(.disabled) input[disabled] {
+  background-color: @disabledBackgroundColor;
+}
+
+.ui.error.icon.input > i.icon {
+  color: @red;
+}
+
+.ui.input.warning > input {
+  color: @warningColor;
+  box-shadow: @warningBoxShadow;
+}
+
+.ui.warning.icon.input > i.icon {
+  color: @yellow;
 }
