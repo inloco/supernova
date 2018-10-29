@@ -67,3 +67,16 @@
 .ui.outline.green.button {
   .outlineButton(@green, @g50, @g100, @g500)
 }
+
+.ui.icon.button {
+  min-width: @iconWidth;
+  min-height: @iconHeight;
+
+  &.outline > .icon:not(.button){
+    height: calc(@iconHeight - 2px);
+  }
+
+  .icon {
+    font-size: @iconFontSize;
+  }
+}

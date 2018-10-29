@@ -37,3 +37,8 @@
 @basicHoverBackground: rgba(62,73,101,0.08);
 @basicFocusBackground: rgba(62,73,101,0.08);
 @basicDownBackground: rgba(62,73,101,0.12);
+
+@iconButtonOpacity: unset;
+@iconFontSize: 20px;
+@iconHeight: @lineHeight;
+@iconWidth: @iconHeight;
