@@ -100,3 +100,47 @@
 .ui.secondary.pointing.menu .item {
   border: none;
 }
+
+
+
+/*--------------
+    Secondary pointing Menu Pagination component only
+---------------*/
+
+.ui.secondary.pointing.menu.pagination {
+  border-bottom: none;
+}
+
+.ui.secondary.pointing.menu.pagination .item {
+  font-weight: 400;
+  outline: none;
+  min-width: 32px;
+  padding: 6px 12px;
+  margin-right: 12px;
+  border-radius: 3px;
+  background: @secondaryPointingPaginationItemBackground;
+}
+
+.ui.secondary.pointing.menu.pagination .item:last-child {
+  margin-right: 0;
+}
+
+.ui.secondary.pointing.menu.pagination .item:hover {
+  background: @secondaryPointingPaginationItemBackgroundHover;
+}
+
+.ui.secondary.pointing.menu.pagination .item:active {
+  background: @secondaryPointingPaginationItemBackgroundActive;
+  border-radius: 3px;
+}
+
+.ui.secondary.pointing.menu.pagination .active.item:hover {
+  background: @secondaryPointingPaginationItemBackground;
+}
+
+.ui.secondary.pointing.menu.pagination .active.item:after,
+.ui.secondary.pointing.menu.pagination .active.item:after {
+  width: 12px;
+  height: 2px;
+  transform: translateY(-5px) translateX(-50%);
+}
