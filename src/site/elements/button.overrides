@@ -3,7 +3,7 @@
 *******************************/
 
 .ui.button {
-  font-spacing: @fontSpacing;
+  letter-spacing: @fontSpacing;
 }
 
 .ui.secondary.button:hover {
@@ -35,8 +35,12 @@
 .outlineButton(@main, @hover, @activeLight, @activeDark) {
   background-color: #fff;
   border: 1px solid @main;
+  line-height: calc(@lineHeight - 2px);
   color: @main;
 
+  &:not(.icon) {
+    padding: @verticalPadding calc(@horizontalPadding - 1px);
+  }
   &:hover,
   &:focus {
     background-color: @hover;
@@ -62,4 +66,17 @@
 .ui.outline.green.buttons .button,
 .ui.outline.green.button {
   .outlineButton(@green, @g50, @g100, @g500)
+}
+
+.ui.icon.button {
+  min-width: @iconWidth;
+  min-height: @iconHeight;
+
+  &.outline > .icon:not(.button){
+    height: calc(@iconHeight - 2px);
+  }
+
+  .icon {
+    font-size: @iconFontSize;
+  }
 }

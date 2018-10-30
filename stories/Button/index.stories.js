@@ -19,6 +19,21 @@ storiesOf('Button', module)
         <Button disabled className="green" onClick={action('clicked green')}>Green Disabled</Button>
       </React.Fragment>
   ))
+  .add('primary icon', () => (
+    <React.Fragment>
+      <Button className="blue" onClick={action('clicked blue')} icon='cloud'/>
+      <br/><br/>
+      <Button className="pink" onClick={action('clicked pink')} icon='cloud'/>
+      <br/><br/>
+      <Button className="green" onClick={action('clicked green')} icon='cloud'/>
+      <br/><br/>
+      <Button disabled className="blue" onClick={action('clicked blue')} icon='cloud'/>
+      <br/><br/>
+      <Button disabled className="pink" onClick={action('clicked pink')} icon='cloud'/>
+      <br/><br/>
+      <Button disabled className="green" onClick={action('clicked green')} icon='cloud'/>
+    </React.Fragment>
+  ))
   .add('subtle', () => (
       <React.Fragment>
         <Button basic className="blue" onClick={action('clicked blue')}>Blue</Button>
@@ -47,6 +62,21 @@ storiesOf('Button', module)
         <Button disabled className="outline pink" onClick={action('clicked pink')}>Pink Disabled</Button>
         <br/><br/>
         <Button disabled className="outline green" onClick={action('clicked green')}>Green Disabled</Button>
+      </React.Fragment>
+  ))
+  .add('outline icon', () => (
+      <React.Fragment>
+        <Button className="outline blue" onClick={action('clicked blue')} icon='cloud'/>
+        <br/><br/>
+        <Button className="outline pink" onClick={action('clicked pink')} icon='cloud'/>
+        <br/><br/>
+        <Button className="outline green" onClick={action('clicked green')} icon='cloud'/>
+        <br/><br/>
+        <Button disabled className="outline blue" onClick={action('clicked blue')} icon='cloud'/>
+        <br/><br/>
+        <Button disabled className="outline pink" onClick={action('clicked pink')} icon='cloud'/>
+        <br/><br/>
+        <Button disabled className="outline green" onClick={action('clicked green')} icon='cloud'/>
       </React.Fragment>
   ))
   .add('loading', () => (
