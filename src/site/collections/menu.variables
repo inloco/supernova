@@ -18,5 +18,5 @@
 @secondaryPointingActiveTextColor: @n600;
 
 @secondaryPointingPaginationItemBackground: transparent;
-@secondaryPointingPaginationItemBackgroundHover: rgba(62,73,101,0.08);
-@secondaryPointingPaginationItemBackgroundActive: rgba(62,73,101,0.12);
+@secondaryPointingPaginationItemBackgroundHover: fade(@n600, 8%);
+@secondaryPointingPaginationItemBackgroundActive: fade(@n600, 12%);
