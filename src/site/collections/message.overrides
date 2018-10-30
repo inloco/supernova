@@ -1,3 +1,32 @@
 /*******************************
         Site Overrides
 *******************************/
+
+.ui.message p {
+  line-height: @lineHeight;
+}
+
+.ui.message > .close.icon {
+  font-size: @closeIconSize;
+  color: @closeIconColor;
+}
+
+.ui.floating.negative.message {
+  box-shadow: @negativeBoxShadow, @floatingBoxShadow;
+}
+.ui.floating.warning.message {
+  box-shadow: @warningBoxShadow, @floatingBoxShadow;
+}
+.ui.floating.positive.message {
+  box-shadow: @positiveBoxShadow, @floatingBoxShadow;
+}
+
+.ui.negative.icon.message > .icon:not(.close) {
+  color: @negativeIconColor;
+}
+.ui.warning.icon.message > .icon:not(.close) {
+  color: @warningIconColor;
+}
+.ui.positive.icon.message > .icon:not(.close) {
+  color: @positiveIconColor;
+}

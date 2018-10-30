@@ -11,9 +11,9 @@
 /*--------------
       Page
 ---------------*/
-@pageBackground      : #fafbfc;
-@textColor           : #4A4B4C;
-@inputPlaceholderColor: rgba(74,75,76, .4);
+@pageBackground      : @gray50;
+@textColor           : @gray900;
+@inputPlaceholderColor: fade(@gray900, 40%);
 
 @inputVerticalPadding   : @relative12px;
 @inputHorizontalPadding : @relative12px;
