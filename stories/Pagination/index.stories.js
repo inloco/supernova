@@ -36,3 +36,13 @@ storiesOf('Pagination', module)
       secondary
     />
   ))
+  .add('with first and last item', () => (
+    <Pagination
+      className="blue"
+      totalPages={15}
+      defaultActivePage={5}
+      pointing
+      secondary
+    />
+  ))
+
