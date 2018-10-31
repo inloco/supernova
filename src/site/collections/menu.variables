@@ -16,3 +16,7 @@
 @secondaryPointingBorderColor: fade(@n600, 15%);
 @secondaryPointingHoverTextColor: @itemTextColor;
 @secondaryPointingActiveTextColor: @n600;
+
+@secondaryPointingPaginationItemBackground: transparent;
+@secondaryPointingPaginationItemBackgroundHover: fade(@n600, 8%);
+@secondaryPointingPaginationItemBackgroundActive: fade(@n600, 12%);
