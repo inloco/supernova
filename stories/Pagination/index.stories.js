@@ -1,9 +1,9 @@
-import React from "react";
-import { storiesOf } from "@storybook/react";
-import { Pagination } from "semantic-ui-react";
+import React from 'react'
+import { storiesOf } from '@storybook/react'
+import { Pagination } from 'semantic-ui-react'
 
-storiesOf("Pagination", module)
-  .add("blue", () => (
+storiesOf('Pagination', module)
+  .add('blue', () => (
     <Pagination
       className="blue"
       totalPages={15}
@@ -14,7 +14,7 @@ storiesOf("Pagination", module)
       secondary
     />
   ))
-  .add("green", () => (
+  .add('green', () => (
     <Pagination
       className="green"
       totalPages={15}
@@ -25,7 +25,7 @@ storiesOf("Pagination", module)
       secondary
     />
   ))
-  .add("pink", () => (
+  .add('pink', () => (
     <Pagination
       className="pink"
       totalPages={15}
@@ -35,4 +35,4 @@ storiesOf("Pagination", module)
       pointing
       secondary
     />
-  ));
+  ))
