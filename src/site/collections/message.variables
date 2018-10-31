@@ -1,3 +1,53 @@
 /*******************************
     User Variable Overrides
 *******************************/
+
+@floatingBoxShadow: @z400BoxShadow; 
+
+@messageTextOpacity: unset;
+@headerFontSize: 14px;
+@headerFontWeight: 500;
+@headerParagraphDistance: 0;
+
+@iconSize: 20px;
+
+/*----------------------
+    Close icon
+-----------------------*/
+
+@closeRightDistance: 12px;
+@closeIconSize: 20px;
+@closeIconColor: @gray600;
+@closeIconHoverColor: @gray700;
+@closeOpacity: unset;
+@closeTopDistance: unset;
+
+/*----------------------
+    Error
+-----------------------*/
+
+@negativeBackgroundColor: fade(@alertRed, 10%);
+@negativeTextColor: @textColor;
+@negativeHeaderColor: @textColor;
+@negativeIconColor: @alertRed;
+@negativeBoxShadow: 0px 0px 0px 1px fade(@alertRed, 50%) inset;
+
+/*----------------------
+    Warning
+-----------------------*/
+
+@warningBackgroundColor: fade(@alertYellow, 10%);
+@warningTextColor: @textColor;
+@warningHeaderColor: @textColor;
+@warningIconColor: @alertYellow;
+@warningBoxShadow: 0px 0px 0px 1px fade(@alertYellow, 50%) inset;
+
+/*----------------------
+    Success
+-----------------------*/
+
+@positiveBackgroundColor: fade(@alertGreen, 10%);
+@positiveTextColor: @textColor;
+@positiveHeaderColor: @textColor;
+@positiveIconColor: @alertGreen;
+@positiveBoxShadow: 0px 0px 0px 1px fade(@alertGreen, 50%) inset;

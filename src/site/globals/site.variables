@@ -11,9 +11,9 @@
 /*--------------
       Page
 ---------------*/
-@pageBackground      : #fafbfc;
-@textColor           : #4A4B4C;
-@inputPlaceholderColor: rgba(74,75,76, .4);
+@pageBackground      : @gray50;
+@textColor           : @gray900;
+@inputPlaceholderColor: fade(@gray900, 40%);
 
 @inputVerticalPadding   : @relative12px;
 @inputHorizontalPadding : @relative12px;
@@ -69,6 +69,10 @@
 @gray900: #4A4B4C;
 @gray1000: #212223;
 
+@alertRed         : #D92400;
+@alertYellow      : #FFAB00;
+@alertGreen       : #0ACC8B;
+
 @pink             : @p400;
 @pinkHover        : #EB0559;
 @pinkFocus        : #EB0559;
@@ -83,8 +87,8 @@
 @greenFocus       : #A2C204;
 @greenDown        : #98B200;
 
-@red        : #D92400;
-@yellow     : #FFAB00;
+@red        : @alertRed;
+@yellow     : @alertYellow;
 
 @linkColor           : @blue;
 @linkHoverColor      : darken(saturate(@linkColor, 20), 15, relative);
@@ -129,3 +133,12 @@
 --------------------*/
 
 @disabledOpacity: 0.33;
+
+/*-------------------
+    Depths
+--------------------*/
+
+@z200BoxShadow: 0 4px 16px -1px fade(@n600, 16%);
+@z300BoxShadow: 0 8px 10px -4px fade(@n600, 20%);
+@z400BoxShadow: 0 16px 24px -6px fade(@n600, 20%);
+@z500BoxShadow: 0 24px 32px -8px fade(@n600, 20%);
