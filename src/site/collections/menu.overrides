@@ -115,10 +115,11 @@
   font-weight: 400;
   outline: none;
   min-width: 32px;
-  padding: 6px 12px;
+  padding: 6px 0px;
   margin-right: 12px;
   border-radius: 3px;
   background: @secondaryPointingPaginationItemBackground;
+  justify-content: center;
 }
 
 .ui.secondary.pointing.menu.pagination .item:last-child {
