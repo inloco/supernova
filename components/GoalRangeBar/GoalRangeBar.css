@@ -1,0 +1,58 @@
+.goal-range-bar__wrapper {
+  position: relative;
+  width: 280px;
+  height: 26px;
+}
+
+.goal-range-bar__overlay {
+  position: absolute;
+  opacity: 0.4;
+  background-color: #ffffff;
+  height: 8px;
+  top: 0px;
+}
+
+.goal-range-bar__overlay-mark {
+  position: absolute;
+  background-color: #ffffff;
+  height: 6px;
+  width: 1px;
+  top: 1px;
+}
+
+.goal-range-bar.ui.tiny.progress .bar {
+  background-color: #fa0c64;
+  height: 8px;
+}
+
+.goal-range-bar.ui.progress:first-child {
+  margin: 0px 0px 4px 0px;
+}
+
+.goal-range-bar__label-wrapper {
+  margin: 0;
+  padding: 0;
+
+  position: absolute;
+  top: 10px;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.goal-range-bar__max-goal {
+  left: 92%;
+  position: absolute;
+  top: 0;
+  color: rgba(97, 98, 99, 0.88);
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.goal-range-bar__min-goal {
+  position: absolute;
+  top: 0;
+  color: rgba(97, 98, 99, 0.88);
+  font-size: 12px;
+  line-height: 14px;
+}
