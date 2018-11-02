@@ -34,6 +34,9 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "husky": "^1.1.3",
+    "prettier": "^1.14.3",
+    "pretty-quick": "^1.8.0",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
     "semantic-ui": "^2.4.2"
@@ -42,5 +45,10 @@
     "singleQuote": true,
     "semi": false,
     "jsxBracketSameLine": true
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   }
 }
