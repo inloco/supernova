@@ -37,5 +37,10 @@
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
     "semantic-ui": "^2.4.2"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "semi": false,
+    "jsxBracketSameLine": true
   }
 }
