@@ -2,7 +2,11 @@
     User Variable Overrides
 *******************************/
 
+@width: 601px;
+@topDistance: 24px;
+
 @floatingBoxShadow: @z400BoxShadow; 
+@floatingZIndex: 400;
 
 @messageTextOpacity: unset;
 @headerFontSize: 14px;
