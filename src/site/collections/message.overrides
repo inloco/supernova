@@ -17,6 +17,8 @@
 
 .ui.floating.message {
   position: fixed;
+  left: 50%;
+  margin-left: calc(-@width/2);
   top: @topDistance;
   z-index: @floatingZIndex;
 }
