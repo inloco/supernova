@@ -2,6 +2,10 @@
         Site Overrides
 *******************************/
 
+.ui.message {
+  width: @width !important;
+}
+
 .ui.message p {
   line-height: @lineHeight;
 }
@@ -9,6 +13,14 @@
 .ui.message > .close.icon {
   font-size: @closeIconSize;
   color: @closeIconColor;
+}
+
+.ui.floating.message {
+  position: fixed;
+  left: 50%;
+  margin-left: calc(-@width/2);
+  top: @topDistance;
+  z-index: @floatingZIndex;
 }
 
 .ui.floating.negative.message {
