@@ -6,25 +6,34 @@ storiesOf('Checkbox', module)
   .add('regular', () => (
     <React.Fragment>
       <Checkbox className="blue" label="Blue" defaultChecked />
-      <br/><br/>
+      <br /><br />
       <Checkbox className="pink" label="Pink" defaultChecked />
-      <br/><br/>
+      <br /><br />
       <Checkbox className="green" label="Green" defaultChecked />
     </React.Fragment>
   ))
   .add('indeterminate', () => (
     <React.Fragment>
       <Checkbox className="blue" label="Blue" defaultIndeterminate />
-      <br/><br/>
+      <br /><br />
       <Checkbox className="pink" label="Pink" defaultIndeterminate />
-      <br/><br/>
+      <br /><br />
       <Checkbox className="green" label="Green" defaultIndeterminate />
     </React.Fragment>
   ))
   .add('disabled', () => (
     <React.Fragment>
       <Checkbox label="Checked disabled" disabled defaultChecked />
-      <br/><br/>
+      <br /><br />
       <Checkbox label="Unchecked disabled" disabled />
+    </React.Fragment>
+  ))
+  .add('radio', () => (
+    <React.Fragment>
+      <Checkbox className="blue" label="Radio Blue" radio />
+      <br /><br />
+      <Checkbox className="pink" label="Radio Pink" radio />
+      <br /><br />
+      <Checkbox className="green" label="Radio Green" radio />
     </React.Fragment>
   ))
