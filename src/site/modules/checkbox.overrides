@@ -120,7 +120,7 @@
   .box:active,
   label:active {
       &::before {
-        border: 1px solid @activeLight;
+        background-color: @activeLight;
       }
   }
 
@@ -149,6 +149,7 @@
 
         &:active {
           &::before {
+            background-color: @activeLight !important;
             border: 1px solid @activeDark;
           }
 
