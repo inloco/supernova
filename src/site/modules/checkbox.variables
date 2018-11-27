@@ -19,3 +19,28 @@
 @checkboxTransition:
   border 0.24s cubic-bezier(.64,0,.35,1),
   box-shadow 0.24s cubic-bezier(.64,0,.35,1);
+
+/*******************************
+            Toggle Label
+*******************************/
+
+@toggleLabelOffset: 0;
+
+/*******************************
+            Toggle Lane
+*******************************/
+
+@toggleLaneBackground: fade(@n600, 13%);
+@toggleLaneHeight: 16px;
+@toggleLaneWidth: 32px;
+@toggleHoverColor: fade(@n600, 18%);
+
+/*******************************
+            Toggle Handle
+*******************************/
+
+@toggleHandleSize: 12px;
+@handleBoxShadow: none;
+@toggleHandleOffset: 2px;
+@toggleOffOffset: 2px;
+@toggleOnOffset: (@toggleLaneWidth - @toggleHandleSize) - 2px;
