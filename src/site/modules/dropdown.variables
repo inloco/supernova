@@ -38,7 +38,7 @@
 
 @itemDivider: none; 
 @selectionItemDivider: @itemDivider;
-@itemPadding: 10px 12px;
+@itemPadding: 12px 12px;
 @selectionItemPadding: @itemPadding;
 
 /*----------------------
