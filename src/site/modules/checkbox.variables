@@ -25,6 +25,7 @@
 *******************************/
 
 @toggleLabelOffset: 0;
+@toggleLabelDistance: 40px;
 
 /*******************************
             Toggle Lane
