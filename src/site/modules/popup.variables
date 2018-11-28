@@ -2,4 +2,15 @@
     User Variable Overrides
 *******************************/
 
-@invertedBackground: #616263;
+@color: @gray900;
+
+@invertedBackground: @gray800;
+
+@border: 1px solid fade(@gray300, 45%);
+@boxShadow: 0 10px 10px -3px fade(@n600, 20%);
+
+@arrowSize: 15px;
+@arrowBoxShadow: 1px 1px 1px 0 fade(@gray300, 45%);
+@rightArrowBoxShadow: -1px 1px 1px 0 fade(@gray300, 45%);
+@bottomArrowBoxShadow: -1px -1px 1px 0 fade(@gray300, 45%);
+@leftArrowBoxShadow: 1px -1px 1px 0 fade(@gray300, 45%);

@@ -1,0 +1,10 @@
+.popup-story {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popup-story__button.ui.button {
+  margin: 20px;
+  width: 200px;
+}
