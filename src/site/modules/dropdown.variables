@@ -54,6 +54,15 @@
 @menuBorderWidth: 0px;
 
 /*----------------------
+    Header
+-----------------------*/
+
+@menuHeaderColor: @gray800;
+@menuHeaderFontWeight: 400;
+@menuHeaderMargin: 0;
+@menuHeaderPadding: 12px;
+
+/*----------------------
     Error
 -----------------------*/
 

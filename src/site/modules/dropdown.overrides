@@ -36,6 +36,10 @@
   color: @disabledColor;
 }
 
+.ui.dropdown .menu > .header {
+  background-color: @gray100;
+}
+
 .ui.dropdown.error > .default.text {
   color: @defaultTextColor;
 }
