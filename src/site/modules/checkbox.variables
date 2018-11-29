@@ -15,6 +15,7 @@
 @checkboxIndeterminateCheckColor: #fff;
 
 @labelDistance: 24px;
+@labelFocusColor: @textColor;
 
 @checkboxTransition:
   border 0.24s cubic-bezier(.64,0,.35,1),
@@ -26,6 +27,8 @@
 
 @toggleLabelOffset: 0;
 @toggleLabelDistance: 40px;
+@toggleOffLabelColor: @textColor;
+@toggleOnLabelColor: @textColor;
 
 /*******************************
             Toggle Lane
