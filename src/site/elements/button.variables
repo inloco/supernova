@@ -9,6 +9,7 @@
 @horizontalPadding: 12px;
 
 @fontWeight: 500;
+@basicFontWeight: @fontWeight;
 @fontSpacing: 0.33px;
 @lineHeight: 36px;
 
