@@ -24,3 +24,13 @@ storiesOf('Dropdown', module)
   .add('disabled', () => (
     <Dropdown placeholder="Select Friend" selection options={friendOptions} disabled />
   ))
+  .add('header', () => (
+    <Dropdown
+      placeholder="Select Friend"
+      selection
+      options={friendOptions}
+      header={<Dropdown.Header content="My Header" />}
+      selectOnBlur={false}
+      selectOnNavigation={false}
+    />
+  ))
