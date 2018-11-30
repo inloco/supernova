@@ -14,23 +14,56 @@ const items = [
   }
 ];
 
-const verticalItems = [
-  {
-    content: 'Home',
-    icon: 'home'
-  },
-  {
-    content: 'Places',
-    icon: 'place'
-  },
-  {
-    content: 'Reports',
-    icon: 'assignment'
-  }
-]
-
 storiesOf('Menu', module)
-  .add('vertical', () => <Menu vertical items={verticalItems} />)
+  .add('vertical', () => {
+    const items = [
+      {
+        content: 'Header',
+        header: true
+      },
+      {
+        content: 'Home',
+        icon: 'home'
+      },
+      {
+        content: 'Places',
+        icon: 'place'
+      },
+      {
+        content: 'Reports',
+        icon: 'assignment'
+      }
+    ]
+    return (
+      <React.Fragment>
+        <Menu className="blue" vertical items={items} />
+        <Menu className="pink" vertical items={items} />
+        <Menu className="green" vertical items={items} />
+      </React.Fragment>
+    )
+  })
+  .add('vertical icons only', () => {
+    const items = [
+      {
+        icon: 'home'
+      },
+      {
+        icon: 'place'
+      },
+      {
+        icon: 'assignment'
+      }
+    ]
+    return (
+      <React.Fragment>
+        <Menu className="blue" vertical icon items={items} />
+        <br />
+        <Menu className="pink" vertical icon items={items} />
+        <br />
+        <Menu className="green" vertical icon items={items} />
+      </React.Fragment>
+    )
+  })
   .add('basic pointing ', () => <Menu pointing items={items} />)
   .add('secondary pointing ', () => <Menu secondary pointing items={items} />)
   .add('basic pointing blue', () => (
