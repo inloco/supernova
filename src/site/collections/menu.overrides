@@ -160,9 +160,11 @@
   border-radius: 3px;
   color: @textColor;
   display: flex;
+  flex-wrap: wrap;
   font-weight: 400;
+  line-height: 24px;
   margin-bottom: 8px;
-  padding: 12px;
+  padding: 12px 0;
 
   &:last-child {
     margin-bottom: 0;
@@ -186,19 +188,87 @@
 }
 
 .ui.vertical.menu .item > i.icon {
+  align-items: center;
   color: @gray600;
+  display: flex;
   font-size: 20px;
+  justify-content: center;
   margin-right: 8px;
+
+  &:first-child {
+    margin-left: 12px;
+  }
 }
 
-.ui.blue.vertical.menu .active.item > i.icon {
+.ui.blue.vertical.menu .active.item > i.icon:first-child,
+.ui.blue.vertical.menu .active.item .title > i.icon:first-child {
   color: @blue;
 }
 
-.ui.pink.vertical.menu .active.item > i.icon {
+.ui.pink.vertical.menu .active.item > i.icon:first-child,
+.ui.pink.vertical.menu .active.item .title > i.icon:first-child {
   color: @pink;
 }
 
-.ui.green.vertical.menu .active.item > i.icon {
+.ui.green.vertical.menu .active.item > i.icon:first-child,
+.ui.green.vertical.menu .active.item .title > i.icon:first-child {
   color: @green;
+}
+
+/*--------------
+    Vertical Accordion Menu
+---------------*/
+
+.ui.vertical.accordion.menu {
+  .item {
+    .title {
+      align-items: center;
+      display: flex;
+      height: 48px;
+      margin: -12px 0;
+      padding: 12px;
+      width: 100%;
+
+      &.active {
+        background-color: @n600-hex-4;
+
+        i.icon {
+          color: @gray600;
+        }
+      }
+
+      i.icon {
+        color: @gray600;
+        font-size: 20px;
+        height: @iconWidth;
+        margin-right: 8px;
+        width: @iconWidth;
+      }
+
+      i.icon:last-child {
+        margin: 0 -4px 0 auto;
+      }
+    }
+
+    .title ~ .menu.content {
+      background-color: @n600-hex-8;
+      margin: 12px 0 -12px;
+      padding: 8px 0;
+      width: 100%;
+
+      .item {
+        margin-bottom: 0;
+        padding: 8px 0;
+
+        &:hover {
+          background-color: @hoverItemBackground;
+        }
+
+        &.active {
+          background-color: @activeItemBackground;
+          font-weight: 400;
+        }
+      }
+    }
+  }
 }

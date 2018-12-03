@@ -41,3 +41,6 @@
 
 @verticalIconFloat: none;
 @verticalIconMargin: 0;
+
+@subMenuFontSize: 14px;
+@subMenuTextColor: @textColor;

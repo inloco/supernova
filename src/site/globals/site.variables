@@ -53,6 +53,8 @@
 @n500: #6E778C;
 @n600: #3E4965;
 
+// Equal to fade(@n600, 4%), but necessary due to stacking elements with opacity.
+@n600-hex-4: #F7F8F9;
 // Equal to fade(@n600, 8%), but necessary due to stacking elements with opacity.
 @n600-hex-8: #F0F1F3;
 

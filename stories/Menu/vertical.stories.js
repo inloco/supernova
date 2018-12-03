@@ -1,5 +1,5 @@
 import React from 'react'
-import { Menu } from 'semantic-ui-react'
+import { Accordion, Icon, Menu } from 'semantic-ui-react'
 import { storiesOf } from '@storybook/react'
 
 storiesOf('Menu/Vertical', module)
@@ -52,10 +52,73 @@ storiesOf('Menu/Vertical', module)
       </React.Fragment>
     )
   })
-  .add('submenus', () => (
-    <Menu className="blue" vertical>
+
+storiesOf('Menu/Vertical/SubMenus/Internal', module)
+  .add('closed', () => (
+    <Menu as={Accordion} className="blue" vertical>
       <Menu.Item link content="Home" icon="home" active />
-      <Menu.Item link content="Places" icon="place" />
+      <Menu.Item link>
+        <Accordion.Title>
+          <Icon name="place" />
+          <span>Places</span>
+          <Icon name="keyboard arrow down" />
+        </Accordion.Title>
+        <Accordion.Content as={Menu.Menu}>
+          <Menu.Item link content="Analytics" icon="timeline" />
+          <Menu.Item link content="Lists" icon="view list" />
+        </Accordion.Content>
+      </Menu.Item>
+      <Menu.Item link content="Reports" icon="assignment" />
+    </Menu>
+  ))
+  .add('open', () => (
+    <Menu as={Accordion} className="blue" vertical>
+      <Menu.Item link content="Home" icon="home" active />
+      <Menu.Item link>
+        <Accordion.Title active>
+          <Icon name="place" />
+          <span>Places</span>
+          <Icon name="keyboard arrow down" />
+        </Accordion.Title>
+        <Accordion.Content as={Menu.Menu} active>
+          <Menu.Item link content="Analytics" icon="timeline" />
+          <Menu.Item link content="Lists" icon="view list" />
+        </Accordion.Content>
+      </Menu.Item>
+      <Menu.Item link content="Reports" icon="assignment" />
+    </Menu>
+  ))
+  .add('open selected', () => (
+    <Menu as={Accordion} className="blue" vertical>
+      <Menu.Item link content="Home" icon="home" />
+      <Menu.Item link active>
+        <Accordion.Title active>
+          <Icon name="place" />
+          <span>Places</span>
+          <Icon name="keyboard arrow down" />
+        </Accordion.Title>
+        <Accordion.Content as={Menu.Menu} active>
+          <Menu.Item link content="Analytics" icon="timeline" active />
+          <Menu.Item link content="Lists" icon="view list" />
+        </Accordion.Content>
+      </Menu.Item>
+      <Menu.Item link content="Reports" icon="assignment" />
+    </Menu>
+  ))
+  .add('closed selected', () => (
+    <Menu as={Accordion} className="blue" vertical>
+      <Menu.Item link content="Home" icon="home" />
+      <Menu.Item link active>
+        <Accordion.Title>
+          <Icon name="place" />
+          <span>Places</span>
+          <Icon name="keyboard arrow down" />
+        </Accordion.Title>
+        <Accordion.Content as={Menu.Menu}>
+          <Menu.Item link content="Analytics" icon="timeline" active />
+          <Menu.Item link content="Lists" icon="view list" />
+        </Accordion.Content>
+      </Menu.Item>
       <Menu.Item link content="Reports" icon="assignment" />
     </Menu>
   ))
