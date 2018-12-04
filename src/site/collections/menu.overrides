@@ -170,6 +170,7 @@
 
   &.active {
     border-radius: 3px;
+    color: @textColor !important;
   }
 
   &.header {
