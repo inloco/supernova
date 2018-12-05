@@ -16,6 +16,8 @@
 @hoverItemBackground: fade(@n600, 4%);
 @activeHoverItemBackground: fade(@n600, 4%);
 
+@pressedItemBackground: @hoverItemBackground;
+
 @activeItemBackground: fade(@n600, 8%);
 
 @iconWidth: 24px;
