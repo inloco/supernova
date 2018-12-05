@@ -4,6 +4,27 @@ import { storiesOf } from '@storybook/react'
 import { Layout } from '../../components'
 
 storiesOf('Layout', module)
-  .add('basic', () => (
-    <Layout />
+  .add('blue', () => (
+    <Layout color="blue">
+      <Layout.Sidebar>
+        <Layout.SidebarItem content="Home" icon="home" active />
+        <Layout.SidebarItem content="Reports" icon="assignment" />
+      </Layout.Sidebar>
+    </Layout>
+  ))
+  .add('pink', () => (
+    <Layout color="pink">
+      <Layout.Sidebar>
+        <Layout.SidebarItem content="Home" icon="home" active />
+        <Layout.SidebarItem content="Reports" icon="assignment" />
+      </Layout.Sidebar>
+    </Layout>
+  ))
+  .add('green', () => (
+    <Layout color="green">
+      <Layout.Sidebar>
+        <Layout.SidebarItem content="Home" icon="home" active />
+        <Layout.SidebarItem content="Reports" icon="assignment" />
+      </Layout.Sidebar>
+    </Layout>
   ))
