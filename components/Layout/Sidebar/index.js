@@ -3,8 +3,6 @@ import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import { Accordion, Menu } from 'semantic-ui-react'
 
-import './Sidebar.css'
-
 /**
  * Exemplo de uso:
  *

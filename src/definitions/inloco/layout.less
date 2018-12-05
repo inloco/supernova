@@ -1,0 +1,45 @@
+/*******************************
+            Layout
+*******************************/
+
+/*******************************
+            Theme
+*******************************/
+
+@type : 'collection';
+@element : 'menu';
+
+@import (multiple) '../../theme.config';
+
+/*--------------
+    Layout
+---------------*/
+
+.inloco-layout {
+  height: 100vh;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+}
+
+/*--------------
+    Layout Sidebar
+---------------*/
+
+.inloco-layout__sidebar.ui.vertical.menu {
+  height: 100%;
+
+  .item.header {
+    margin-bottom: 13px;
+    opacity: 1;
+
+    i.icon {
+      cursor: pointer;
+
+      &:hover {
+        background-color: fade(@n600, 4%);
+      }
+    }
+  }
+}
