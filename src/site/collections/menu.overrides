@@ -2,11 +2,24 @@
          Site Overrides
 *******************************/
 
+.ui.menu .item > i.dropdown.icon {
+  align-items: center;
+  display: flex;
+  font-size: 20px;
+  height: @iconWidth;
+  width: @iconWidth;
+}
+
+.ui.menu .right.menu .item {
+  padding-right: 20px;
+}
+
 /*--------------
     Both basic and secondary pointing Menu components
 ---------------*/
 
 .ui.pointing.menu {
+  color: @gray800;
   margin: 0;
   border: 0;
   border-bottom: 2px solid @gray300;
@@ -19,11 +32,13 @@
 .ui.secondary.pointing.menu .item {
   line-height: 20px;
   font-size: 14px;
+  font-weight: 500;
   align-self: flex-start;
 }
 
 .ui.pointing.menu .active.item {
   color: @n600;
+  font-weight: 500;
 }
 
 .ui.pointing.menu .active.item:after,
