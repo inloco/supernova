@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 
 import LayoutSidebar from './Sidebar'
 import LayoutSidebarItem from './Sidebar/Item'
+import LayoutTopbar from './Topbar'
 
 /**
  * Exemplo de uso:
@@ -45,6 +46,7 @@ class Layout extends Component {
 
   static Sidebar = LayoutSidebar
   static SidebarItem = LayoutSidebarItem
+  static Topbar = LayoutTopbar
 
   render() {
     const { children, color } = this.props

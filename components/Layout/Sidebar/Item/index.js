@@ -6,12 +6,18 @@ import { Menu } from 'semantic-ui-react'
 
 class SidebarItem extends Component {
   static propTypes = {
-    title: PropTypes.string.isRequired
+    expanded: PropTypes.bool
   }
 
   render() {
+    const { content, expanded, ...otherProps } = this.props
     return (
-      <Menu.Item className="inloco-layout__sidebar-item" link {...this.props} />
+      <Menu.Item
+        className="inloco-layout__sidebar-item"
+        link
+        content={expanded ? content : null}
+        {...otherProps}
+      />
     )
   }
 }

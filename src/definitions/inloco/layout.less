@@ -16,10 +16,6 @@
 ---------------*/
 
 .inloco-layout {
-  height: 100vh;
-  left: 0;
-  position: absolute;
-  top: 0;
   width: 100vw;
 }
 
@@ -28,18 +24,38 @@
 ---------------*/
 
 .inloco-layout__sidebar.ui.vertical.menu {
-  height: 100%;
+  height: 100vh;
+  left: 0;
+  position: absolute;
+  top: 0;
 
   .item.header {
     margin-bottom: 13px;
     opacity: 1;
+    padding: 8px 0;
 
     i.icon {
+      align-items: center;
+      border-radius: 16px;
       cursor: pointer;
+      display: flex;
+      height: 32px;
+      margin: 0 4px 0 8px;
+      width: 32px;
 
       &:hover {
         background-color: fade(@n600, 4%);
       }
     }
   }
+}
+
+/*--------------
+    Layout Topbar
+---------------*/
+
+.inloco-layout__topbar.ui.menu {
+  border: none;
+  border-radius: 0;
+  margin: 0 0 0 64px;
 }
