@@ -3,27 +3,6 @@ import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import { Accordion, Icon, Menu } from 'semantic-ui-react'
 
-/**
- * Exemplo de uso:
- *
- *  <Layout.Sidebar>
- *    <Layout.SidebarItem
- *      as={Link}
- *      icon={icon}
- *      content={content}
- *      active={active}
- *      to={href}
- *    />
- *    <Layout.Divider />
- *    <Layout.SidebarSubMenu
- *      icon={icon}
- *      content={content}
- *      active={active}
- *      items={subMenuItems}
- *    />
- *  </Layout.Sidebar>
- *
- */
 class Sidebar extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,

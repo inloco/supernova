@@ -1,7 +1,8 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import { Layout } from '../../components'
+import { Dropdown, Layout, Menu } from '../../components'
+import engage from './images/engage.svg'
 
 import './layoutStory.css'
 
@@ -12,7 +13,16 @@ storiesOf('Layout', module)
         <Layout.SidebarItem content="Home" icon="home" active />
         <Layout.SidebarItem content="Reports" icon="assignment" />
       </Layout.Sidebar>
-      <Layout.Topbar />
+      <Layout.Topbar logo={<img src={engage} />}>
+        <Menu.Menu position="right">
+          <Dropdown item text="Maira Bello">
+            <Dropdown.Menu>
+              <Dropdown.Item text="Account" />
+              <Dropdown.Item text="Logout" />
+            </Dropdown.Menu>
+          </Dropdown>
+        </Menu.Menu>
+      </Layout.Topbar>
     </Layout>
   ))
   .add('pink', () => (
@@ -21,7 +31,16 @@ storiesOf('Layout', module)
         <Layout.SidebarItem content="Home" icon="home" active />
         <Layout.SidebarItem content="Reports" icon="assignment" />
       </Layout.Sidebar>
-      <Layout.Topbar />
+      <Layout.Topbar logo={<img src={engage} />}>
+        <Menu.Menu position="right">
+          <Dropdown item text="Maira Bello">
+            <Dropdown.Menu>
+              <Dropdown.Item text="Account" />
+              <Dropdown.Item text="Logout" />
+            </Dropdown.Menu>
+          </Dropdown>
+        </Menu.Menu>
+      </Layout.Topbar>
     </Layout>
   ))
   .add('green', () => (
@@ -30,6 +49,15 @@ storiesOf('Layout', module)
         <Layout.SidebarItem content="Home" icon="home" active />
         <Layout.SidebarItem content="Reports" icon="assignment" />
       </Layout.Sidebar>
-      <Layout.Topbar />
+      <Layout.Topbar logo={<img src={engage} />}>
+        <Menu.Menu position="right">
+          <Dropdown item text="Maira Bello">
+            <Dropdown.Menu>
+              <Dropdown.Item text="Account" />
+              <Dropdown.Item text="Logout" />
+            </Dropdown.Menu>
+          </Dropdown>
+        </Menu.Menu>
+      </Layout.Topbar>
     </Layout>
   ))

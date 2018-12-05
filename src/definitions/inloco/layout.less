@@ -26,11 +26,12 @@
 .inloco-layout__sidebar.ui.vertical.menu {
   height: 100vh;
   left: 0;
+  margin: 0;
   position: absolute;
   top: 0;
 
   .item.header {
-    margin-bottom: 13px;
+    margin-bottom: 28px;
     opacity: 1;
     padding: 8px 0;
 
@@ -57,5 +58,12 @@
 .inloco-layout__topbar.ui.menu {
   border: none;
   border-radius: 0;
+  box-shadow: 0 2px 3px -2px fade(@n600, 5%);
+  height: 64px;
   margin: 0 0 0 64px;
+}
+
+.inloco-layout__topbar-logo {
+  display: flex;
+  margin-left: 30px;
 }

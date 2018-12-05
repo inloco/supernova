@@ -6,7 +6,10 @@ import LayoutSidebarItem from './Sidebar/Item'
 import LayoutTopbar from './Topbar'
 
 /**
- * Exemplo de uso:
+ * TODO: Remove this block once everything is ready and the story file is
+ * the full example.
+ *
+ * Usage example:
  *
  * <Layout color={color}>
  *  <Layout.Topbar logo={logo}>
