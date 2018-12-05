@@ -4,11 +4,25 @@
 
 @minHeight: 38px;
 @itemTextColor: @gray800;
+@hoverItemTextColor: @textColor;
 @itemFontWeight: 500;
 @activeItemFontWeight: @itemFontWeight;
 
+@borderRadius: 3px;
+
 @itemVerticalPadding: 8px;
 @itemHorizontalPadding: 32px;
+
+@hoverItemBackground: fade(@n600, 4%);
+@activeHoverItemBackground: fade(@n600, 4%);
+
+@pressedItemBackground: @hoverItemBackground;
+
+@activeItemBackground: fade(@n600, 8%);
+
+@iconWidth: 24px;
+
+@headerWeight: 400;
 
 @secondaryPointingActiveFontWeight: @itemFontWeight;
 @secondaryPointingItemVerticalPadding: 8px;
@@ -20,3 +34,12 @@
 @secondaryPointingPaginationItemBackground: transparent;
 @secondaryPointingPaginationItemBackgroundHover: fade(@n600, 8%);
 @secondaryPointingPaginationItemBackgroundActive: fade(@n600, 12%);
+
+/*--------------
+    Vertical Menu
+---------------*/
+
+@verticalBoxShadow: @z300BoxShadow;
+
+@verticalIconFloat: none;
+@verticalIconMargin: 0;

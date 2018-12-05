@@ -145,3 +145,60 @@
   height: 2px;
   transform: translateY(-5px) translateX(-50%);
 }
+
+/*--------------
+    Vertical Menu
+---------------*/
+
+.ui.vertical.menu {
+  border: none;
+  padding: 8px;
+}
+
+.ui.vertical.menu .item {
+  align-items: center;
+  border-radius: 3px;
+  color: @textColor;
+  display: flex;
+  font-weight: 400;
+  margin-bottom: 8px;
+  padding: 12px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &.active {
+    border-radius: 3px;
+    color: @textColor !important;
+  }
+
+  &.header {
+    color: fade(@gray800, 88%);
+    font-size: 12px;
+    opacity: 0.5;
+
+    &:hover {
+      background-color: @gray00;
+      cursor: default;
+    }
+  }
+}
+
+.ui.vertical.menu .item > i.icon {
+  color: @gray600;
+  font-size: 20px;
+  margin-right: 8px;
+}
+
+.ui.blue.vertical.menu .active.item > i.icon {
+  color: @blue;
+}
+
+.ui.pink.vertical.menu .active.item > i.icon {
+  color: @pink;
+}
+
+.ui.green.vertical.menu .active.item > i.icon {
+  color: @green;
+}
