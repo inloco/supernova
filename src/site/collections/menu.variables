@@ -37,7 +37,7 @@
     Vertical Menu
 ---------------*/
 
-@verticalBoxShadow: 0 8px 10px 0 fade(@n600, 20%);
+@verticalBoxShadow: @z300BoxShadow;
 
 @verticalIconFloat: none;
 @verticalIconMargin: 0;
