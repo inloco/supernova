@@ -1,3 +1,8 @@
 #root {
   margin: 0 !important;
 }
+
+.layout-story .ui.placeholder .line,
+.layout-story .ui.placeholder .paragraph:before {
+  background-color: #fafbfc;
+}

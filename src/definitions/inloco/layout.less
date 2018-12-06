@@ -16,6 +16,9 @@
 ---------------*/
 
 .inloco-layout {
+  background-color: @gray50;
+  max-height: 100vh;
+  overflow-y: auto;
   width: 100vw;
 }
 
@@ -66,4 +69,35 @@
 .inloco-layout__topbar-logo {
   display: flex;
   margin-left: 30px;
+}
+
+/*--------------
+    Layout Main
+---------------*/
+
+.inloco-layout__main {
+  margin: 0 32px 0 96px;
+}
+
+/*--------------
+    Layout Header
+---------------*/
+
+.inloco-layout__header {
+  display: flex;
+  justify-content: space-between;
+  margin: 32px 0;
+}
+
+.inloco-layout__header-title {
+  color: @gray800;
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+}
+
+.inloco-layout__header-controls {
+  > :not(:first-child) {
+    margin-left: 16px;
+  }
 }
