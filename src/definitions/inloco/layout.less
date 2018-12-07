@@ -116,15 +116,37 @@
 ---------------*/
 
 .inloco-layout__header {
+  align-items: flex-end;
   display: flex;
+  height: 38px;
   justify-content: space-between;
   margin: 32px 0;
+  position: relative;
+
+  .ui.breadcrumb {
+    align-items: center;
+    display: flex;
+    left: 0;
+    position: absolute;
+    top: 0;
+
+    i.icon {
+      color: @gray600;
+      margin-left: -4px;
+    }
+
+    .section {
+      color: fade(@gray800, 88%);
+      font-size: 12px;
+    }
+  }
 }
 
 .inloco-layout__header-title {
   color: @gray800;
   font-size: 24px;
   font-weight: 300;
+  height: 24px;
   letter-spacing: 0.3px;
 }
 
