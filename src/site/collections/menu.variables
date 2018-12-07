@@ -22,6 +22,8 @@
 
 @iconWidth: 24px;
 
+@headerBackground: @gray00;
+@headerTextTransform: none;
 @headerWeight: 400;
 
 @secondaryPointingActiveFontWeight: @itemFontWeight;
@@ -41,8 +43,28 @@
 
 @verticalBoxShadow: @z300BoxShadow;
 
+@verticalHeaderColor: fade(@gray800, 88%);
+@verticalHeaderFontSize: 12px;
+
 @verticalIconFloat: none;
 @verticalIconMargin: 0;
 
 @subMenuFontSize: 14px;
 @subMenuTextColor: @textColor;
+
+/*--------------
+    Dropdown Sub Menu
+---------------*/
+
+@dropdownMenuDistance: 12px;
+
+@dropdownItemPadding: 8px 12px;
+@dropdownItemFontSize: 14px;
+@dropdownItemIconFontSize: 20px;
+
+@dropdownActiveItemBackground: @activeItemBackground;
+@dropdownActiveItemFontWeight: 400;
+@dropdownActiveItemColor: @textColor;
+
+@dropdownHoveredItemBackground: @hoverItemBackground;
+@dropdownHoveredItemColor: @textColor;

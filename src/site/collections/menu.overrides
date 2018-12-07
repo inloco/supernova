@@ -176,12 +176,12 @@
   }
 
   &.header {
-    color: fade(@gray800, 88%);
+    color: @verticalHeaderColor;
     font-size: 12px;
     opacity: 0.5;
 
     &:hover {
-      background-color: @gray00;
+      background-color: @headerBackground;
       cursor: default;
     }
   }
@@ -201,18 +201,29 @@
 }
 
 .ui.blue.vertical.menu .active.item > i.icon:first-child,
-.ui.blue.vertical.menu .active.item .title > i.icon:first-child {
+.ui.blue.vertical.menu .active.item .title > i.icon:first-child,
+.ui.blue.vertical.menu .activeSubMenu.item > i.icon {
   color: @blue;
 }
 
 .ui.pink.vertical.menu .active.item > i.icon:first-child,
-.ui.pink.vertical.menu .active.item .title > i.icon:first-child {
+.ui.pink.vertical.menu .active.item .title > i.icon:first-child,
+.ui.pink.vertical.menu .activeSubMenu.item > i.icon {
   color: @pink;
 }
 
 .ui.green.vertical.menu .active.item > i.icon:first-child,
-.ui.green.vertical.menu .active.item .title > i.icon:first-child {
+.ui.green.vertical.menu .active.item .title > i.icon:first-child,
+.ui.green.vertical.menu .activeSubMenu.item > i.icon {
   color: @green;
+}
+
+.ui.vertical.icon.menu .icon.item {
+  padding: 12px 12px;
+
+  i.icon {
+    height: @iconWidth;
+  }
 }
 
 /*--------------
@@ -270,5 +281,53 @@
         }
       }
     }
+  }
+}
+
+/*--------------
+    Vertical Dropdown Menu
+---------------*/
+
+.ui.vertical.menu .dropdown.item {
+  i.icon {
+    margin-left: 12px;
+    order: 1;
+  }
+
+  .text {
+    order: 2;
+  }
+
+  &.activeSubMenu {
+    background-color: @activeItemBackground;
+  }
+
+  &.active {
+    background-color: fade(@n600, 12%);
+  }
+}
+
+.ui.vertical.menu .ui.dropdown.item > .menu {
+  min-width: 143px;
+  padding: 4px 0 8px;
+
+  .item {
+    align-items: center;
+    display: flex;
+
+    i.icon {
+      align-items: center;
+      display: flex;
+      height: @iconWidth;
+    }
+  }
+
+  .header {
+    background-color: @headerBackground;
+    color: @verticalHeaderColor;
+    font-size: @verticalHeaderFontSize;
+    line-height: 14px;
+    opacity: 0.5;
+    text-transform: @headerTextTransform;
   }
 }
