@@ -3,9 +3,9 @@
 *******************************/
 
 @minHeight: 38px;
-@itemTextColor: @gray800;
+@itemTextColor: @textColor;
 @hoverItemTextColor: @textColor;
-@itemFontWeight: 500;
+@itemFontWeight: 400;
 @activeItemFontWeight: @itemFontWeight;
 
 @borderRadius: 3px;
@@ -21,6 +21,8 @@
 @activeItemBackground: fade(@n600, 8%);
 
 @iconWidth: 24px;
+
+@dropdownIconDistance: 4px;
 
 @headerBackground: @gray00;
 @headerTextTransform: none;
