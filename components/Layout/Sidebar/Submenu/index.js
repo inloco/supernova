@@ -10,7 +10,7 @@ class SidebarSubmenu extends Component {
   static propTypes = {
     className: PropTypes.string,
     content: PropTypes.node.isRequired,
-    icon: PropTypes.string,
+    icon: PropTypes.string.isRequired,
     expanded: PropTypes.bool
   }
 

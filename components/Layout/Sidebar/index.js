@@ -7,6 +7,7 @@ class Sidebar extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
     color: PropTypes.string,
+    expanded: PropTypes.bool.isRequired,
     headerTitle: PropTypes.string
   }
 

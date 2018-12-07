@@ -29,6 +29,7 @@
 
 .inloco-layout__sidebar.ui.vertical.menu {
   border-radius: 0;
+  display: flex;
   grid-area: sidebar;
   height: 100vh;
   left: 0;
@@ -58,8 +59,26 @@
   }
 
   .ui.divider {
-    margin-left: -8px;
-    margin-right: -8px;
+    margin: 8px -8px 16px -8px;
+  }
+}
+
+.inloco-layout__sidebar-footer {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.inloco-layout__sidebar.ui.vertical.menu {
+  .inloco-layout__sidebar-footer {
+    .inloco-layout__sidebar-submenu-accordion.item {
+      flex-direction: column-reverse;
+
+      .menu.content {
+        margin: 0 0 12px;
+      }
+    }
   }
 }
 

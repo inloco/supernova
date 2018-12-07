@@ -23,6 +23,12 @@ const StoryLayout = props => (
         <Layout.SidebarItem content="Analytics" icon="timeline" />
         <Layout.SidebarItem content="Lists" icon="view list" />
       </Layout.SidebarSubmenu>
+      <Layout.SidebarFooter>
+        <Layout.SidebarSubmenu content="Help" icon="help">
+          <Layout.SidebarItem content="About" icon="help" />
+          <Layout.SidebarItem content="Documentation" icon="help" />
+        </Layout.SidebarSubmenu>
+      </Layout.SidebarFooter>
     </Layout.Sidebar>
     <Layout.Topbar logo={<img src={engage} />}>
       <Menu.Menu position="right">

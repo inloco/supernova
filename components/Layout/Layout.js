@@ -5,6 +5,7 @@ import React, { Component } from 'react'
 import LayoutSidebar from './Sidebar'
 import LayoutSidebarItem from './Sidebar/Item'
 import LayoutSidebarSubmenu from './Sidebar/Submenu'
+import LayoutSidebarFooter from './Sidebar/Footer'
 import LayoutTopbar from './Topbar'
 import LayoutMain from './Main'
 import LayoutHeader from './Main/Header'
@@ -22,6 +23,7 @@ class Layout extends Component {
   static Sidebar = LayoutSidebar
   static SidebarItem = LayoutSidebarItem
   static SidebarSubmenu = LayoutSidebarSubmenu
+  static SidebarFooter = LayoutSidebarFooter
   static Topbar = LayoutTopbar
   static Main = LayoutMain
   static Header = LayoutHeader
