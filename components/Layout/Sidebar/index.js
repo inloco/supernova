@@ -35,11 +35,11 @@ class Sidebar extends Component {
             React.cloneElement(child, { expanded })
           )}
         </Menu>
-        {/* <Dimmer
+        <Dimmer
           className="inloco-layout__sidebar-dimmer"
           active={expanded}
           page
-        /> */}
+        />
       </React.Fragment>
     )
   }

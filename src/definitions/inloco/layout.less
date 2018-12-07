@@ -28,12 +28,14 @@
 ---------------*/
 
 .inloco-layout__sidebar.ui.vertical.menu {
+  border-radius: 0;
   grid-area: sidebar;
   height: 100vh;
   left: 0;
   margin: 0;
-  position: absolute;
+  position: fixed;
   top: 0;
+  z-index: @dimmerZIndex + 1;
 
   .item.header {
     margin-bottom: 28px;
