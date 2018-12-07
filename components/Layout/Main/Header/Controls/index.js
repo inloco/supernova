@@ -1,4 +1,4 @@
-import classNames from 'classnames'
+import cx from 'classnames'
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 
@@ -10,10 +10,9 @@ class HeaderControls extends Component {
 
   render() {
     const { children, className, ...otherProps } = this.props
+    const classes = cx('inloco-layout__header-controls', className)
     return (
-      <div
-        className={classNames('inloco-layout__header-controls', className)}
-        {...otherProps}>
+      <div className={classes} {...otherProps}>
         {children}
       </div>
     )

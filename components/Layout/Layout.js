@@ -1,4 +1,4 @@
-import classNames from 'classnames'
+import cx from 'classnames'
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 
@@ -63,8 +63,9 @@ class Layout extends Component {
 
   render() {
     const { children, className, color, ...otherProps } = this.props
+    const classes = cx('inloco-layout', className)
     return (
-      <div className={classNames('inloco-layout', className)} {...otherProps}>
+      <div className={classes} {...otherProps}>
         {React.Children.map(children, child =>
           React.cloneElement(child, { color })
         )}

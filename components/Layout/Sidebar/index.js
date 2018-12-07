@@ -1,4 +1,4 @@
-import classNames from 'classnames'
+import cx from 'classnames'
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import { Accordion, Icon, Menu } from 'semantic-ui-react'
@@ -22,7 +22,7 @@ class Sidebar extends Component {
     const { children, color, headerTitle } = this.props
     const { expanded } = this.state
 
-    const classes = classNames('inloco-layout__sidebar', color, { expanded })
+    const classes = cx('inloco-layout__sidebar', color, { expanded })
     const headerIcon = expanded ? 'close' : 'menu'
     return (
       <Menu as={Accordion} className={classes} vertical icon={!expanded}>
