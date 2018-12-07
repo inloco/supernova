@@ -140,8 +140,6 @@
     Depths
 --------------------*/
 
-@dimmerZIndex: 2000;
-
 @z200BoxShadow: 0 4px 16px -1px fade(@n600, 16%);
 @z300BoxShadow: 0 8px 10px -4px fade(@n600, 20%);
 @z400BoxShadow: 0 16px 24px -6px fade(@n600, 20%);
