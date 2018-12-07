@@ -350,3 +350,13 @@
     text-transform: @headerTextTransform;
   }
 }
+
+/*--------------
+    Divider
+---------------*/
+
+.ui.menu .ui.divider {
+  border-bottom: 0;
+  border-color: fade(@n600, 8%);
+  margin: 16px 0;
+}
