@@ -148,9 +148,14 @@
   font-weight: 300;
   height: 24px;
   letter-spacing: 0.3px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .inloco-layout__header-controls {
+  flex-shrink: 0;
+
   > :not(:first-child) {
     margin-left: 16px;
   }
