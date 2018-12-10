@@ -128,7 +128,6 @@
     display: flex;
     left: 0;
     margin-left: -6px;
-    padding: 2px 6px;
     position: absolute;
     top: 0;
 
@@ -138,12 +137,16 @@
     }
 
     .section {
+      align-items: center;
+      display: flex;
       font-size: 12px;
-    }
+      height: 20px;
+      padding: 2px 6px;
 
-    &:hover {
-      background-color: fade(@n600, 8%);
-      border-radius: 3px;
+      &:hover {
+        background-color: fade(@n600, 8%);
+        border-radius: 3px;
+      }
     }
   }
 }

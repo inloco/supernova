@@ -45,8 +45,12 @@ const StoryLayout = props => (
     <Layout.Main>
       <Layout.Header>
         <Breadcrumb>
-          <Icon className="chevron left" />
-          <Breadcrumb.Section link>Previous section</Breadcrumb.Section>
+          <Breadcrumb.Section link>
+            <Icon className="chevron left" />
+            Previous section
+          </Breadcrumb.Section>
+          <Breadcrumb.Divider>/</Breadcrumb.Divider>
+          <Breadcrumb.Section link>Previous section 2</Breadcrumb.Section>
         </Breadcrumb>
         <Layout.HeaderTitle>Home Title</Layout.HeaderTitle>
         <Layout.HeaderControls>
