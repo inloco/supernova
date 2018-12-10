@@ -104,7 +104,7 @@
   box-shadow: 0 2px 3px -2px fade(@n600, 5%);
   grid-area: topbar;
   height: 64px;
-  margin: 0 0 0 64px;
+  margin: 0 0 20px 64px;
 }
 
 .inloco-layout__topbar-logo {
@@ -116,21 +116,33 @@
     Layout Main
 ---------------*/
 
+@headerHeight: 52px;
+@headerBottomMargin: 30px;
+
 .inloco-layout__main {
   grid-area: main;
   margin: 0 32px 0 96px;
+
+  .ui.fixed.sticky {
+    background-color: @gray50;
+  }
+
+  .ui.stuck-container {
+    height: @headerHeight + @headerBottomMargin;
+  }
 }
 
 /*--------------
-    Layout Header
+    Layout Main Header
 ---------------*/
 
 .inloco-layout__header {
   align-items: flex-end;
   display: flex;
-  height: 42px;
+  height: @headerHeight;
   justify-content: space-between;
-  margin: 30px 0;
+  margin: 0 0 @headerBottomMargin;
+  padding-top: 10px;
   position: relative;
 
   .ui.breadcrumb {
@@ -139,7 +151,7 @@
     left: 0;
     margin-left: -6px;
     position: absolute;
-    top: 0;
+    top: 10px;
 
     i.icon {
       color: @gray600;

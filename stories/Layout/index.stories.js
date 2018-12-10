@@ -89,6 +89,18 @@ const StoryLayout = props => (
           <Placeholder.Line />
           <Placeholder.Line />
         </Placeholder.Paragraph>
+        <Placeholder.Paragraph>
+          <Placeholder.Line />
+          <Placeholder.Line />
+          <Placeholder.Line />
+          <Placeholder.Line />
+        </Placeholder.Paragraph>
+        <Placeholder.Paragraph>
+          <Placeholder.Line />
+          <Placeholder.Line />
+          <Placeholder.Line />
+          <Placeholder.Line />
+        </Placeholder.Paragraph>
       </Placeholder>
     </Layout.Main>
   </Layout>
