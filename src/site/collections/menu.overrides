@@ -199,6 +199,10 @@
       background-color: @headerBackground;
       cursor: default;
     }
+
+    i.icon {
+      height: @iconWidth;
+    }
   }
 }
 

@@ -68,7 +68,8 @@
     "api",
     "form",
     "state",
-    "visibility"
+    "visibility",
+    "layout"
   ],
   "version": "2.4.2"
 }
