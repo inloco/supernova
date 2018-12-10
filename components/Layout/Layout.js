@@ -50,7 +50,8 @@ class Layout extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
     className: PropTypes.string,
-    color: PropTypes.string
+    color: PropTypes.string,
+    noSidebar: PropTypes.bool
   }
 
   static Sidebar = LayoutSidebar
@@ -62,8 +63,8 @@ class Layout extends Component {
   static HeaderControls = LayoutHeaderControls
 
   render() {
-    const { children, className, color, ...otherProps } = this.props
-    const classes = cx('inloco-layout', className)
+    const { children, className, color, noSidebar, ...otherProps } = this.props
+    const classes = cx('inloco-layout', className, { noSidebar })
     return (
       <div className={classes} {...otherProps}>
         {React.Children.map(children, child =>

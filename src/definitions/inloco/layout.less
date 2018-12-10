@@ -17,13 +17,9 @@
 
 .inloco-layout {
   background-color: @gray50;
-  display: grid;
-  grid-template:
-    'sidebar topbar' 64px
-    'sidebar main'
-    / 64px;
   max-height: 100vh;
   overflow-y: auto;
+  position: relative;
   width: 100vw;
 }
 
@@ -32,12 +28,14 @@
 ---------------*/
 
 .inloco-layout__sidebar.ui.vertical.menu {
+  border-radius: 0;
   grid-area: sidebar;
   height: 100vh;
   left: 0;
   margin: 0;
-  position: absolute;
+  position: fixed;
   top: 0;
+  z-index: 1001;
 
   .item.header {
     margin-bottom: 28px;
@@ -70,7 +68,7 @@
   box-shadow: 0 2px 3px -2px fade(@n600, 5%);
   grid-area: topbar;
   height: 64px;
-  margin: 0;
+  margin: 0 0 0 64px;
 }
 
 .inloco-layout__topbar-logo {
@@ -84,7 +82,7 @@
 
 .inloco-layout__main {
   grid-area: main;
-  margin: 0 32px;
+  margin: 0 32px 0 96px;
 }
 
 /*--------------
@@ -107,5 +105,23 @@
 .inloco-layout__header-controls {
   > :not(:first-child) {
     margin-left: 16px;
+  }
+}
+
+/*--------------
+    Layout No Sidebar
+---------------*/
+
+.inloco-layout.noSidebar {
+  .inloco-layout__sidebar.ui.vertical.menu {
+    display: none;
+  }
+
+  .inloco-layout__topbar {
+    margin-left: 0;
+  }
+
+  .inloco-layout__main {
+    margin-left: 32px;
   }
 }
