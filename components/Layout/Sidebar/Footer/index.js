@@ -7,7 +7,7 @@ class Footer extends Component {
   static propTypes = {
     className: PropTypes.string,
     children: PropTypes.node.isRequired,
-    expanded: PropTypes.bool.isRequired
+    expanded: PropTypes.bool
   }
 
   render() {
