@@ -1,7 +1,14 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import { Button, Dropdown, Layout, Menu, Placeholder } from '../../components'
+import {
+  Button,
+  Divider,
+  Dropdown,
+  Layout,
+  Menu,
+  Placeholder
+} from '../../components'
 import engage from './images/engage.svg'
 
 import './layoutStory.css'
@@ -11,10 +18,17 @@ const StoryLayout = props => (
     <Layout.Sidebar>
       <Layout.SidebarItem content="Home" icon="home" active />
       <Layout.SidebarItem content="Reports" icon="assignment" />
+      <Divider />
       <Layout.SidebarSubmenu content="Places" icon="place">
         <Layout.SidebarItem content="Analytics" icon="timeline" />
         <Layout.SidebarItem content="Lists" icon="view list" />
       </Layout.SidebarSubmenu>
+      <Layout.SidebarFooter>
+        <Layout.SidebarSubmenu content="Help" icon="help">
+          <Layout.SidebarItem content="About" icon="help" />
+          <Layout.SidebarItem content="Documentation" icon="help" />
+        </Layout.SidebarSubmenu>
+      </Layout.SidebarFooter>
     </Layout.Sidebar>
     <Layout.Topbar logo={<img src={engage} />}>
       <Menu.Menu position="right">
