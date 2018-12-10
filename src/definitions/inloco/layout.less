@@ -76,6 +76,16 @@
   .inloco-layout__sidebar-footer {
     .inloco-layout__sidebar-submenu-accordion.item {
       flex-direction: column-reverse;
+      padding: 0;
+      margin: 12px 0;
+
+      &:hover {
+        background-color: transparent;
+
+        .title {
+          background-color: fade(@n600, 4%);
+        }
+      }
 
       .menu.content {
         margin: 0 0 12px;
