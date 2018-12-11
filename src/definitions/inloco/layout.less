@@ -28,6 +28,7 @@
 ---------------*/
 
 .inloco-layout__sidebar.ui.vertical.menu {
+  background-color: @gray00;
   border-right: 1px solid fade(@n600, 7%);
   border-radius: 0;
   box-shadow: 2px 0 3px -2px fade(@n600, 5%);
@@ -36,14 +37,20 @@
   height: 100vh;
   left: 0;
   margin: 0;
+  overflow-y: auto;
+  padding-top: 86px;
   position: fixed;
   top: 0;
   z-index: @dimmerZIndex + 1;
 
   .item.header {
-    margin-bottom: 28px;
+    left: 0;
+    margin-bottom: 20px;
     opacity: 1;
-    padding: 8px 0;
+    padding: 16px 8px;
+    position: fixed;
+    top: 0;
+    z-index: @dimmerZIndex + 1;
 
     i.icon {
       align-items: center;
@@ -67,7 +74,7 @@
 
 .inloco-layout__sidebar-footer {
   display: flex;
-  flex: 1;
+  flex: 1 0 48px;
   flex-direction: column;
   justify-content: flex-end;
 }
