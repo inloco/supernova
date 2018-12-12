@@ -8,7 +8,8 @@ class SidebarItem extends Component {
   static propTypes = {
     className: PropTypes.string,
     dropdown: PropTypes.bool,
-    expanded: PropTypes.bool
+    expanded: PropTypes.bool,
+    icon: PropTypes.string
   }
 
   static defaultProps = {
@@ -16,7 +17,14 @@ class SidebarItem extends Component {
   }
 
   render() {
-    const { className, content, dropdown, expanded, ...otherProps } = this.props
+    const {
+      className,
+      content,
+      dropdown,
+      expanded,
+      icon,
+      ...otherProps
+    } = this.props
     const classes = cx('inloco-layout__sidebar-item', className)
 
     if (dropdown) {
@@ -30,6 +38,7 @@ class SidebarItem extends Component {
         className={classes}
         link
         content={expanded ? content : null}
+        icon={icon ? { className: icon } : null}
         {...otherProps}
       />
     )

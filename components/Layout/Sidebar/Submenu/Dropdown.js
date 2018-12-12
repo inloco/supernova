@@ -25,7 +25,11 @@ class SidebarSubmenuDropdown extends Component {
       activeSubMenu: active
     })
     return (
-      <Dropdown className={classes} item icon={icon} {...otherProps}>
+      <Dropdown
+        className={classes}
+        item
+        icon={{ className: icon }}
+        {...otherProps}>
         <Dropdown.Menu>
           <Dropdown.Header content={content} />
           {React.Children.map(children, child =>
