@@ -122,3 +122,20 @@ storiesOf('Menu/Vertical/SubMenus/Internal', module)
       <Menu.Item link content="Reports" icon="assignment" />
     </Menu>
   ))
+  .add('open with no icons on subitems', () => (
+    <Menu as={Accordion} className="blue" vertical>
+      <Menu.Item link content="Home" icon="home" active />
+      <Menu.Item link>
+        <Accordion.Title active>
+          <Icon name="place" />
+          <span>Places</span>
+          <Icon name="keyboard arrow down" />
+        </Accordion.Title>
+        <Accordion.Content as={Menu.Menu} active>
+          <Menu.Item link content="Analytics" />
+          <Menu.Item link content="Lists" />
+        </Accordion.Content>
+      </Menu.Item>
+      <Menu.Item link content="Reports" icon="assignment" />
+    </Menu>
+  ))

@@ -42,3 +42,16 @@ storiesOf('Menu/Vertical/SubMenus/Lateral', module)
       <Menu.Item link content="Reports" icon="assignment" />
     </Menu>
   ))
+  .add('no icons on subitems', () => (
+    <Menu className="blue" vertical>
+      <Menu.Item link content="Home" icon="home" active />
+      <Dropdown item text="Places" icon="place">
+        <Dropdown.Menu>
+          <Dropdown.Header content="Places" />
+          <Dropdown.Item text="Analytics" />
+          <Dropdown.Item text="Lists" />
+        </Dropdown.Menu>
+      </Dropdown>
+      <Menu.Item link content="Reports" icon="assignment" />
+    </Menu>
+  ))

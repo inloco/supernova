@@ -27,8 +27,8 @@ const StoryLayout = props => (
       </Layout.SidebarSubmenu>
       <Layout.SidebarFooter>
         <Layout.SidebarSubmenu content="Help" icon="help">
-          <Layout.SidebarItem content="About" icon="help" />
-          <Layout.SidebarItem content="Documentation" icon="help" />
+          <Layout.SidebarItem content="About" />
+          <Layout.SidebarItem content="Documentation" />
         </Layout.SidebarSubmenu>
       </Layout.SidebarFooter>
     </Layout.Sidebar>

@@ -288,7 +288,11 @@
 
       .item {
         margin-bottom: 0;
-        padding: 8px 0;
+        padding: 8px 0 8px 18px;
+
+        i.icon {
+          margin-left: -6px;
+        }
 
         &:hover {
           background-color: @hoverItemBackground;
@@ -316,6 +320,10 @@
 
   .text {
     order: 2;
+  }
+
+  .item {
+    height: 40px;
   }
 
   &.activeSubMenu {
