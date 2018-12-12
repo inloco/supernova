@@ -21,12 +21,7 @@ class SidebarItem extends Component {
 
     if (dropdown) {
       return (
-        <Dropdown.Item
-          className={classes}
-          link
-          text={content}
-          {...otherProps}
-        />
+        <Dropdown.Item className={classes} text={content} {...otherProps} />
       )
     }
 

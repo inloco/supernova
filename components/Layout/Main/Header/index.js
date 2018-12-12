@@ -1,6 +1,7 @@
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
+import { Sticky } from 'semantic-ui-react'
 
 class Header extends Component {
   static propTypes = {
@@ -12,9 +13,11 @@ class Header extends Component {
     const { children, className, ...otherProps } = this.props
     const classes = cx('inloco-layout__header', className)
     return (
-      <div className={classes} {...otherProps}>
-        {children}
-      </div>
+      <Sticky>
+        <div className={classes} {...otherProps}>
+          {children}
+        </div>
+      </Sticky>
     )
   }
 }
