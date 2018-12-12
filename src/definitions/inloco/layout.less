@@ -16,8 +16,10 @@
 ---------------*/
 
 .inloco-layout {
+  display: flex;
   background-color: @gray50;
-  max-height: 100vh;
+  flex-direction: column;
+  height: 100vh;
   overflow-y: auto;
   position: relative;
   width: 100vw;
@@ -102,14 +104,54 @@
   border: none;
   border-radius: 0;
   box-shadow: 0 2px 3px -2px fade(@n600, 5%);
+  flex-shrink: 0;
   grid-area: topbar;
   height: 64px;
-  margin: 0 0 20px 64px;
+  margin: 0 0 0 64px;
+  order: 0;
 }
 
 .inloco-layout__topbar-logo {
   display: flex;
   margin-left: 30px;
+}
+
+/*--------------
+    Layout Top Warning
+---------------*/
+
+@topWarningHeight: 32px;
+
+.inloco-layout__top-warning {
+  height: @topWarningHeight;
+  margin-left: 65px;
+  min-height: @topWarningHeight;
+  order: 1;
+
+  .ui.sticky {
+    background-color: @gray00;
+  }
+}
+
+.inloco-layout.withWarning .inloco-layout__main {
+  margin-top: 0;
+}
+
+.inloco-layout__top-warning-message.ui.message {
+  display: flex;
+  height: @topWarningHeight;
+  justify-content: center;
+  padding: 0;
+  width: 100% !important;
+
+  .content {
+    align-items: center;
+    display: flex;
+
+    .header {
+      margin: 0 8px 0 0;
+    }
+  }
 }
 
 /*--------------
@@ -121,7 +163,8 @@
 
 .inloco-layout__main {
   grid-area: main;
-  margin: 0 32px 0 96px;
+  margin: 20px 32px 0 96px;
+  order: 2;
 
   .ui.fixed.sticky {
     background-color: @gray50;

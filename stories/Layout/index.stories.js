@@ -15,8 +15,8 @@ import engage from './images/engage.svg'
 
 import './layoutStory.css'
 
-const StoryLayout = props => (
-  <Layout className="layout-story" {...props}>
+const StoryLayout = ({ withWarning, ...otherProps }) => (
+  <Layout className="layout-story" {...otherProps}>
     <Layout.Sidebar>
       <Layout.SidebarItem content="Home" icon="home" active />
       <Layout.SidebarItem content="Reports" icon="assignment" />
@@ -42,6 +42,13 @@ const StoryLayout = props => (
         </Dropdown>
       </Menu.Menu>
     </Layout.Topbar>
+    {withWarning && (
+      <Layout.TopWarning
+        warning
+        header="Warning!"
+        content="This is a test account."
+      />
+    )}
     <Layout.Main>
       <Layout.Header>
         <Breadcrumb>
@@ -55,7 +62,7 @@ const StoryLayout = props => (
         <Layout.HeaderTitle>Home Title</Layout.HeaderTitle>
         <Layout.HeaderControls>
           <Button>Cancel</Button>
-          <Button className={props.color}>Save</Button>
+          <Button className={otherProps.color}>Save</Button>
         </Layout.HeaderControls>
       </Layout.Header>
       <Placeholder fluid>
@@ -111,3 +118,4 @@ storiesOf('Layout', module)
   .add('pink', () => <StoryLayout color="pink" />)
   .add('green', () => <StoryLayout color="green" />)
   .add('no sidebar', () => <StoryLayout color="blue" noSidebar />)
+  .add('with warning', () => <StoryLayout color="blue" withWarning />)
