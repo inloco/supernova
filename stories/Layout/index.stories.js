@@ -2,9 +2,11 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 
 import {
+  Breadcrumb,
   Button,
   Divider,
   Dropdown,
+  Icon,
   Layout,
   Menu,
   Placeholder
@@ -42,6 +44,14 @@ const StoryLayout = props => (
     </Layout.Topbar>
     <Layout.Main>
       <Layout.Header>
+        <Breadcrumb>
+          <Breadcrumb.Section link>
+            <Icon className="chevron left" />
+            Previous section
+          </Breadcrumb.Section>
+          <Breadcrumb.Divider>/</Breadcrumb.Divider>
+          <Breadcrumb.Section link>Previous section 2</Breadcrumb.Section>
+        </Breadcrumb>
         <Layout.HeaderTitle>Home Title</Layout.HeaderTitle>
         <Layout.HeaderControls>
           <Button>Cancel</Button>

@@ -28,7 +28,9 @@
 ---------------*/
 
 .inloco-layout__sidebar.ui.vertical.menu {
+  border-right: 1px solid fade(@n600, 7%);
   border-radius: 0;
+  box-shadow: 2px 0 3px -2px fade(@n600, 5%);
   display: flex;
   grid-area: sidebar;
   height: 100vh;
@@ -114,19 +116,55 @@
 ---------------*/
 
 .inloco-layout__header {
+  align-items: flex-end;
   display: flex;
+  height: 42px;
   justify-content: space-between;
-  margin: 32px 0;
+  margin: 30px 0;
+  position: relative;
+
+  .ui.breadcrumb {
+    align-items: center;
+    display: flex;
+    left: 0;
+    margin-left: -6px;
+    position: absolute;
+    top: 0;
+
+    i.icon {
+      color: @gray600;
+      margin-left: -4px;
+    }
+
+    .section {
+      align-items: center;
+      display: flex;
+      font-size: 12px;
+      height: 20px;
+      padding: 2px 6px;
+
+      &:hover {
+        background-color: fade(@n600, 8%);
+        border-radius: 3px;
+      }
+    }
+  }
 }
 
 .inloco-layout__header-title {
   color: @gray800;
   font-size: 24px;
   font-weight: 300;
+  height: 24px;
   letter-spacing: 0.3px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .inloco-layout__header-controls {
+  flex-shrink: 0;
+
   > :not(:first-child) {
     margin-left: 16px;
   }
