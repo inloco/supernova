@@ -3,6 +3,10 @@ import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import { Accordion, Dimmer, Icon, Menu } from 'semantic-ui-react'
 
+import LayoutSidebarItem from './Item'
+import LayoutSidebarSubmenu from './Submenu'
+import LayoutSidebarFooter from './Footer'
+
 class Sidebar extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
@@ -31,9 +35,16 @@ class Sidebar extends Component {
             <Icon className={headerIcon} onClick={this.handleHeaderIconClick} />
             {expanded && headerTitle}
           </Menu.Item>
-          {React.Children.map(children, child =>
-            React.cloneElement(child, { expanded })
-          )}
+          {React.Children.map(children, child => {
+            if (
+              child.type === LayoutSidebarItem ||
+              child.type === LayoutSidebarSubmenu ||
+              child.type === LayoutSidebarFooter
+            ) {
+              return React.cloneElement(child, { expanded })
+            }
+            return child
+          })}
         </Menu>
         <Dimmer
           className="inloco-layout__sidebar-dimmer"
