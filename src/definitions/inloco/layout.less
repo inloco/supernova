@@ -101,6 +101,7 @@
 ---------------*/
 
 .inloco-layout__topbar.ui.menu {
+  align-items: center;
   border: none;
   border-radius: 0;
   box-shadow: 0 2px 3px -2px fade(@n600, 5%);
@@ -109,6 +110,13 @@
   height: 64px;
   margin: 0 0 0 64px;
   order: 0;
+
+  .menu.right {
+    .ui.item.dropdown {
+      margin-right: 12px;
+      padding: 8px 4px 8px 12px;
+    }
+  }
 }
 
 .inloco-layout__topbar-logo {

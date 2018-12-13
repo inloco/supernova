@@ -362,6 +362,18 @@
 }
 
 /*--------------
+    Horizontal Dropdown Menu
+---------------*/
+
+.ui.menu .dropdown.item .menu {
+  margin-top: 8px;
+}
+
+.ui.menu .ui.dropdown .menu > .item {
+  line-height: 24px;
+}
+
+/*--------------
     Divider
 ---------------*/
 
