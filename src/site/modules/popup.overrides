@@ -1,3 +1,15 @@
 /*******************************
         User Overrides
 *******************************/
+
+.ui.tiny.popup {
+  padding: 4px 14px;
+
+  &.right::before {
+    left: -3px;
+  }
+
+  &.left::before {
+    right: -3px;
+  }
+}
