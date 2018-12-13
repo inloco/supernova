@@ -1,35 +1,32 @@
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
-
 import { Dropdown, Menu, Popup } from 'semantic-ui-react'
+
+import SidebarContext from '../SidebarContext'
 
 class SidebarItem extends Component {
   static propTypes = {
     className: PropTypes.string,
     dropdown: PropTypes.bool,
-    expanded: PropTypes.bool,
     icon: PropTypes.string
   }
 
-  static defaultProps = {
-    expanded: true
-  }
+  static contextType = SidebarContext
 
   render() {
-    const {
-      className,
-      content,
-      dropdown,
-      expanded,
-      icon,
-      ...otherProps
-    } = this.props
+    const { className, content, dropdown, icon, ...otherProps } = this.props
+    const { expanded } = this.context
     const classes = cx('inloco-layout__sidebar-item', className)
 
     if (dropdown) {
       return (
-        <Dropdown.Item className={classes} text={content} {...otherProps} />
+        <Dropdown.Item
+          className={classes}
+          text={content}
+          icon={icon}
+          {...otherProps}
+        />
       )
     }
 
