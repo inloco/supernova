@@ -43,7 +43,7 @@ class SidebarSubmenuDropdown extends Component {
       <Popup
         inverted
         size="tiny"
-        position="center right"
+        position="right center"
         content={content}
         trigger={dropdown}
       />
