@@ -6,20 +6,17 @@ import { Divider } from 'semantic-ui-react'
 class Footer extends Component {
   static propTypes = {
     className: PropTypes.string,
-    children: PropTypes.node.isRequired,
-    expanded: PropTypes.bool
+    children: PropTypes.node.isRequired
   }
 
   render() {
-    const { className, children, expanded, ...otherProps } = this.props
+    const { className, children, ...otherProps } = this.props
     const classes = cx('inloco-layout__sidebar-footer', className)
     return (
       <React.Fragment>
         <Divider />
         <div className={classes} {...otherProps}>
-          {React.Children.map(children, child =>
-            React.cloneElement(child, { expanded })
-          )}
+          {children}
         </div>
       </React.Fragment>
     )
