@@ -2,7 +2,7 @@ import cx from 'classnames'
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 
-import { Dropdown, Menu } from 'semantic-ui-react'
+import { Dropdown, Menu, Popup } from 'semantic-ui-react'
 
 class SidebarItem extends Component {
   static propTypes = {
@@ -33,7 +33,7 @@ class SidebarItem extends Component {
       )
     }
 
-    return (
+    const item = (
       <Menu.Item
         className={classes}
         link
@@ -42,6 +42,19 @@ class SidebarItem extends Component {
         {...otherProps}
       />
     )
+
+    if (!expanded) {
+      return (
+        <Popup
+          inverted
+          size="tiny"
+          position="center right"
+          content={content}
+          trigger={item}
+        />
+      )
+    }
+    return item
   }
 }
 

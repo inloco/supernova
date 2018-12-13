@@ -1,7 +1,7 @@
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
-import { Dropdown } from 'semantic-ui-react'
+import { Dropdown, Popup } from 'semantic-ui-react'
 
 class SidebarSubmenuDropdown extends Component {
   static propTypes = {
@@ -24,7 +24,8 @@ class SidebarSubmenuDropdown extends Component {
     const classes = cx('inloco-layout__sidebar-submenu-dropdown', className, {
       activeSubMenu: active
     })
-    return (
+
+    const dropdown = (
       <Dropdown
         className={classes}
         item
@@ -37,6 +38,15 @@ class SidebarSubmenuDropdown extends Component {
           )}
         </Dropdown.Menu>
       </Dropdown>
+    )
+    return (
+      <Popup
+        inverted
+        size="tiny"
+        position="center right"
+        content={content}
+        trigger={dropdown}
+      />
     )
   }
 }
