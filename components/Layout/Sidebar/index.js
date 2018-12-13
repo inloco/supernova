@@ -6,11 +6,11 @@ import { Accordion, Dimmer, Icon, Menu } from 'semantic-ui-react'
 import LayoutSidebarItem from './Item'
 import LayoutSidebarSubmenu from './Submenu'
 import LayoutSidebarFooter from './Footer'
+import LayoutContext from '../LayoutContext'
 
 class Sidebar extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
-    color: PropTypes.string,
     headerTitle: PropTypes.string
   }
 
@@ -18,13 +18,16 @@ class Sidebar extends Component {
     headerTitle: 'Menu'
   }
 
+  static contextType = LayoutContext
+
   state = {
     expanded: false
   }
 
   render() {
-    const { children, color, headerTitle } = this.props
+    const { children, headerTitle } = this.props
     const { expanded } = this.state
+    const { color } = this.context
 
     const classes = cx('inloco-layout__sidebar', color, { expanded })
     const headerIcon = expanded ? 'close' : 'menu'
