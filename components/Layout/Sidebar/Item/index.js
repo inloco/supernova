@@ -24,7 +24,7 @@ class SidebarItem extends Component {
         <Dropdown.Item
           className={classes}
           text={content}
-          icon={icon}
+          icon={{ className: icon }}
           {...otherProps}
         />
       )
