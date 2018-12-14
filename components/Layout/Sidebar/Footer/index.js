@@ -13,12 +13,9 @@ class Footer extends Component {
     const { className, children, ...otherProps } = this.props
     const classes = cx('inloco-layout__sidebar-footer', className)
     return (
-      <React.Fragment>
-        <Divider />
-        <div className={classes} {...otherProps}>
-          {children}
-        </div>
-      </React.Fragment>
+      <div className={classes} {...otherProps}>
+        {children}
+      </div>
     )
   }
 }

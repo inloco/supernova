@@ -25,6 +25,7 @@ const StoryLayout = ({ withWarning, ...otherProps }) => (
         <Layout.SidebarItem content="Analytics" icon="timeline" />
         <Layout.SidebarItem content="Lists" icon="view list" />
       </Layout.SidebarSubmenu>
+      <Divider />
       <Layout.SidebarFooter>
         <Layout.SidebarSubmenu content="Help" icon="help">
           <Layout.SidebarItem content="About" />
