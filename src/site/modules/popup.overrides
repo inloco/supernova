@@ -13,3 +13,7 @@
     right: -3px;
   }
 }
+
+.inloco-popup--hidden.ui.popup {
+  display: none !important;
+}
