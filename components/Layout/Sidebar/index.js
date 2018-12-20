@@ -1,7 +1,7 @@
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
-import { Accordion, Dimmer, Icon, Menu } from 'semantic-ui-react'
+import { Accordion, Dimmer, Icon, Menu, Sticky } from 'semantic-ui-react'
 
 import LayoutContext from '../LayoutContext'
 import SidebarContext from './SidebarContext'
@@ -32,13 +32,20 @@ class Sidebar extends Component {
     return (
       <React.Fragment>
         <Menu as={Accordion} className={classes} vertical icon={!expanded}>
-          <Menu.Item header>
-            <Icon className={headerIcon} onClick={this.handleHeaderIconClick} />
-            {expanded && headerTitle}
-          </Menu.Item>
-          <SidebarContext.Provider value={{ expanded }}>
-            {children}
-          </SidebarContext.Provider>
+          <div className="inloco-layout__sidebar-content">
+            <Sticky>
+              <Menu.Item header>
+                <Icon
+                  className={headerIcon}
+                  onClick={this.handleHeaderIconClick}
+                />
+                {expanded && headerTitle}
+              </Menu.Item>
+            </Sticky>
+            <SidebarContext.Provider value={{ expanded }}>
+              {children}
+            </SidebarContext.Provider>
+          </div>
         </Menu>
         <Dimmer
           className="inloco-layout__sidebar-dimmer"

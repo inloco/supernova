@@ -29,6 +29,9 @@
     Layout Sidebar
 ---------------*/
 
+@sidebarHeaderHeight: 64px;
+@sidebarHeaderBottomMargin: 20px;
+
 .inloco-layout__sidebar.ui.vertical.menu {
   border-right: 1px solid fade(@n600, 7%);
   border-radius: 0;
@@ -38,6 +41,7 @@
   height: 100vh;
   left: 0;
   margin: 0;
+  padding: 0;
   position: fixed;
   top: 0;
   z-index: 1001;
@@ -47,9 +51,9 @@
   }
 
   .item.header {
-    margin-bottom: 28px;
+    margin-bottom: @sidebarHeaderBottomMargin;
     opacity: 1;
-    padding: 8px 0;
+    padding: 16px 8px;
 
     i.icon {
       align-items: center;
@@ -67,7 +71,20 @@
   }
 
   .ui.divider {
-    margin: 8px -8px 16px -8px;
+    margin: 16px 0;
+  }
+
+  .ui.stuck-container {
+    height: @sidebarHeaderHeight + @sidebarHeaderBottomMargin;
+  }
+}
+
+.inloco-layout__sidebar-content {
+  overflow-y: auto;
+
+  .item {
+    margin-left: 8px;
+    margin-right: 8px;
   }
 }
 
@@ -101,6 +118,16 @@
 
       .menu.content {
         margin: 0 0 12px;
+      }
+    }
+  }
+
+  .inloco-layout__sidebar-submenu-dropdown {
+    position: static;
+
+    &.upward {
+      .menu {
+        top: auto !important;
       }
     }
   }
