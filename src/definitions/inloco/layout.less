@@ -75,11 +75,14 @@
   }
 
   .ui.stuck-container {
-    height: @sidebarHeaderHeight + @sidebarHeaderBottomMargin;
+    min-height: @sidebarHeaderHeight + @sidebarHeaderBottomMargin;
   }
 }
 
 .inloco-layout__sidebar-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   overflow-y: auto;
 
   .item {
