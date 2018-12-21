@@ -8,6 +8,7 @@ import LayoutSidebarSubmenu from './Sidebar/Submenu'
 import LayoutSidebarFooter from './Sidebar/Footer'
 import LayoutTopbar from './Topbar'
 import LayoutMain from './Main'
+import LayoutMainContent from './Main/Content'
 import LayoutTopWarning from './TopWarning'
 import LayoutHeader from './Main/Header'
 import LayoutHeaderTitle from './Main/Header/Title'
@@ -29,6 +30,7 @@ class Layout extends Component {
   static Topbar = LayoutTopbar
   static TopWarning = LayoutTopWarning
   static Main = LayoutMain
+  static MainContent = LayoutMainContent
   static Header = LayoutHeader
   static HeaderTitle = LayoutHeaderTitle
   static HeaderControls = LayoutHeaderControls
