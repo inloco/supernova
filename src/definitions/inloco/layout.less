@@ -261,6 +261,16 @@
         background-color: fade(@n600, 8%);
         border-radius: 3px;
       }
+
+      &:first-child {
+        &::before {
+          color: @gray600;
+          content: '\E5CB';
+          font-family: 'Icons';
+          font-size: 16px;
+          margin-left: -4px;
+        }
+      }
     }
   }
 }

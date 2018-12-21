@@ -53,10 +53,7 @@ const StoryLayout = ({ withWarning, ...otherProps }) => (
     <Layout.Main>
       <Layout.Header>
         <Breadcrumb>
-          <Breadcrumb.Section link>
-            <Icon className="chevron left" />
-            Previous section
-          </Breadcrumb.Section>
+          <Breadcrumb.Section link>Previous section</Breadcrumb.Section>
           <Breadcrumb.Divider>/</Breadcrumb.Divider>
           <Breadcrumb.Section link>Previous section 2</Breadcrumb.Section>
         </Breadcrumb>
