@@ -30,11 +30,14 @@ class SidebarItem extends Component {
       )
     }
 
+    const wrappedContent = (
+      <div className="inloco-layout__sidebar-item-content">{content}</div>
+    )
     const item = (
       <Menu.Item
         className={classes}
         link
-        content={expanded ? content : null}
+        content={wrappedContent}
         icon={icon ? { className: icon } : null}
         {...otherProps}
         onClick={this.handleItemClick}
