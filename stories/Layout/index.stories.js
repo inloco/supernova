@@ -15,7 +15,7 @@ import engage from './images/engage.svg'
 
 import './layoutStory.css'
 
-const StoryLayout = ({ withWarning, ...otherProps }) => (
+const StoryLayout = ({ noBreadcrumb, withWarning, ...otherProps }) => (
   <Layout className="layout-story" {...otherProps}>
     <Layout.Sidebar>
       <Layout.SidebarItem content="Home" icon="home" active />
@@ -52,11 +52,13 @@ const StoryLayout = ({ withWarning, ...otherProps }) => (
     )}
     <Layout.Main>
       <Layout.Header>
-        <Breadcrumb>
-          <Breadcrumb.Section link>Previous section</Breadcrumb.Section>
-          <Breadcrumb.Divider>/</Breadcrumb.Divider>
-          <Breadcrumb.Section link>Previous section 2</Breadcrumb.Section>
-        </Breadcrumb>
+        {!noBreadcrumb && (
+          <Breadcrumb>
+            <Breadcrumb.Section link>Previous section</Breadcrumb.Section>
+            <Breadcrumb.Divider>/</Breadcrumb.Divider>
+            <Breadcrumb.Section link>Previous section 2</Breadcrumb.Section>
+          </Breadcrumb>
+        )}
         <Layout.HeaderTitle>Home Title</Layout.HeaderTitle>
         <Layout.HeaderControls>
           <Button>Cancel</Button>
@@ -117,5 +119,6 @@ storiesOf('Layout', module)
   .add('blue', () => <StoryLayout color="blue" />)
   .add('pink', () => <StoryLayout color="pink" />)
   .add('green', () => <StoryLayout color="green" />)
+  .add('no breadcrumb', () => <StoryLayout color="blue" noBreadcrumb />)
   .add('no sidebar', () => <StoryLayout color="blue" noSidebar />)
   .add('with warning', () => <StoryLayout color="blue" withWarning />)

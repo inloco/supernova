@@ -232,8 +232,7 @@
 ---------------*/
 
 .inloco-layout__header {
-  align-items: flex-end;
-  display: flex;
+  display: grid;
   height: @headerHeight;
   justify-content: space-between;
   margin: 0 0 @headerBottomMargin;
@@ -243,10 +242,9 @@
   .ui.breadcrumb {
     align-items: center;
     display: flex;
-    left: 96px;
+    grid-column: 1;
+    grid-row: 1;
     margin-left: -6px;
-    position: absolute;
-    top: 10px;
 
     i.icon {
       color: @gray600;
@@ -276,22 +274,34 @@
       }
     }
   }
+
+  .ui.breadcrumb + .inloco-layout__header-title {
+    grid-row-start: 2;
+    line-height: 24px;
+  }
 }
 
 .inloco-layout__header-title {
   color: @gray800;
   font-size: 24px;
   font-weight: 300;
-  height: 24px;
+  grid-column: 1;
+  grid-row-start: 1;
+  grid-row-end: 3;
   letter-spacing: 0.3px;
-  line-height: 24px;
+  line-height: 48px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
 .inloco-layout__header-controls {
+  align-items: center;
+  display: flex;
   flex-shrink: 0;
+  grid-column: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
 
   > :not(:first-child) {
     margin-left: 16px;
