@@ -206,12 +206,12 @@
     Layout Main
 ---------------*/
 
-@headerHeight: 52px;
-@headerBottomMargin: 30px;
+@headerHeight: 64px;
+@headerBottomMargin: 20px;
 
 .inloco-layout__main {
+  margin-top: 12px;
   grid-area: main;
-  margin-top: 20px;
   order: 2;
 
   .ui.fixed.sticky {
@@ -237,7 +237,7 @@
   height: @headerHeight;
   justify-content: space-between;
   margin: 0 0 @headerBottomMargin;
-  padding: 10px 32px 0 96px;
+  padding: 8px 32px 8px 96px;
   position: relative;
 
   .ui.breadcrumb {
@@ -284,6 +284,7 @@
   font-weight: 300;
   height: 24px;
   letter-spacing: 0.3px;
+  line-height: 24px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
