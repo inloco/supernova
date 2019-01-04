@@ -42,7 +42,8 @@ class Sidebar extends Component {
                 {expanded && headerTitle}
               </Menu.Item>
             </Sticky>
-            <SidebarContext.Provider value={{ expanded }}>
+            <SidebarContext.Provider
+              value={{ onSidebarClose: this.handleClose, expanded }}>
               {children}
             </SidebarContext.Provider>
           </div>
@@ -51,18 +52,18 @@ class Sidebar extends Component {
           className="inloco-layout__sidebar-dimmer"
           active={expanded}
           page
-          onClick={this.handleDimmerClick}
+          onClick={this.handleClose}
         />
       </React.Fragment>
     )
   }
 
-  handleHeaderIconClick = () => {
-    this.setState(({ expanded }) => ({ expanded: !expanded }))
+  handleClose = () => {
+    this.setState({ expanded: false })
   }
 
-  handleDimmerClick = () => {
-    this.setState({ expanded: false })
+  handleHeaderIconClick = () => {
+    this.setState(({ expanded }) => ({ expanded: !expanded }))
   }
 }
 

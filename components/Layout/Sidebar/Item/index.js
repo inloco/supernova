@@ -37,6 +37,7 @@ class SidebarItem extends Component {
         content={expanded ? content : null}
         icon={icon ? { className: icon } : null}
         {...otherProps}
+        onClick={this.handleItemClick}
       />
     )
 
@@ -52,6 +53,16 @@ class SidebarItem extends Component {
       )
     }
     return item
+  }
+
+  handleItemClick = (event, data) => {
+    const { onClick } = this.props
+    const { onSidebarClose } = this.context
+
+    onSidebarClose()
+    if (onClick) {
+      onClick(event, data)
+    }
   }
 }
 
