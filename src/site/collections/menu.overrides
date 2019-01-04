@@ -286,6 +286,10 @@
         i.icon {
           color: @gray600;
         }
+
+        i.icon:last-child::before {
+          content: '\E316';
+        }
       }
 
       i.icon {
