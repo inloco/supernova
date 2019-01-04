@@ -44,10 +44,33 @@
   padding: 0;
   position: fixed;
   top: 0;
+  transition: width 1s;
+  width: 65px;
   z-index: 1001;
 
   &.expanded {
     width: 255px;
+  }
+
+  &:not(.expanded) {
+    &:not(.transitioning) {
+      .item:not(.header) {
+        padding: 12px 12px;
+
+        & > .icon:not(.dropdown) {
+          margin: 0em auto;
+        }
+      }
+    }
+
+    .inloco-layout__sidebar-item-content {
+      opacity: 0;
+    }
+  }
+
+  .item {
+    flex-wrap: nowrap;
+    overflow: hidden;
   }
 
   .item.header {
@@ -62,7 +85,7 @@
       display: flex;
       height: 32px;
       margin: 0 4px 0 8px;
-      width: 32px;
+      min-width: 32px;
 
       &:hover {
         background-color: fade(@n600, 4%);
@@ -93,6 +116,10 @@
       margin-left: 0;
       margin-right: 0;
     }
+
+    .icon {
+      min-width: 24px;
+    }
   }
 }
 
@@ -104,14 +131,21 @@
 }
 
 .inloco-layout__sidebar.ui.vertical.menu {
+  .inloco-layout__sidebar-submenu-accordion {
+    flex-wrap: wrap;
+  }
+
   .inloco-layout__sidebar-footer {
+    margin-bottom: 8px;
+
     .inloco-layout__sidebar-submenu-accordion.item {
       flex-direction: column-reverse;
       padding: 0;
-      margin: 12px 0;
+      margin: 12px 8px;
 
       &:hover {
         background-color: transparent;
+        overflow: initial;
 
         .title {
           background-color: fade(@n600, 4%);

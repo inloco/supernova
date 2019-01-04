@@ -19,19 +19,27 @@ class Sidebar extends Component {
   static contextType = LayoutContext
 
   state = {
-    expanded: false
+    expanded: false,
+    transitioning: false
   }
 
   render() {
     const { children, headerTitle } = this.props
-    const { expanded } = this.state
+    const { expanded, transitioning } = this.state
     const { color } = this.context
 
-    const classes = cx('inloco-layout__sidebar', color, { expanded })
+    const classes = cx('inloco-layout__sidebar', color, {
+      expanded,
+      transitioning
+    })
     const headerIcon = expanded ? 'close' : 'menu'
     return (
       <React.Fragment>
-        <Menu as={Accordion} className={classes} vertical icon={!expanded}>
+        <Menu
+          as={Accordion}
+          className={classes}
+          vertical
+          onTransitionEnd={this.handleTransitionEnd}>
           <div className="inloco-layout__sidebar-content">
             <Sticky>
               <Menu.Item header>
@@ -59,11 +67,18 @@ class Sidebar extends Component {
   }
 
   handleClose = () => {
-    this.setState({ expanded: false })
+    this.setState({ expanded: false, transitioning: true })
   }
 
   handleHeaderIconClick = () => {
-    this.setState(({ expanded }) => ({ expanded: !expanded }))
+    this.setState(({ expanded }) => ({
+      expanded: !expanded,
+      transitioning: true
+    }))
+  }
+
+  handleTransitionEnd = () => {
+    this.setState({ transitioning: false })
   }
 }
 
