@@ -77,8 +77,10 @@ class Sidebar extends Component {
     }))
   }
 
-  handleTransitionEnd = () => {
-    this.setState({ transitioning: false })
+  handleTransitionEnd = ({ target, currentTarget }) => {
+    if (target === currentTarget) {
+      this.setState({ transitioning: false })
+    }
   }
 }
 
