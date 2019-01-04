@@ -35,7 +35,9 @@ class SidebarSubmenuAccordion extends Component {
       <Menu.Item className={classes} link active={active} {...otherProps}>
         <Accordion.Title active={open} onClick={this.handleTitleClick}>
           <Icon className={icon} />
-          <span>{content}</span>
+          <span className="inloco-layout__sidebar-submenu-accordion-content">
+            {content}
+          </span>
           <Icon className="keyboard arrow down" />
         </Accordion.Title>
         <Accordion.Content as={Menu.Menu} active={open}>
