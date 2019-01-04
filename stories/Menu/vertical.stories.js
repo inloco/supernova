@@ -57,7 +57,7 @@ storiesOf('Menu/Vertical/SubMenus/Internal', module)
   .add('closed', () => (
     <Menu as={Accordion} className="blue" vertical>
       <Menu.Item link content="Home" icon="home" active />
-      <Menu.Item link>
+      <Menu.Item link className="submenu-accordion">
         <Accordion.Title>
           <Icon name="place" />
           <span>Places</span>
@@ -74,7 +74,7 @@ storiesOf('Menu/Vertical/SubMenus/Internal', module)
   .add('open', () => (
     <Menu as={Accordion} className="blue" vertical>
       <Menu.Item link content="Home" icon="home" active />
-      <Menu.Item link>
+      <Menu.Item link className="submenu-accordion">
         <Accordion.Title active>
           <Icon name="place" />
           <span>Places</span>
@@ -91,7 +91,7 @@ storiesOf('Menu/Vertical/SubMenus/Internal', module)
   .add('open selected', () => (
     <Menu as={Accordion} className="blue" vertical>
       <Menu.Item link content="Home" icon="home" />
-      <Menu.Item link active>
+      <Menu.Item link active className="submenu-accordion">
         <Accordion.Title active>
           <Icon name="place" />
           <span>Places</span>
@@ -108,7 +108,7 @@ storiesOf('Menu/Vertical/SubMenus/Internal', module)
   .add('closed selected', () => (
     <Menu as={Accordion} className="blue" vertical>
       <Menu.Item link content="Home" icon="home" />
-      <Menu.Item link active>
+      <Menu.Item link active className="submenu-accordion">
         <Accordion.Title>
           <Icon name="place" />
           <span>Places</span>
@@ -125,7 +125,7 @@ storiesOf('Menu/Vertical/SubMenus/Internal', module)
   .add('open with no icons on subitems', () => (
     <Menu as={Accordion} className="blue" vertical>
       <Menu.Item link content="Home" icon="home" active />
-      <Menu.Item link>
+      <Menu.Item link className="submenu-accordion">
         <Accordion.Title active>
           <Icon name="place" />
           <span>Places</span>

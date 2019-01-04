@@ -26,7 +26,11 @@ class SidebarSubmenuAccordion extends Component {
       ...otherProps
     } = this.props
     const { open } = this.state
-    const classes = cx('inloco-layout__sidebar-submenu-accordion', className)
+    const classes = cx(
+      'inloco-layout__sidebar-submenu-accordion',
+      'submenu-accordion',
+      className
+    )
     return (
       <Menu.Item className={classes} link active={active} {...otherProps}>
         <Accordion.Title active={open} onClick={this.handleTitleClick}>

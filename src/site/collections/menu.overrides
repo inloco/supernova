@@ -246,11 +246,26 @@
 }
 
 /*--------------
+    Vertical Pressed
+---------------*/
+
+.ui.vertical.link.menu .item:active,
+.ui.vertical.menu .link.item:active,
+.ui.vertical.menu a.item:active,
+.ui.vertical.menu .dropdown.item:active {
+  background-color: fade(@n600, 8%);
+}
+
+/*--------------
     Vertical Accordion Menu
 ---------------*/
 
 .ui.vertical.accordion.menu {
   .item {
+    &.submenu-accordion {
+      background-color: transparent;
+    }
+
     .title {
       align-items: center;
       display: flex;
@@ -259,9 +274,15 @@
       padding: 12px;
       width: 100%;
 
-      &.active {
-        background-color: @n600-hex-4;
+      &:hover {
+        background-color: @hoverItemBackground;
+      }
 
+      &:active {
+        background-color: fade(@n600, 8%);
+      }
+
+      &.active {
         i.icon {
           color: @gray600;
         }
@@ -281,14 +302,13 @@
     }
 
     .title ~ .menu.content {
-      background-color: @n600-hex-8;
       margin: 12px 0 -12px;
       padding: 8px 0;
       width: 100%;
 
       .item {
         margin-bottom: 0;
-        padding: 8px 0 8px 18px;
+        padding: 8px 0 8px 45px;
 
         i.icon {
           margin-left: -6px;
@@ -296,6 +316,10 @@
 
         &:hover {
           background-color: @hoverItemBackground;
+        }
+
+        &:active {
+          background-color: fade(@n600, 8%);
         }
 
         &.active {
