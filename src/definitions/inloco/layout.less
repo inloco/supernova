@@ -62,10 +62,6 @@
         }
       }
     }
-
-    .inloco-layout__sidebar-item-content {
-      opacity: 0;
-    }
   }
 
   .inloco-layout__sidebar-item-content {
@@ -74,10 +70,12 @@
 
   .item {
     flex-wrap: nowrap;
+    height: 48px;
     overflow: hidden;
   }
 
   .item.header {
+    height: 64px;
     margin-bottom: @sidebarHeaderBottomMargin;
     opacity: 1;
     padding: 16px 8px;
@@ -137,6 +135,7 @@
 .inloco-layout__sidebar.ui.vertical.menu {
   .inloco-layout__sidebar-submenu-accordion {
     flex-wrap: wrap;
+    height: auto;
 
     .inloco-layout__sidebar-submenu-accordion-content {
       white-space: nowrap;

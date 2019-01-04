@@ -37,7 +37,7 @@ class SidebarItem extends Component {
       <Menu.Item
         className={classes}
         link
-        content={wrappedContent}
+        content={expanded ? wrappedContent : null}
         icon={icon ? { className: icon } : null}
         {...otherProps}
         onClick={this.handleItemClick}
