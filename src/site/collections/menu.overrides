@@ -398,8 +398,16 @@
   margin-top: 8px;
 }
 
+.ui.menu .dropdown.item:active {
+  background-color: fade(@n600, 8%);
+}
+
 .ui.menu .ui.dropdown .menu > .item {
   line-height: 24px;
+
+  &:active {
+    background-color: fade(@n600, 8%) !important;
+  }
 }
 
 /*--------------
