@@ -52,6 +52,28 @@ storiesOf('Menu/Vertical', module)
       </React.Fragment>
     )
   })
+  .add('icons only - small', () => {
+    const items = [
+      {
+        icon: 'home'
+      },
+      {
+        icon: 'place'
+      },
+      {
+        icon: 'assignment'
+      }
+    ]
+    return (
+      <React.Fragment>
+        <Menu className="blue" size="small" vertical icon items={items} />
+        <br />
+        <Menu className="pink" size="small" vertical icon items={items} />
+        <br />
+        <Menu className="green" size="small" vertical icon items={items} />
+      </React.Fragment>
+    )
+  })
 
 storiesOf('Menu/Vertical/SubMenus/Internal', module)
   .add('closed', () => (

@@ -238,7 +238,7 @@
 }
 
 .ui.vertical.icon.menu .icon.item {
-  padding: 12px 12px;
+  padding: 12px;
 
   i.icon {
     height: @iconWidth;
@@ -255,6 +255,20 @@
 .ui.vertical.menu .dropdown.item:active {
   background-color: fade(@n600, 8%);
 }
+
+/*--------------
+    Vertical Small
+---------------*/
+
+.ui.vertical.small.icon.menu .icon.item {
+  margin-bottom: 16px;
+  padding: 4px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
 
 /*--------------
     Vertical Accordion Menu
