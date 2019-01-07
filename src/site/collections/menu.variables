@@ -54,6 +54,8 @@
 @subMenuFontSize: 14px;
 @subMenuTextColor: @textColor;
 
+@smallWidth: 48px;
+
 /*--------------
     Dropdown Sub Menu
 ---------------*/
