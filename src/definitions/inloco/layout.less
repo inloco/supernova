@@ -259,7 +259,6 @@
 ---------------*/
 
 @headerHeight: 64px;
-@headerBottomMargin: 20px;
 
 .inloco-layout__main {
   margin-top: 12px;
@@ -271,7 +270,7 @@
   }
 
   .ui.stuck-container {
-    height: @headerHeight + @headerBottomMargin;
+    height: @headerHeight;
 
     .inloco-layout__header {
       box-shadow: 0 2px 3px -2px fade(@n600, 10%);
@@ -280,7 +279,7 @@
 }
 
 .inloco-layout__main-content {
-  margin: 0 32px 0 96px;
+  margin: 20px 32px 0 96px;
 }
 
 /*--------------
@@ -291,7 +290,6 @@
   display: grid;
   height: @headerHeight;
   justify-content: space-between;
-  margin: 0 0 @headerBottomMargin;
   padding: 8px 32px 8px 96px;
   position: relative;
 
