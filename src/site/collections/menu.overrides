@@ -394,6 +394,7 @@
 ---------------*/
 
 .ui.menu .dropdown.item .menu {
+  border-radius: 3px;
   margin-top: 8px;
 }
 
