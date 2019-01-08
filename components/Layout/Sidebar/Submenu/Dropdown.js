@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import { Dropdown, Popup } from 'semantic-ui-react'
 
+import { normalizeIconProp } from '../../../utils/icons'
+
 class SidebarSubmenuDropdown extends Component {
   static propTypes = {
     active: PropTypes.bool,
@@ -37,7 +39,7 @@ class SidebarSubmenuDropdown extends Component {
         ref={this.dropdownRef}
         className={classes}
         item
-        icon={{ className: icon }}
+        icon={normalizeIconProp(icon)}
         onOpen={this.handleOpen}
         onClose={this.handleClose}
         {...otherProps}>

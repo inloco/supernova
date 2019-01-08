@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import { Accordion, Icon, Menu } from 'semantic-ui-react'
 
+import { normalizeIconProp } from '../../../utils/icons'
+
 class SidebarSubmenuAccordion extends Component {
   static propTypes = {
     active: PropTypes.bool,
@@ -34,7 +36,7 @@ class SidebarSubmenuAccordion extends Component {
     return (
       <Menu.Item className={classes} link active={active} {...otherProps}>
         <Accordion.Title active={open} onClick={this.handleTitleClick}>
-          <Icon className={icon} />
+          {Icon.create(normalizeIconProp(icon), { autoGenerateKey: false })}
           <span className="inloco-layout__sidebar-submenu-accordion-content">
             {content}
           </span>

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import { Dropdown, Menu, Popup } from 'semantic-ui-react'
 
+import { normalizeIconProp } from '../../../utils/icons'
 import SidebarContext from '../SidebarContext'
 
 class SidebarItem extends Component {
@@ -24,7 +25,7 @@ class SidebarItem extends Component {
         <Dropdown.Item
           className={classes}
           text={content}
-          icon={icon ? { className: icon } : null}
+          icon={normalizeIconProp(icon)}
           {...otherProps}
         />
       )
@@ -38,7 +39,7 @@ class SidebarItem extends Component {
         className={classes}
         link
         content={expanded ? wrappedContent : null}
-        icon={icon ? { className: icon } : null}
+        icon={normalizeIconProp(icon)}
         {...otherProps}
         onClick={this.handleItemClick}
       />

@@ -81,7 +81,8 @@
     opacity: 1;
     padding: 16px 8px;
 
-    i.icon {
+    i.icon,
+    .icon {
       align-items: center;
       border-radius: 16px;
       display: flex;
@@ -90,7 +91,8 @@
       min-width: 32px;
     }
 
-    &:hover i.icon {
+    &:hover i.icon,
+    &:hover .icon {
       background-color: fade(@n600, 4%);
     }
   }
@@ -160,11 +162,11 @@
       }
 
       .title {
-        i.icon:last-child::before {
+        .icon:last-child::before {
           content: '\E316';
         }
 
-        &.active i.icon:last-child {
+        &.active .icon:last-child {
           transform: rotate(180deg);
         }
       }

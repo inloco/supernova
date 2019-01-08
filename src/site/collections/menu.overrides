@@ -2,7 +2,8 @@
          Site Overrides
 *******************************/
 
-.ui.menu .item > i.dropdown.icon {
+.ui.menu .item > i.dropdown.icon,
+.ui.menu .item > .dropdown.icon {
   align-items: center;
   display: flex;
   font-size: 20px;
@@ -200,47 +201,52 @@
       cursor: default;
     }
 
-    i.icon {
+    i.icon,
+    .icon {
       height: @iconWidth;
     }
   }
 }
 
-.ui.vertical.menu .item > i.icon {
-  align-items: center;
-  color: @gray600;
-  display: flex;
-  font-size: 20px;
-  justify-content: center;
-  margin-right: 8px;
+.ui.vertical.menu .item {
+  &> i.icon,
+  &> .icon {
+    align-items: center;
+    color: @gray600;
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    margin-right: 8px;
 
-  &:first-child {
-    margin-left: 12px;
+    &:first-child {
+      margin-left: 12px;
+    }
   }
 }
 
-.ui.blue.vertical.menu .active.item > i.icon:first-child,
-.ui.blue.vertical.menu .active.item .title > i.icon:first-child,
-.ui.blue.vertical.menu .activeSubMenu.item > i.icon {
+.ui.blue.vertical.menu .active.item > *.icon:first-child,
+.ui.blue.vertical.menu .active.item .title > *.icon:first-child,
+.ui.blue.vertical.menu .activeSubMenu.item > *.icon {
   color: @blue;
 }
 
-.ui.pink.vertical.menu .active.item > i.icon:first-child,
-.ui.pink.vertical.menu .active.item .title > i.icon:first-child,
-.ui.pink.vertical.menu .activeSubMenu.item > i.icon {
+.ui.pink.vertical.menu .active.item > *.icon:first-child,
+.ui.pink.vertical.menu .active.item .title > *.icon:first-child,
+.ui.pink.vertical.menu .activeSubMenu.item > *.icon {
   color: @pink;
 }
 
-.ui.green.vertical.menu .active.item > i.icon:first-child,
-.ui.green.vertical.menu .active.item .title > i.icon:first-child,
-.ui.green.vertical.menu .activeSubMenu.item > i.icon {
+.ui.green.vertical.menu .active.item > *.icon:first-child,
+.ui.green.vertical.menu .active.item .title > *.icon:first-child,
+.ui.green.vertical.menu .activeSubMenu.item > *.icon {
   color: @green;
 }
 
 .ui.vertical.icon.menu .icon.item {
   padding: 12px;
 
-  i.icon {
+  i.icon,
+  .icon {
     height: @iconWidth;
   }
 }
@@ -276,6 +282,10 @@
 
 .ui.vertical.accordion.menu {
   .item {
+    .icon {
+      width: @iconWidth;
+    }
+
     &.submenu-accordion {
       background-color: transparent;
     }
@@ -297,21 +307,23 @@
       }
 
       &.active {
-        i.icon {
+        i.icon,
+        .icon {
           color: @gray600;
         }
       }
 
-      i.icon {
+      i.icon,
+      .icon {
         color: @gray600;
         font-size: 20px;
         height: @iconWidth;
         margin-right: 8px;
         width: @iconWidth;
-      }
 
-      i.icon:last-child {
-        margin: 0 -4px 0 auto;
+        &:last-child {
+          margin: 0 -4px 0 auto;
+        }
       }
     }
 
@@ -324,7 +336,8 @@
         margin-bottom: 0;
         padding: 8px 0 8px 45px;
 
-        i.icon {
+        i.icon,
+        .icon {
           margin-left: -6px;
         }
 
@@ -350,7 +363,8 @@
 ---------------*/
 
 .ui.vertical.menu .dropdown.item {
-  i.icon {
+  i.icon,
+  .icon {
     height: @iconWidth;
     margin-left: 12px;
     order: 1;
@@ -382,7 +396,8 @@
     display: flex;
     min-width: 143px;
 
-    i.icon {
+    i.icon,
+    .icon {
       align-items: center;
       display: flex;
       height: @iconWidth;
