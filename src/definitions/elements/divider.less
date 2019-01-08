@@ -12,11 +12,10 @@
             Theme
 *******************************/
 
-@type    : 'element';
+@type : 'element';
 @element : 'divider';
 
 @import (multiple) '../../theme.config';
-
 
 /*******************************
             Divider
@@ -130,8 +129,7 @@
 }
 
 /* Inside grid */
-@media only screen and (max-width : @largestMobileScreen) {
-
+@media only screen and (max-width: @largestMobileScreen) {
   .ui.stackable.grid .ui.vertical.divider,
   .ui.grid .stackable.row .ui.vertical.divider {
     display: table;
@@ -250,6 +248,5 @@
 .ui.divider {
   font-size: @medium;
 }
-
 
 .loadUIOverrides();

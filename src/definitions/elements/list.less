@@ -12,7 +12,7 @@
             Theme
 *******************************/
 
-@type    : 'element';
+@type : 'element';
 @element : 'list';
 
 @import (multiple) '../../theme.config';
@@ -102,7 +102,6 @@ ol.ui.list ol li,
   line-height: @childItemLineHeight;
 }
 
-
 /* Icon */
 .ui.list .list > .item > i.icon,
 .ui.list > .item > i.icon {
@@ -118,7 +117,6 @@ ol.ui.list ol li,
   display: inline-block;
   vertical-align: @iconVerticalAlign;
 }
-
 
 /* Image */
 .ui.list .list > .item > .image,
@@ -221,20 +219,20 @@ ol.ui.list ol li,
 }
 
 /* Floated Content */
-.ui[class*="left floated"].list {
+.ui[class*='left floated'].list {
   float: left;
 }
-.ui[class*="right floated"].list {
+.ui[class*='right floated'].list {
   float: right;
 }
 
-.ui.list .list > .item [class*="left floated"],
-.ui.list > .item [class*="left floated"] {
+.ui.list .list > .item [class*='left floated'],
+.ui.list > .item [class*='left floated'] {
   float: left;
   margin: @leftFloatMargin;
 }
-.ui.list .list > .item [class*="right floated"],
-.ui.list > .item [class*="right floated"] {
+.ui.list .list > .item [class*='right floated'],
+.ui.list > .item [class*='right floated'] {
   float: right;
   margin: @rightFloatMargin;
 }
@@ -268,7 +266,6 @@ ol.ui.list ol li,
 .ui.menu .ui.list > .item:last-child {
   padding-bottom: 0em;
 }
-
 
 /*******************************
             Types
@@ -323,7 +320,6 @@ ol.ui.list ol li,
   display: inline-block;
 }
 
-
 /*******************************
              States
 *******************************/
@@ -350,7 +346,6 @@ ol.ui.list ol li,
 .ui.list > a.item:hover .icon {
   color: @itemLinkIconHoverColor;
 }
-
 
 /*******************************
            Variations
@@ -384,7 +379,6 @@ ol.ui.list ol li,
   color: @invertedItemLinkHoverColor;
 }
 
-
 /* Linking Content */
 .ui.inverted.list .item a:not(.ui) {
   color: @invertedItemLinkColor !important;
@@ -397,19 +391,19 @@ ol.ui.list ol li,
        Aligned
 --------------------*/
 
-.ui.list[class*="top aligned"] .image,
-.ui.list[class*="top aligned"] .content,
-.ui.list [class*="top aligned"] {
+.ui.list[class*='top aligned'] .image,
+.ui.list[class*='top aligned'] .content,
+.ui.list [class*='top aligned'] {
   vertical-align: top !important;
 }
-.ui.list[class*="middle aligned"] .image,
-.ui.list[class*="middle aligned"] .content,
-.ui.list [class*="middle aligned"] {
+.ui.list[class*='middle aligned'] .image,
+.ui.list[class*='middle aligned'] .content,
+.ui.list [class*='middle aligned'] {
   vertical-align: middle !important;
 }
-.ui.list[class*="bottom aligned"] .image,
-.ui.list[class*="bottom aligned"] .content,
-.ui.list [class*="bottom aligned"] {
+.ui.list[class*='bottom aligned'] .image,
+.ui.list[class*='bottom aligned'] .content,
+.ui.list [class*='bottom aligned'] {
   vertical-align: bottom !important;
 }
 
@@ -761,7 +755,6 @@ ol.ui.horizontal.list li:before,
   border-color: @dividedInvertedBorderColor;
 }
 
-
 /*-------------------
         Celled
 --------------------*/
@@ -872,18 +865,18 @@ ol.ui.horizontal.list li:before,
 }
 
 /* Very Relaxed */
-.ui[class*="very relaxed"].list:not(.horizontal) > .item:not(:first-child) {
+.ui[class*='very relaxed'].list:not(.horizontal) > .item:not(:first-child) {
   padding-top: @veryRelaxedItemVerticalPadding;
 }
-.ui[class*="very relaxed"].list:not(.horizontal) > .item:not(:last-child) {
+.ui[class*='very relaxed'].list:not(.horizontal) > .item:not(:last-child) {
   padding-bottom: @veryRelaxedItemVerticalPadding;
 }
-.ui.horizontal[class*="very relaxed"].list .list > .item:not(:first-child),
-.ui.horizontal[class*="very relaxed"].list > .item:not(:first-child) {
+.ui.horizontal[class*='very relaxed'].list .list > .item:not(:first-child),
+.ui.horizontal[class*='very relaxed'].list > .item:not(:first-child) {
   padding-left: @veryRelaxedHorizontalPadding;
 }
-.ui.horizontal[class*="very relaxed"].list .list > .item:not(:last-child),
-.ui.horizontal[class*="very relaxed"].list > .item:not(:last-child) {
+.ui.horizontal[class*='very relaxed'].list .list > .item:not(:last-child),
+.ui.horizontal[class*='very relaxed'].list > .item:not(:last-child) {
   padding-right: @veryRelaxedHorizontalPadding;
 }
 
@@ -950,4 +943,3 @@ ol.ui.horizontal.list li:before,
 }
 
 .loadUIOverrides();
-

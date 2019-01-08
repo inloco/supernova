@@ -8,7 +8,6 @@
  *
  */
 
-
 /*******************************
              Step
 *******************************/
@@ -17,7 +16,7 @@
    Load Theme
 ---------------*/
 
-@type    : 'element';
+@type : 'element';
 @element : 'step';
 
 @import (multiple) '../../theme.config';
@@ -47,7 +46,6 @@
 .ui.steps:last-child {
   margin-bottom: 0em;
 }
-
 
 /*******************************
            Singular
@@ -114,7 +112,6 @@
 .ui.steps .step:only-child {
   border-radius: @stepsBorderRadius;
 }
-
 
 /*******************************
             Content
@@ -185,7 +182,7 @@
   display: block;
   position: static;
   text-align: center;
-  content: counters(ordered, ".");
+  content: counters(ordered, '.');
   align-self: @iconAlign;
   margin-right: @iconDistance;
   font-size: @iconSize;
@@ -198,7 +195,6 @@
   display: block;
   align-self: @iconAlign;
 }
-
 
 /*--------------
     Vertical
@@ -228,7 +224,6 @@
   border-radius: @stepsBorderRadius;
 }
 
-
 /* Arrow */
 .ui.vertical.steps .step:after {
   display: none;
@@ -252,14 +247,12 @@
   display: @verticalActiveLastArrowDisplay;
 }
 
-
 /*---------------
     Responsive
 ----------------*/
 
 /* Mobile (Default) */
 @media only screen and (max-width: (@largestMobileScreen)) {
-
   .ui.steps:not(.unstackable) {
     display: inline-flex;
     overflow: visible;
@@ -294,7 +287,6 @@
   .ui.ordered.steps:not(.unstackable) .step:before {
     margin: 0em 0em @mobileIconDistance 0em;
   }
-
 }
 
 /*******************************
@@ -380,11 +372,9 @@
   background: @disabledBackground;
 }
 
-
 /*******************************
            Variations
 *******************************/
-
 
 /*--------------
    Stackable
@@ -392,43 +382,41 @@
 
 /* Tablet Or Below */
 @media only screen and (max-width: @largestTabletScreen) {
+  .ui[class*='tablet stackable'].steps {
+    display: inline-flex;
+    overflow: visible;
+    flex-direction: column;
+  }
 
-.ui[class*="tablet stackable"].steps {
-  display: inline-flex;
-  overflow: visible;
-  flex-direction: column;
-}
+  /* Steps */
+  .ui[class*='tablet stackable'].steps .step {
+    flex-direction: column;
+    border-radius: @borderRadius;
+    padding: @verticalPadding @horizontalPadding;
+  }
+  .ui[class*='tablet stackable'].steps .step:first-child {
+    padding: @verticalPadding @horizontalPadding;
+    border-radius: @stepsBorderRadius @stepsBorderRadius 0em 0em;
+  }
+  .ui[class*='tablet stackable'].steps .step:last-child {
+    border-radius: 0em 0em @stepsBorderRadius @stepsBorderRadius;
+  }
 
-/* Steps */
-.ui[class*="tablet stackable"].steps .step {
-  flex-direction: column;
-  border-radius: @borderRadius;
-  padding: @verticalPadding @horizontalPadding;
-}
-.ui[class*="tablet stackable"].steps .step:first-child {
-  padding: @verticalPadding @horizontalPadding;
-  border-radius: @stepsBorderRadius @stepsBorderRadius 0em 0em;
-}
-.ui[class*="tablet stackable"].steps .step:last-child {
-  border-radius: 0em 0em @stepsBorderRadius @stepsBorderRadius;
-}
+  /* Arrow */
+  .ui[class*='tablet stackable'].steps .step:after {
+    display: none !important;
+  }
 
-/* Arrow */
-.ui[class*="tablet stackable"].steps .step:after {
-  display: none !important;
-}
+  /* Content */
+  .ui[class*='tablet stackable'].steps .step .content {
+    text-align: center;
+  }
 
-/* Content */
-.ui[class*="tablet stackable"].steps .step .content {
-  text-align: center;
-}
-
-/* Icon */
-.ui[class*="tablet stackable"].steps .step > .icon,
-.ui[class*="tablet stackable"].ordered.steps .step:before {
-  margin: 0em 0em @mobileIconDistance 0em;
-}
-
+  /* Icon */
+  .ui[class*='tablet stackable'].steps .step > .icon,
+  .ui[class*='tablet stackable'].ordered.steps .step:before {
+    margin: 0em 0em @mobileIconDistance 0em;
+  }
 }
 
 /*--------------
@@ -517,13 +505,12 @@
   width: 14.285%;
 }
 .ui.eight.steps > .step {
-  width: 12.500%;
+  width: 12.5%;
 }
 
 /*-------------------
        Sizes
 --------------------*/
-
 
 .ui.mini.steps .step,
 .ui.mini.step {
@@ -557,6 +544,5 @@
 .ui.massive.step {
   font-size: @massive;
 }
-
 
 .loadUIOverrides();

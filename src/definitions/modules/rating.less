@@ -8,12 +8,11 @@
  *
  */
 
-
 /*******************************
             Theme
 *******************************/
 
-@type    : 'module';
+@type : 'module';
 @element : 'rating';
 
 @import (multiple) '../../theme.config';
@@ -45,11 +44,9 @@
   transition: @iconTransition;
 }
 
-
 /*******************************
              Types
 *******************************/
-
 
 /*-------------------
       Standard
@@ -73,7 +70,6 @@
   background: @selectedBackground;
   color: @selectedColor;
 }
-
 
 /*-------------------
         Star
@@ -103,7 +99,6 @@
   text-shadow: @starSelectedTextShadow !important;
 }
 
-
 /*-------------------
         Heart
 --------------------*/
@@ -131,7 +126,6 @@
   text-shadow: @heartSelectedTextShadow !important;
 }
 
-
 /*******************************
              States
 *******************************/
@@ -145,7 +139,6 @@
   cursor: default;
 }
 
-
 /*-------------------
    User Interactive
 --------------------*/
@@ -158,8 +151,6 @@
 .ui.rating .icon.selected {
   opacity: @interactiveSelectedIconOpacity;
 }
-
-
 
 /*******************************
           Variations
@@ -186,6 +177,5 @@
 .ui.massive.rating {
   font-size: @massive;
 }
-
 
 .loadUIOverrides();

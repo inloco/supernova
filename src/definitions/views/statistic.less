@@ -12,7 +12,7 @@
             Theme
 *******************************/
 
-@type    : 'view';
+@type : 'view';
 @element : 'statistic';
 
 @import (multiple) '../../theme.config';
@@ -39,8 +39,6 @@
 .ui.statistic:last-child {
   margin-bottom: 0em;
 }
-
-
 
 /*******************************
             Group
@@ -78,11 +76,9 @@
   margin-top: 0em;
 }
 
-
 /*******************************
             Content
 *******************************/
-
 
 /*--------------
       Value
@@ -125,8 +121,6 @@
   margin-top: @bottomLabelDistance;
 }
 
-
-
 /*******************************
              Types
 *******************************/
@@ -168,17 +162,13 @@
   vertical-align: @imageVerticalAlign;
 }
 
-
-
 /*******************************
             Variations
 *******************************/
 
-
 /*--------------
       Count
 ---------------*/
-
 
 .ui.ten.statistics {
   margin: @itemGroupMargin;
@@ -259,9 +249,6 @@
   min-width: @oneColumn;
   margin: @itemMargin;
 }
-
-
-
 
 /*--------------
    Horizontal
@@ -447,11 +434,11 @@
     Floated
 ---------------*/
 
-.ui[class*="left floated"].statistic {
+.ui[class*='left floated'].statistic {
   float: left;
   margin: @leftFloatedMargin;
 }
-.ui[class*="right floated"].statistic {
+.ui[class*='right floated'].statistic {
   float: right;
   margin: @rightFloatedMargin;
 }
@@ -459,11 +446,9 @@
   margin-bottom: 0em;
 }
 
-
 /*--------------
      Sizes
 ---------------*/
-
 
 /* Mini */
 .ui.mini.statistics .statistic > .value,
@@ -478,7 +463,6 @@
 .ui.mini.statistic > .text.value {
   font-size: @miniTextValueSize !important;
 }
-
 
 /* Tiny */
 .ui.tiny.statistics .statistic > .value,
@@ -549,6 +533,5 @@
 .ui.huge.statistic > .text.value {
   font-size: @hugeTextValueSize !important;
 }
-
 
 .loadUIOverrides();
