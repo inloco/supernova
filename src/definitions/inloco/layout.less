@@ -75,6 +75,7 @@
   }
 
   .item.header {
+    cursor: pointer;
     height: 64px;
     margin-bottom: @sidebarHeaderBottomMargin;
     opacity: 1;
@@ -83,15 +84,14 @@
     i.icon {
       align-items: center;
       border-radius: 16px;
-      cursor: pointer;
       display: flex;
       height: 32px;
       margin: 0 4px 0 8px;
       min-width: 32px;
+    }
 
-      &:hover {
-        background-color: fade(@n600, 4%);
-      }
+    &:hover i.icon {
+      background-color: fade(@n600, 4%);
     }
   }
 

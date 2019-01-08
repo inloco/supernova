@@ -42,11 +42,8 @@ class Sidebar extends Component {
           onTransitionEnd={this.handleTransitionEnd}>
           <div className="inloco-layout__sidebar-content">
             <Sticky>
-              <Menu.Item header>
-                <Icon
-                  className={headerIcon}
-                  onClick={this.handleHeaderIconClick}
-                />
+              <Menu.Item header onClick={this.handleHeaderClick}>
+                <Icon className={headerIcon} />
                 {expanded && headerTitle}
               </Menu.Item>
             </Sticky>
@@ -70,7 +67,7 @@ class Sidebar extends Component {
     this.setState({ expanded: false, transitioning: true })
   }
 
-  handleHeaderIconClick = () => {
+  handleHeaderClick = () => {
     this.setState(({ expanded }) => ({
       expanded: !expanded,
       transitioning: true
