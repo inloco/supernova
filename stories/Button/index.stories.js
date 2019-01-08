@@ -240,3 +240,31 @@ storiesOf('Button', module)
       </Button>
     </React.Fragment>
   ))
+  .add('sizes', () => (
+    <React.Fragment>
+      <Button size="mini" content="mini" />
+      <br />
+      <br />
+      <Button size="tiny" content="tiny" />
+      <br />
+      <br />
+      <Button size="small" content="small" />
+      <br />
+      <br />
+      <Button size="medium" content="medium" />
+      <br />
+      <br />
+      <Button size="large" content="large" />
+      <br />
+      <br />
+      <Button size="big" content="big" />
+      <br />
+      <br />
+      <Button size="huge" content="huge" />
+      <br />
+      <br />
+      <Button size="massive" content="massive" />
+      <br />
+      <br />
+    </React.Fragment>
+  ))

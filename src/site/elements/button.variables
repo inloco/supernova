@@ -3,15 +3,14 @@
 *******************************/
 
 
-@verticalPadding: 11.5px; //To make the button total height ~36px
 @horizontalMargin: 0;
-@verticalPadding: 0;
-@horizontalPadding: 12px;
+@verticalPadding: @relative11px;
+@horizontalPadding: 1.5em;
 
 @fontWeight: 500;
 @basicFontWeight: @fontWeight;
 @fontSpacing: 0.33px;
-@lineHeight: 36px;
+@lineHeight: 1em;
 
 @textTransform: uppercase;
 @basicTextTransform: uppercase;
@@ -40,6 +39,6 @@
 @basicDownBackground: rgba(62,73,101,0.12);
 
 @iconButtonOpacity: unset;
-@iconFontSize: 20px;
+@iconFontSize: 1em;
 @iconHeight: @lineHeight;
 @iconWidth: @iconHeight;
