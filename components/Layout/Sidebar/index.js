@@ -56,7 +56,6 @@ class Sidebar extends Component {
         <Dimmer
           className="inloco-layout__sidebar-dimmer"
           active={expanded}
-          page
           onClick={this.handleClose}
         />
       </React.Fragment>
