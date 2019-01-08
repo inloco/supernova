@@ -298,6 +298,7 @@
     display: flex;
     grid-column: 1;
     grid-row: 1;
+    margin-bottom: 2px;
     margin-left: -6px;
 
     i.icon {
@@ -307,14 +308,18 @@
 
     .section {
       align-items: center;
+      border-radius: 3px;
       display: flex;
       font-size: 12px;
       height: 20px;
       padding: 2px 6px;
 
       &:hover {
+        background-color: fade(@n600, 4%);
+      }
+
+      &:active {
         background-color: fade(@n600, 8%);
-        border-radius: 3px;
       }
 
       &:first-child {
