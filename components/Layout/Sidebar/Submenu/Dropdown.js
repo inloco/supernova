@@ -10,8 +10,7 @@ class SidebarSubmenuDropdown extends Component {
     active: PropTypes.bool,
     children: PropTypes.node.isRequired,
     className: PropTypes.string,
-    content: PropTypes.node.isRequired,
-    icon: PropTypes.string.isRequired
+    content: PropTypes.node.isRequired
   }
 
   state = {

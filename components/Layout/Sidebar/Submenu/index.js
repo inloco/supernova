@@ -10,8 +10,7 @@ import SidebarContext from '../SidebarContext'
 class SidebarSubmenu extends Component {
   static propTypes = {
     className: PropTypes.string,
-    content: PropTypes.node.isRequired,
-    icon: PropTypes.string.isRequired
+    content: PropTypes.node.isRequired
   }
 
   static contextType = SidebarContext

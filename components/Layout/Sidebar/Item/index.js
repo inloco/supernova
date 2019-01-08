@@ -9,8 +9,7 @@ import SidebarContext from '../SidebarContext'
 class SidebarItem extends Component {
   static propTypes = {
     className: PropTypes.string,
-    dropdown: PropTypes.bool,
-    icon: PropTypes.string
+    dropdown: PropTypes.bool
   }
 
   static contextType = SidebarContext
