@@ -1,3 +1,29 @@
 /*******************************
         User Overrides
 *******************************/
+
+.ui.accordion .title .dropdown.icon,
+.ui.accordion .accordion .title .dropdown.icon {
+  align-items: center;
+  font-family: Icons;
+  justify-content: center;
+
+  &:before {
+    content: '\E313';
+  }
+}
+
+/* Accordion Menu Content */
+.ui.accordion.menu .item .title ~ .menu.content,
+.ui.accordion.menu .item .accordion .title ~ .menu.content {
+  transition: opacity 0.25s cubic-bezier(0.75, 0, 0.24, 1.01);
+
+  &:not(.active) {
+    display: block;
+    height: 0;
+    margin: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0;
+  }
+}

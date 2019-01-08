@@ -164,15 +164,15 @@
           content: '\E316';
         }
 
-        &.active {
-          i.icon:last-child::before {
-            content: '\E313';
-          }
+        &.active i.icon:last-child {
+          transform: rotate(180deg);
         }
       }
 
       .menu.content {
-        margin: 0 0 12px;
+        &.active {
+          margin: 0 0 12px;
+        }
       }
     }
   }
