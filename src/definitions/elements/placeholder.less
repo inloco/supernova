@@ -11,7 +11,7 @@
             Theme
 *******************************/
 
-@type    : 'element';
+@type : 'element';
 @element : 'placeholder';
 
 @import (multiple) '../../theme.config';
@@ -31,12 +31,12 @@
   max-width: @placeholderMaxWidth;
 }
 
-@keyframes placeholderShimmer{
+@keyframes placeholderShimmer {
   0% {
-    background-position: -@placeholderLoadingGradientWidth 0
+    background-position: -@placeholderLoadingGradientWidth 0;
   }
   100% {
-    background-position: @placeholderLoadingGradientWidth 0
+    background-position: @placeholderLoadingGradientWidth 0;
   }
 }
 
@@ -52,7 +52,11 @@
 .ui.placeholder + .ui.placeholder + .ui.placeholder + .ui.placeholder {
   animation-delay: (@placeholderAnimationInterval * 3);
 }
-.ui.placeholder + .ui.placeholder + .ui.placeholder + .ui.placeholder + .ui.placeholder {
+.ui.placeholder
+  + .ui.placeholder
+  + .ui.placeholder
+  + .ui.placeholder
+  + .ui.placeholder {
   animation-delay: (@placeholderAnimationInterval * 4);
 }
 
@@ -80,7 +84,6 @@
   /* 4/3 aspect ratio */
   padding-top: 75%;
 }
-
 
 /* Lines */
 .ui.placeholder .line {
@@ -198,7 +201,6 @@
             Variations
 *******************************/
 
-
 /*-------------------
         Sizes
 --------------------*/
@@ -221,7 +223,6 @@
 .ui.placeholder .very.short.line.line.line:after {
   width: @placeholderVeryShortLineOutdent;
 }
-
 
 /*-------------------
         Fluid

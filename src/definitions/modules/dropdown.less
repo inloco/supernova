@@ -8,12 +8,11 @@
  *
  */
 
-
 /*******************************
             Theme
 *******************************/
 
-@type    : 'module';
+@type : 'module';
 @element : 'dropdown';
 
 @import (multiple) '../../theme.config';
@@ -70,7 +69,6 @@
   white-space: nowrap;
 }
 
-
 /*--------------
   Hidden Input
 ---------------*/
@@ -98,7 +96,6 @@
 .ui.dropdown .menu > .item .dropdown.icon + .text {
   margin-right: @itemDropdownIconDistance;
 }
-
 
 /*--------------
       Text
@@ -141,14 +138,14 @@
   Floated Content
 ---------------*/
 
-.ui.dropdown > .text > [class*="right floated"],
-.ui.dropdown .menu .item > [class*="right floated"] {
+.ui.dropdown > .text > [class*='right floated'],
+.ui.dropdown .menu .item > [class*='right floated'] {
   float: right !important;
   margin-right: 0em !important;
   margin-left: @floatedDistance !important;
 }
-.ui.dropdown > .text > [class*="left floated"],
-.ui.dropdown .menu .item > [class*="left floated"] {
+.ui.dropdown > .text > [class*='left floated'],
+.ui.dropdown .menu .item > [class*='left floated'] {
   float: left !important;
   margin-left: 0em !important;
   margin-right: @floatedDistance !important;
@@ -160,7 +157,6 @@
 .ui.dropdown .menu .item > img.floated {
   margin-top: @itemLineHeightOffset;
 }
-
 
 /*--------------
   Menu Divider
@@ -257,7 +253,7 @@
 .ui.dropdown .menu > .item > .label,
 .ui.dropdown .menu > .item > .flag,
 .ui.dropdown .menu > .item > .image,
-.ui.dropdown .menu > .item > img  {
+.ui.dropdown .menu > .item > img {
   margin-top: @itemLineHeightOffset;
 }
 
@@ -270,7 +266,7 @@
 .ui.dropdown .menu > .item > .label,
 .ui.dropdown .menu > .item > .flag,
 .ui.dropdown .menu > .item > .image,
-.ui.dropdown .menu > .item > img  {
+.ui.dropdown .menu > .item > img {
   margin-left: 0em;
   float: @itemElementFloat;
   margin-right: @itemElementDistance;
@@ -292,11 +288,9 @@
   max-height: @menuImageMaxHeight;
 }
 
-
 /*******************************
             Coupling
 *******************************/
-
 
 /*--------------
       Menu
@@ -341,8 +335,6 @@
 .ui.button.dropdown .menu {
   min-width: 100%;
 }
-
-
 
 /*******************************
               Types
@@ -403,7 +395,7 @@ select.ui.dropdown {
 
 /* Compact */
 .ui.compact.selection.dropdown {
-  min-width:  0px;
+  min-width: 0px;
 }
 
 /*  Selection Menu */
@@ -436,7 +428,7 @@ select.ui.dropdown {
   padding: @selectionMessagePadding;
 }
 
-@media only screen and (max-width : @largestMobileScreen) {
+@media only screen and (max-width: @largestMobileScreen) {
   .ui.selection.dropdown .menu {
     max-height: @selectionMobileMaxMenuHeight;
   }
@@ -610,7 +602,7 @@ select.ui.dropdown {
   backface-visibility: hidden;
   -webkit-overflow-scrolling: touch;
 }
-@media only screen and (max-width : @largestMobileScreen) {
+@media only screen and (max-width: @largestMobileScreen) {
   .ui.search.dropdown .menu {
     max-height: @searchMobileMaxMenuHeight;
   }
@@ -711,7 +703,6 @@ select.ui.dropdown {
   line-height: @multipleSelectionChildLineHeight;
 }
 
-
 /*--------------
      Inline
 ---------------*/
@@ -734,11 +725,9 @@ select.ui.dropdown {
   border-radius: @inlineMenuBorderRadius;
 }
 
-
 /*******************************
             States
 *******************************/
-
 
 /*--------------------
         Active
@@ -752,7 +741,6 @@ select.ui.dropdown {
   box-shadow: @activeItemBoxShadow;
   z-index: @activeItemZIndex;
 }
-
 
 /*--------------------
         Hover
@@ -824,7 +812,6 @@ select.ui.dropdown {
   }
 }
 
-
 /*--------------------
      Default Text
 ----------------------*/
@@ -871,7 +858,6 @@ select.ui.dropdown {
   color: @selectedColor;
 }
 
-
 /*--------------------
     Search Filtered
 ----------------------*/
@@ -883,7 +869,6 @@ select.ui.dropdown {
 .ui.dropdown .filtered.item {
   display: none !important;
 }
-
 
 /*--------------------
         Error
@@ -924,7 +909,6 @@ select.ui.dropdown {
   background-color: @errorItemActiveBackground;
 }
 
-
 /*--------------------
         Clear
 ----------------------*/
@@ -936,7 +920,6 @@ select.ui.dropdown {
 .ui.dropdown > .clear.dropdown.icon:hover {
   opacity: @clearableIconActiveOpacity;
 }
-
 
 /*--------------------
         Disabled
@@ -950,7 +933,6 @@ select.ui.dropdown {
   opacity: @disabledOpacity;
 }
 
-
 /*******************************
            Variations
 *******************************/
@@ -963,7 +945,6 @@ select.ui.dropdown {
 .ui.dropdown .menu {
   left: 0px;
 }
-
 
 /* Default Side (Right) */
 .ui.dropdown .right.menu > .menu,
@@ -1004,7 +985,6 @@ select.ui.dropdown {
   margin-left: @itemDropdownIconDistance;
   margin-right: 0em;
 }
-
 
 /*--------------
      Upward
@@ -1107,13 +1087,13 @@ select.ui.dropdown {
 }
 
 /* Scrollbar in IE */
-@media all and (-ms-high-contrast:none) {
+@media all and (-ms-high-contrast: none) {
   .ui.scrolling.dropdown .menu,
   .ui.dropdown .scrolling.menu {
     min-width: calc(100% - @scrollbarWidth);
   }
 }
-@media only screen and (max-width : @largestMobileScreen) {
+@media only screen and (max-width: @largestMobileScreen) {
   .ui.scrolling.dropdown .menu,
   .ui.dropdown .scrolling.menu {
     max-height: @scrollingMobileMaxMenuHeight;
@@ -1206,7 +1186,6 @@ select.ui.dropdown {
 .ui.fluid.dropdown > .dropdown.icon {
   float: right;
 }
-
 
 /*--------------
     Floating
@@ -1319,7 +1298,6 @@ select.ui.dropdown {
   transform: rotate(135deg);
 }
 
-
 /* Right Pointing */
 .ui.right.pointing.dropdown > .menu {
   top: 0%;
@@ -1341,7 +1319,7 @@ select.ui.dropdown {
   bottom: 100%;
   left: 0%;
   right: auto;
-  margin: 0em 0em @pointingArrowDistanceFromEdge ;
+  margin: 0em 0em @pointingArrowDistanceFromEdge;
 }
 .ui.bottom.pointing.dropdown > .menu:after {
   top: auto;
@@ -1404,7 +1382,6 @@ select.ui.dropdown {
   margin: 0em 0em @pointingArrowDistanceFromEdge 0em;
   box-shadow: @pointingArrowBoxShadow;
 }
-
 
 /* Left Pointing Upward */
 .ui.left.pointing.upward.dropdown:not(.top):not(.bottom) .menu {

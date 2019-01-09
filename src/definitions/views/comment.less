@@ -8,12 +8,11 @@
  *
  */
 
-
 /*******************************
             Theme
 *******************************/
 
-@type    : 'view';
+@type : 'view';
 @element : 'comment';
 
 @import (multiple) '../../theme.config';
@@ -21,7 +20,6 @@
 /*******************************
             Standard
 *******************************/
-
 
 /*--------------
     Comments
@@ -57,7 +55,6 @@
   padding-top: @firstCommentPadding;
 }
 
-
 /*--------------------
     Nested Comments
 ---------------------*/
@@ -66,7 +63,7 @@
   margin: @nestedCommentsMargin;
   padding: @nestedCommentsPadding;
 }
-.ui.comments .comment .comments:before{
+.ui.comments .comment .comments:before {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -155,7 +152,6 @@
   line-height: @textLineHeight;
 }
 
-
 /*--------------------
      User Actions
 ---------------------*/
@@ -203,7 +199,6 @@
   display: none;
 }
 
-
 /*******************************
            Variations
 *******************************/
@@ -235,7 +230,6 @@
   opacity: 1;
 }
 
-
 /*-------------------
         Sizes
 --------------------*/
@@ -264,6 +258,5 @@
 .ui.massive.comments {
   font-size: @massive;
 }
-
 
 .loadUIOverrides();
