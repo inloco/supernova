@@ -33,7 +33,7 @@
 ---------------*/
 
 .outlineButton(@main, @hover, @activeLight, @activeDark) {
-  background-color: #fff;
+  background-color: transparent;
   border: 1px solid @main;
   line-height: calc(@lineHeight - 2px);
   color: @main;
