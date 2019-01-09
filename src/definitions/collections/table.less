@@ -8,12 +8,11 @@
  *
  */
 
-
 /*******************************
             Theme
 *******************************/
 
-@type    : 'collection';
+@type : 'collection';
 @element : 'table';
 
 @import (multiple) '../../theme.config';
@@ -152,16 +151,15 @@
   display: block;
 }
 
-
 /* Responsive */
-@media only screen and (max-width : @largestMobileScreen) {
+@media only screen and (max-width: @largestMobileScreen) {
   .ui.table:not(.unstackable) {
     width: 100%;
   }
   .ui.table:not(.unstackable) tbody,
   .ui.table:not(.unstackable) tr,
   .ui.table:not(.unstackable) tr > th,
-  .ui.table:not(.unstackable) tr > td  {
+  .ui.table:not(.unstackable) tr > td {
     display: block !important;
     width: auto !important;
     display: block !important;
@@ -200,7 +198,6 @@
   }
 }
 
-
 /*******************************
             Coupling
 *******************************/
@@ -212,7 +209,6 @@
 .ui.table td .image img {
   max-width: none;
 }
-
 
 /*******************************
              Types
@@ -252,7 +248,8 @@
   background: @definitionHeaderBackground;
   font-weight: @definitionHeaderFontWeight;
   color: @definitionHeaderColor;
-  box-shadow: -@borderWidth -@borderWidth 0px @borderWidth @definitionPageBackground;
+  box-shadow: -@borderWidth -@borderWidth 0px @borderWidth
+    @definitionPageBackground;
 }
 
 .ui.definition.table tfoot:not(.full-width) th:first-child {
@@ -260,7 +257,8 @@
   background: @definitionFooterBackground;
   font-weight: @definitionFooterColor;
   color: @definitionFooterFontWeight;
-  box-shadow: @borderWidth @borderWidth 0px @borderWidth @definitionPageBackground;
+  box-shadow: @borderWidth @borderWidth 0px @borderWidth
+    @definitionPageBackground;
 }
 
 /* Remove Border */
@@ -285,7 +283,6 @@
   padding-right: @definitionColumnHorizontalPadding;
 }
 
-
 /* Fix 2nd Column */
 .ui.definition.table thead:not(.full-width) th:nth-child(2) {
   border-left: @borderWidth solid @borderColor;
@@ -296,7 +293,6 @@
 .ui.definition.table td:nth-child(2) {
   border-left: @borderWidth solid @borderColor;
 }
-
 
 /*******************************
              States
@@ -371,8 +367,6 @@
   color: @activeColor !important;
 }
 
-
-
 /*--------------
      Disabled
 ---------------*/
@@ -393,34 +387,33 @@
     Stackable
 ---------------*/
 
-@media only screen and (max-width : @largestTabletScreen) {
-
-  .ui[class*="tablet stackable"].table,
-  .ui[class*="tablet stackable"].table tbody,
-  .ui[class*="tablet stackable"].table tr,
-  .ui[class*="tablet stackable"].table tr > th,
-  .ui[class*="tablet stackable"].table tr > td  {
+@media only screen and (max-width: @largestTabletScreen) {
+  .ui[class*='tablet stackable'].table,
+  .ui[class*='tablet stackable'].table tbody,
+  .ui[class*='tablet stackable'].table tr,
+  .ui[class*='tablet stackable'].table tr > th,
+  .ui[class*='tablet stackable'].table tr > td {
     display: block !important;
     width: 100% !important;
     display: block !important;
   }
 
-  .ui[class*="tablet stackable"].table {
+  .ui[class*='tablet stackable'].table {
     padding: 0em;
   }
-  .ui[class*="tablet stackable"].table thead {
+  .ui[class*='tablet stackable'].table thead {
     display: @responsiveHeaderDisplay;
   }
-  .ui[class*="tablet stackable"].table tfoot {
+  .ui[class*='tablet stackable'].table tfoot {
     display: @responsiveFooterDisplay;
   }
-  .ui[class*="tablet stackable"].table tr {
+  .ui[class*='tablet stackable'].table tr {
     padding-top: @responsiveRowVerticalPadding;
     padding-bottom: @responsiveRowVerticalPadding;
     box-shadow: @responsiveRowBoxShadow;
   }
-  .ui[class*="tablet stackable"].table tr > th,
-  .ui[class*="tablet stackable"].table tr > td {
+  .ui[class*='tablet stackable'].table tr > th,
+  .ui[class*='tablet stackable'].table tr > td {
     background: none;
     border: none !important;
     padding: @responsiveCellVerticalPadding @responsiveCellHorizontalPadding;
@@ -428,7 +421,7 @@
   }
 
   /* Definition Table */
-  .ui.definition[class*="tablet stackable"].table thead th:first-child {
+  .ui.definition[class*='tablet stackable'].table thead th:first-child {
     box-shadow: none !important;
   }
 }
@@ -437,16 +430,16 @@
  Text Alignment
 ---------------*/
 
-.ui.table[class*="left aligned"],
-.ui.table [class*="left aligned"] {
+.ui.table[class*='left aligned'],
+.ui.table [class*='left aligned'] {
   text-align: left;
 }
-.ui.table[class*="center aligned"],
-.ui.table [class*="center aligned"] {
+.ui.table[class*='center aligned'],
+.ui.table [class*='center aligned'] {
   text-align: center;
 }
-.ui.table[class*="right aligned"],
-.ui.table [class*="right aligned"] {
+.ui.table[class*='right aligned'],
+.ui.table [class*='right aligned'] {
   text-align: right;
 }
 
@@ -454,16 +447,16 @@
  Vertical Alignment
 ------------------*/
 
-.ui.table[class*="top aligned"],
-.ui.table [class*="top aligned"] {
+.ui.table[class*='top aligned'],
+.ui.table [class*='top aligned'] {
   vertical-align: top;
 }
-.ui.table[class*="middle aligned"],
-.ui.table [class*="middle aligned"] {
+.ui.table[class*='middle aligned'],
+.ui.table [class*='middle aligned'] {
   vertical-align: middle;
 }
-.ui.table[class*="bottom aligned"],
-.ui.table [class*="bottom aligned"] {
+.ui.table[class*='bottom aligned'],
+.ui.table [class*='bottom aligned'] {
   vertical-align: bottom;
 }
 
@@ -490,7 +483,6 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
 
 /*--------------
    Selectable
@@ -549,8 +541,6 @@
   color: @negativeColorHover !important;
 }
 
-
-
 /*-------------------
       Attached
 --------------------*/
@@ -571,19 +561,19 @@
 }
 
 /* Top */
-.ui[class*="top attached"].table {
+.ui[class*='top attached'].table {
   bottom: 0px;
   margin-bottom: 0em;
   top: @attachedTopOffset;
   margin-top: @verticalMargin;
   border-radius: @borderRadius @borderRadius 0em 0em;
 }
-.ui.table[class*="top attached"]:first-child {
+.ui.table[class*='top attached']:first-child {
   margin-top: 0em;
 }
 
 /* Bottom */
-.ui[class*="bottom attached"].table {
+.ui[class*='bottom attached'].table {
   bottom: 0px;
   margin-top: 0em;
   top: @attachedBottomOffset;
@@ -591,7 +581,7 @@
   box-shadow: @attachedBottomBoxShadow;
   border-radius: 0em 0em @borderRadius @borderRadius;
 }
-.ui[class*="bottom attached"].table:last-child {
+.ui[class*='bottom attached'].table:last-child {
   margin-bottom: 0em;
 }
 
@@ -621,12 +611,12 @@
    Single Line
 ---------------*/
 
-.ui.table[class*="single line"],
-.ui.table [class*="single line"] {
+.ui.table[class*='single line'],
+.ui.table [class*='single line'] {
   white-space: nowrap;
 }
-.ui.table[class*="single line"],
-.ui.table [class*="single line"] {
+.ui.table[class*='single line'],
+.ui.table [class*='single line'] {
   white-space: nowrap;
 }
 
@@ -750,7 +740,6 @@
   background-color: @black !important;
   color: @white !important;
 }
-
 
 /*--------------
   Column Count
@@ -948,7 +937,6 @@
   border-right-color: @sortableInvertedBorderColor;
 }
 
-
 /*--------------
     Inverted
 ---------------*/
@@ -1022,22 +1010,25 @@
 }
 
 /* Very Basic */
-.ui[class*="very basic"].table {
+.ui[class*='very basic'].table {
   border: none;
 }
-.ui[class*="very basic"].table:not(.sortable):not(.striped) th,
-.ui[class*="very basic"].table:not(.sortable):not(.striped) td {
+.ui[class*='very basic'].table:not(.sortable):not(.striped) th,
+.ui[class*='very basic'].table:not(.sortable):not(.striped) td {
   padding: @basicTableCellPadding;
 }
-.ui[class*="very basic"].table:not(.sortable):not(.striped) th:first-child,
-.ui[class*="very basic"].table:not(.sortable):not(.striped) td:first-child {
+.ui[class*='very basic'].table:not(.sortable):not(.striped) th:first-child,
+.ui[class*='very basic'].table:not(.sortable):not(.striped) td:first-child {
   padding-left: 0em;
 }
-.ui[class*="very basic"].table:not(.sortable):not(.striped) th:last-child,
-.ui[class*="very basic"].table:not(.sortable):not(.striped) td:last-child {
+.ui[class*='very basic'].table:not(.sortable):not(.striped) th:last-child,
+.ui[class*='very basic'].table:not(.sortable):not(.striped) td:last-child {
   padding-right: 0em;
 }
-.ui[class*="very basic"].table:not(.sortable):not(.striped) thead tr:first-child th {
+.ui[class*='very basic'].table:not(.sortable):not(.striped)
+  thead
+  tr:first-child
+  th {
   padding-top: 0em;
 }
 
@@ -1068,11 +1059,11 @@
 }
 
 /* Very */
-.ui[class*="very padded"].table th {
+.ui[class*='very padded'].table th {
   padding-left: @veryPaddedHorizontalPadding;
   padding-right: @veryPaddedHorizontalPadding;
 }
-.ui[class*="very padded"].table td {
+.ui[class*='very padded'].table td {
   padding: @veryPaddedVerticalPadding @veryPaddedHorizontalPadding;
 }
 
@@ -1089,11 +1080,11 @@
 }
 
 /* Very */
-.ui[class*="very compact"].table th {
+.ui[class*='very compact'].table th {
   padding-left: @veryCompactHorizontalPadding;
   padding-right: @veryCompactHorizontalPadding;
 }
-.ui[class*="very compact"].table td {
+.ui[class*='very compact'].table td {
   padding: @veryCompactVerticalPadding @veryCompactHorizontalPadding;
 }
 

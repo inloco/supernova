@@ -12,7 +12,7 @@
             Theme
 *******************************/
 
-@type    : 'view';
+@type : 'view';
 @element : 'item';
 
 @import (multiple) '../../theme.config';
@@ -77,8 +77,6 @@
   margin-bottom: 0em;
 }
 
-
-
 /*--------------
      Images
 ---------------*/
@@ -104,7 +102,6 @@
 .ui.items > .item > .image:only-child > img {
   border-radius: @borderRadius;
 }
-
 
 /*--------------
      Content
@@ -155,13 +152,12 @@
      Floated
 ---------------*/
 
-.ui.items > .item [class*="left floated"] {
+.ui.items > .item [class*='left floated'] {
   float: left;
 }
-.ui.items > .item [class*="right floated"] {
+.ui.items > .item [class*='right floated'] {
   float: right;
 }
-
 
 /*--------------
   Content Image
@@ -177,7 +173,6 @@
   height: @avatarSize;
   border-radius: @avatarBorderRadius;
 }
-
 
 /*--------------
    Description
@@ -219,7 +214,7 @@
   margin-right: 0em;
 }
 
-.ui.items > .item .meta [class*="right floated"] {
+.ui.items > .item .meta [class*='right floated'] {
   margin-right: 0em;
   margin-left: @metaSpacing;
 }
@@ -252,8 +247,6 @@
 .ui.items > .item .meta > a:not(.ui):hover {
   color: @metaLinkHoverColor;
 }
-
-
 
 /*--------------
      Labels
@@ -310,10 +303,12 @@
   border-top: @extraDivider;
 }
 .ui.items > .item .extra > * {
-  margin: (@extraRowSpacing / 2) @extraHorizontalSpacing (@extraRowSpacing / 2) 0em;
+  margin: (@extraRowSpacing / 2) @extraHorizontalSpacing (@extraRowSpacing / 2)
+    0em;
 }
-.ui.items > .item .extra > [class*="right floated"] {
-  margin: (@extraRowSpacing / 2) 0em (@extraRowSpacing / 2) @extraHorizontalSpacing;
+.ui.items > .item .extra > [class*='right floated'] {
+  margin: (@extraRowSpacing / 2) 0em (@extraRowSpacing / 2)
+    @extraHorizontalSpacing;
 }
 
 .ui.items > .item .extra:after {
@@ -325,7 +320,6 @@
   visibility: hidden;
 }
 
-
 /*******************************
           Responsive
 *******************************/
@@ -334,7 +328,6 @@
 .ui.items > .item > .image:not(.ui) {
   width: @imageWidth;
 }
-
 
 /* Tablet Only */
 @media only screen and (min-width: @tabletBreakpoint) and (max-width: @largestTabletScreen) {
@@ -348,7 +341,6 @@
     display: block;
     padding: 0em 0em 0em @tabletContentImageDistance;
   }
-
 }
 
 /* Mobile Only */
@@ -374,26 +366,23 @@
   }
 }
 
-
 /*******************************
            Variations
 *******************************/
-
 
 /*-------------------
        Aligned
 --------------------*/
 
-.ui.items > .item > .image + [class*="top aligned"].content {
+.ui.items > .item > .image + [class*='top aligned'].content {
   align-self: flex-start;
 }
-.ui.items > .item > .image + [class*="middle aligned"].content {
+.ui.items > .item > .image + [class*='middle aligned'].content {
   align-self: center;
 }
-.ui.items > .item > .image + [class*="bottom aligned"].content {
+.ui.items > .item > .image + [class*='bottom aligned'].content {
   align-self: flex-end;
 }
-
 
 /*--------------
      Relaxed
@@ -402,10 +391,9 @@
 .ui.relaxed.items > .item {
   margin: @relaxedItemSpacing 0em;
 }
-.ui[class*="very relaxed"].items > .item {
+.ui[class*='very relaxed'].items > .item {
   margin: @veryRelaxedItemSpacing 0em;
 }
-
 
 /*-------------------
       Divided
@@ -431,11 +419,10 @@
   margin: 0em;
   padding: @relaxedItemSpacing 0em;
 }
-.ui[class*="very relaxed"].divided.items > .item {
+.ui[class*='very relaxed'].divided.items > .item {
   margin: 0em;
   padding: @veryRelaxedItemSpacing 0em;
 }
-
 
 /*-------------------
         Link
@@ -450,7 +437,6 @@
 .ui.link.items > .item:hover .content .header {
   color: @headerLinkHoverColor;
 }
-
 
 /*--------------
       Size
