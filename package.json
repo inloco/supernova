@@ -10,7 +10,8 @@
     "build:css": "gulp build",
     "build:storybook": "yarn build:css && build-storybook -o .out",
     "deploy:storybook": "yarn build:storybook && storybook-to-ghpages",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
+    "test:watch": "jest --watch",
     "prepublishOnly": "npm run build:css && npm run build",
     "build": "babel ./components -d ./dist",
     "storybook": "start-storybook -p 9001 -c .storybook",
@@ -38,7 +39,11 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.7.1",
+    "enzyme-to-json": "^3.3.5",
     "husky": "^1.1.3",
+    "jest": "^23.6.0",
     "prettier": "^1.14.3",
     "pretty-quick": "^1.8.0",
     "semantic-ui": "^2.4.2"
@@ -52,5 +57,11 @@
     "hooks": {
       "pre-commit": "pretty-quick --staged"
     }
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>config/jest.js",
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   }
 }
