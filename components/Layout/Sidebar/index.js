@@ -18,6 +18,8 @@ class Sidebar extends Component {
 
   static contextType = LayoutContext
 
+  scrollRef = React.createRef()
+
   state = {
     expanded: false,
     transitioning: false
@@ -40,7 +42,7 @@ class Sidebar extends Component {
           className={classes}
           vertical
           onTransitionEnd={this.handleTransitionEnd}>
-          <div className="inloco-layout__sidebar-content">
+          <div className="inloco-layout__sidebar-content" ref={this.scrollRef}>
             <Sticky>
               <Menu.Item header onClick={this.handleHeaderClick}>
                 <Icon className={headerIcon} />
@@ -48,7 +50,11 @@ class Sidebar extends Component {
               </Menu.Item>
             </Sticky>
             <SidebarContext.Provider
-              value={{ onSidebarClose: this.handleClose, expanded }}>
+              value={{
+                onSidebarClose: this.handleClose,
+                expanded,
+                scrollRef: this.scrollRef
+              }}>
               {children}
             </SidebarContext.Provider>
           </div>

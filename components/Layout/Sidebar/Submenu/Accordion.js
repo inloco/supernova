@@ -5,6 +5,8 @@ import { Accordion, Icon, Menu, Transition } from 'semantic-ui-react'
 
 import { normalizeIconProp } from '../../../utils/icons'
 
+import SidebarContext from '../SidebarContext'
+
 class SidebarSubmenuAccordion extends Component {
   static propTypes = {
     active: PropTypes.bool,
@@ -12,6 +14,8 @@ class SidebarSubmenuAccordion extends Component {
     className: PropTypes.string,
     content: PropTypes.node.isRequired
   }
+
+  static contextType = SidebarContext
 
   state = {
     open: false
@@ -48,6 +52,20 @@ class SidebarSubmenuAccordion extends Component {
         </Transition>
       </Menu.Item>
     )
+  }
+
+  /**
+   * Scroll the sidebar down when the footer accordion opens, as its content
+   * may cause the scrollbar to appear for the first time.
+   */
+  componentDidUpdate(props, { open: prevOpen }) {
+    const { open } = this.state
+    if (open && !prevOpen) {
+      const {
+        scrollRef: { current: scrollElement }
+      } = this.context
+      scrollElement.scrollTo(0, scrollElement.scrollHeight)
+    }
   }
 
   handleTitleClick = () => {
