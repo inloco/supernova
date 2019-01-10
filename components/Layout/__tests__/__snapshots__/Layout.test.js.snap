@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout should render context provider with given content 1`] = `
+<div
+  className="inloco-layout"
+>
+  <ContextProvider
+    value={
+      Object {
+        "color": undefined,
+        "onWarningMount": [Function],
+        "ref": Object {
+          "current": null,
+        },
+        "withWarning": false,
+      }
+    }
+  >
+    Test Children Content
+  </ContextProvider>
+</div>
+`;
