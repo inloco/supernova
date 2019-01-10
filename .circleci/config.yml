@@ -23,3 +23,5 @@ jobs:
           command: yarn test --ci --maxWorkers=2
       - store_test_results:
           path: ./reports
+    branches:
+      ignore: gh-pages
