@@ -69,7 +69,8 @@
     "form",
     "state",
     "visibility",
-    "layout"
+    "layout",
+    "wizard"
   ],
   "version": "2.4.2"
 }
