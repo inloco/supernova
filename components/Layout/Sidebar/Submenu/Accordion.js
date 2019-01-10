@@ -1,7 +1,7 @@
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
-import { Accordion, Icon, Menu } from 'semantic-ui-react'
+import { Accordion, Icon, Menu, Transition } from 'semantic-ui-react'
 
 import { normalizeIconProp } from '../../../utils/icons'
 
@@ -41,9 +41,11 @@ class SidebarSubmenuAccordion extends Component {
           </span>
           <Icon className="keyboard arrow down dropdown" />
         </Accordion.Title>
-        <Accordion.Content as={Menu.Menu} active={open}>
-          {children}
-        </Accordion.Content>
+        <Transition visible={open} animation="slide down" duration={250}>
+          <Accordion.Content as={Menu.Menu} active={open}>
+            {children}
+          </Accordion.Content>
+        </Transition>
       </Menu.Item>
     )
   }
