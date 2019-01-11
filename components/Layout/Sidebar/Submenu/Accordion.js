@@ -60,10 +60,11 @@ class SidebarSubmenuAccordion extends Component {
    */
   componentDidUpdate(props, { open: prevOpen }) {
     const { open } = this.state
-    if (open && !prevOpen) {
-      const {
-        scrollRef: { current: scrollElement }
-      } = this.context
+    const {
+      isFooter,
+      scrollRef: { current: scrollElement }
+    } = this.context
+    if (isFooter && open && !prevOpen) {
       scrollElement.scrollTo(0, scrollElement.scrollHeight)
     }
   }

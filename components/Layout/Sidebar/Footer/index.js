@@ -1,7 +1,8 @@
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
-import { Divider } from 'semantic-ui-react'
+
+import SidebarContext from '../SidebarContext'
 
 class Footer extends Component {
   static propTypes = {
@@ -9,12 +10,16 @@ class Footer extends Component {
     children: PropTypes.node.isRequired
   }
 
+  static contextType = SidebarContext
+
   render() {
     const { className, children, ...otherProps } = this.props
     const classes = cx('inloco-layout__sidebar-footer', className)
     return (
       <div className={classes} {...otherProps}>
-        {children}
+        <SidebarContext.Provider value={{ ...this.context, isFooter: true }}>
+          {children}
+        </SidebarContext.Provider>
       </div>
     )
   }
