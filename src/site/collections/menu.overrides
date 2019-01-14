@@ -370,6 +370,10 @@
     order: 1;
   }
 
+  &> img.icon {
+    content: none;
+  }
+
   .text {
     order: 2;
   }
