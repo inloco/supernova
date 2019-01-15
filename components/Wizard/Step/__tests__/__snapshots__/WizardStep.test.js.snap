@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WizardStep should render wizard step with child content 1`] = `
+<div
+  className="inloco-wizard__step customTestClass"
+>
+  Test Child Content
+</div>
+`;

@@ -14,6 +14,7 @@ import LayoutHeader from './Main/Header'
 import LayoutHeaderTitle from './Main/Header/Title'
 import LayoutHeaderControls from './Main/Header/Controls'
 import LayoutContext from './LayoutContext'
+import LayoutWizard from './Wizard'
 
 class Layout extends Component {
   static propTypes = {
@@ -34,6 +35,7 @@ class Layout extends Component {
   static Header = LayoutHeader
   static HeaderTitle = LayoutHeaderTitle
   static HeaderControls = LayoutHeaderControls
+  static Wizard = LayoutWizard
 
   ref = React.createRef()
 

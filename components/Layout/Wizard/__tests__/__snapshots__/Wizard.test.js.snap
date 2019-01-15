@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LayoutWizard should render layout wizard content for the first step by default 1`] = `
+<Fragment>
+  <Header>
+    <HeaderTitle>
+      <div
+        className="inloco-layout__wizard-title"
+      >
+        <div
+          className="inloco-layout__wizard-title-number"
+        >
+          1
+        </div>
+        Step 1
+      </div>
+    </HeaderTitle>
+  </Header>
+  <MainContent>
+    <Wizard
+      className="inloco-layout__wizard customTestClass"
+      currentStep={0}
+      footerProps={Object {}}
+      onChangeStep={[Function]}
+      steps={
+        Array [
+          "Step 1",
+          "Step 2",
+          "Step 3",
+        ]
+      }
+    >
+      Test Child Content
+    </Wizard>
+  </MainContent>
+</Fragment>
+`;
+
+exports[`LayoutWizard should render layout wizard content for the given initial step 1`] = `
+<Fragment>
+  <Header>
+    <HeaderTitle>
+      <div
+        className="inloco-layout__wizard-title"
+      >
+        <div
+          className="inloco-layout__wizard-title-number"
+        >
+          2
+        </div>
+        Step 2
+      </div>
+    </HeaderTitle>
+  </Header>
+  <MainContent>
+    <Wizard
+      className="inloco-layout__wizard customTestClass"
+      currentStep={1}
+      footerProps={Object {}}
+      onChangeStep={[Function]}
+      steps={
+        Array [
+          "Step 1",
+          "Step 2",
+          "Step 3",
+        ]
+      }
+    >
+      Test Child Content
+    </Wizard>
+  </MainContent>
+</Fragment>
+`;

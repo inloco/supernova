@@ -31,6 +31,7 @@
 
 @sidebarHeaderHeight: 64px;
 @sidebarHeaderBottomMargin: 20px;
+@sidebarWidth: 65px;
 
 .inloco-layout__sidebar.ui.vertical.menu {
   border-right: 1px solid fade(@n600, 7%);
@@ -45,7 +46,7 @@
   position: fixed;
   top: 0;
   transition: width 0.25s cubic-bezier(0.75, 0, 0.24, 1.01);
-  width: 65px;
+  width: @sidebarWidth;
   z-index: 1001;
 
   &.expanded {
@@ -402,4 +403,33 @@
       left: 32px;
     }
   }
+}
+
+/*--------------
+    Layout Wizard
+---------------*/
+
+.inloco-layout__wizard {
+  .inloco-wizard__footer {
+    padding-left: calc(32px + @sidebarWidth);
+  }
+}
+
+.inloco-layout__wizard-title {
+  align-items: center;
+  display: flex;
+  font-size: 20px;
+}
+
+.inloco-layout__wizard-title-number {
+  background-color: @n400;
+  border-radius: 11px;
+  color: @gray00;
+  font-size: 14px;
+  font-weight: 500;
+  height: 20px;
+  line-height: 20px;
+  margin-right: 8px;
+  text-align: center;
+  width: 20px;
 }

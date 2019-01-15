@@ -18,6 +18,11 @@ describe('WizardFooter', () => {
     expect(buildWrapper()).toMatchSnapshot()
   })
 
+  it('should render the given step as the current step', () => {
+    const wrapper = buildWrapper({ currentStep: 1 })
+    expect(wrapper).toMatchSnapshot()
+  })
+
   describe('when the current step changes', () => {
     let wrapper
 
@@ -28,10 +33,6 @@ describe('WizardFooter', () => {
       } = wrapper.instance()
       const { onChangeStep } = controls.mock.calls[0][0]
       onChangeStep(1)
-    })
-
-    it('should render the new step as the current step', () => {
-      expect(wrapper).toMatchSnapshot()
     })
 
     it('should call "onChangeStep" prop with the new step', () => {

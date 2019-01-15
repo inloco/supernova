@@ -1,37 +1,33 @@
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
-
 import { Breadcrumb, Icon } from 'semantic-ui-react'
+
+import WizardFooterBasicControls from './BasicControls'
 
 class WizardFooter extends Component {
   static propTypes = {
     className: PropTypes.string,
-    controls: PropTypes.func.isRequired,
-    initialStepIndex: PropTypes.number,
+    controls: PropTypes.func,
+    currentStep: PropTypes.number,
     onChangeStep: PropTypes.func,
     steps: PropTypes.arrayOf(PropTypes.string).isRequired
   }
 
   static defaultProps = {
-    initialStepIndex: 0,
+    currentStep: 0,
     onChangeStep: () => {}
-  }
-
-  state = {
-    currentStep: this.props.initialStepIndex
   }
 
   render() {
     const {
       controls,
       className,
-      initialStepIndex,
+      currentStep,
       onChangeStep,
       steps,
       ...otherProps
     } = this.props
-    const { currentStep } = this.state
     const classes = cx('inloco-wizard__footer', className)
     return (
       <div className={classes} {...otherProps}>
@@ -55,18 +51,19 @@ class WizardFooter extends Component {
           })}
         </Breadcrumb>
         <div className="inloco-wizard__footer-controls">
-          {controls({
-            currentStep,
-            onChangeStep: this.handleChangeStep
-          })}
+          {this.renderControls({ currentStep, onChangeStep })}
         </div>
       </div>
     )
   }
 
-  handleChangeStep = newStepIndex => {
-    this.setState({ currentStep: newStepIndex })
-    this.props.onChangeStep(newStepIndex)
+  renderControls = props => {
+    const { controls, steps } = this.props
+    return controls ? (
+      controls(props)
+    ) : (
+      <WizardFooterBasicControls {...props} totalSteps={steps.length} />
+    )
   }
 }
 
