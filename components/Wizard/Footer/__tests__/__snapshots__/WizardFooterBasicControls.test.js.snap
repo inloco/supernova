@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WizardFooterBasicControls should render "cancel", "previous" and "next" buttons 1`] = `
+<Fragment>
+  <Button
+    as="button"
+    role="button"
+  >
+    Cancel
+  </Button>
+  <Button
+    as="button"
+    onClick={[Function]}
+    role="button"
+  >
+    Previous
+  </Button>
+  <Button
+    as="button"
+    className="blue"
+    onClick={[Function]}
+    role="button"
+  >
+    Next
+  </Button>
+</Fragment>
+`;
+
+exports[`WizardFooterBasicControls when the "showSaveButton" prop is set to "true" should render "cancel", "previous", "save" and "next" buttons 1`] = `
+<Fragment>
+  <Button
+    as="button"
+    role="button"
+  >
+    Cancel
+  </Button>
+  <Button
+    as="button"
+    onClick={[Function]}
+    role="button"
+  >
+    Previous
+  </Button>
+  <Button
+    as="button"
+    role="button"
+  >
+    Save
+  </Button>
+  <Button
+    as="button"
+    className="blue"
+    onClick={[Function]}
+    role="button"
+  >
+    Next
+  </Button>
+</Fragment>
+`;
+
+exports[`WizardFooterBasicControls when the current step is the first step should render "cancel" and "next" buttons 1`] = `
+<Fragment>
+  <Button
+    as="button"
+    role="button"
+  >
+    Cancel
+  </Button>
+  <Button
+    as="button"
+    className="blue"
+    onClick={[Function]}
+    role="button"
+  >
+    Next
+  </Button>
+</Fragment>
+`;
+
+exports[`WizardFooterBasicControls when the current step is the last step should render "cancel", "previous" and "finish" buttons 1`] = `
+<Fragment>
+  <Button
+    as="button"
+    role="button"
+  >
+    Cancel
+  </Button>
+  <Button
+    as="button"
+    onClick={[Function]}
+    role="button"
+  >
+    Previous
+  </Button>
+  <Button
+    as="button"
+    className="blue"
+    role="button"
+  >
+    Finish
+  </Button>
+</Fragment>
+`;

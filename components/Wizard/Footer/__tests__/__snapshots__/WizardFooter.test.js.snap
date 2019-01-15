@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WizardFooter should render wizard with given content 1`] = `
+<div
+  className="inloco-wizard__footer"
+>
+  <Breadcrumb>
+    <BreadcrumbSection
+      className="inloco-wizard__footer-step--current"
+    >
+      Step 1
+    </BreadcrumbSection>
+    <BreadcrumbDivider>
+      <Icon
+        as="i"
+        className="chevron right"
+      />
+    </BreadcrumbDivider>
+    <BreadcrumbSection
+      className=""
+    >
+      Step 2
+    </BreadcrumbSection>
+    <BreadcrumbDivider>
+      <Icon
+        as="i"
+        className="chevron right"
+      />
+    </BreadcrumbDivider>
+    <BreadcrumbSection
+      className=""
+    >
+      Step 3
+    </BreadcrumbSection>
+  </Breadcrumb>
+  <div
+    className="inloco-wizard__footer-controls"
+  >
+    <div>
+      Test Controls
+    </div>
+  </div>
+</div>
+`;
+
+exports[`WizardFooter when the current step changes should render the new step as the current step 1`] = `
+<div
+  className="inloco-wizard__footer"
+>
+  <Breadcrumb>
+    <BreadcrumbSection
+      className=""
+    >
+      Step 1
+    </BreadcrumbSection>
+    <BreadcrumbDivider>
+      <Icon
+        as="i"
+        className="chevron right"
+      />
+    </BreadcrumbDivider>
+    <BreadcrumbSection
+      className="inloco-wizard__footer-step--current"
+    >
+      Step 2
+    </BreadcrumbSection>
+    <BreadcrumbDivider>
+      <Icon
+        as="i"
+        className="chevron right"
+      />
+    </BreadcrumbDivider>
+    <BreadcrumbSection
+      className=""
+    >
+      Step 3
+    </BreadcrumbSection>
+  </Breadcrumb>
+  <div
+    className="inloco-wizard__footer-controls"
+  >
+    <div>
+      Test Controls
+    </div>
+  </div>
+</div>
+`;
