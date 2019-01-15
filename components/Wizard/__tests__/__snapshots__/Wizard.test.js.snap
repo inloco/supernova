@@ -1,9 +1,67 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Wizard should render wizard with given content 1`] = `
+exports[`Wizard should render wizard with the first step as the current step by default 1`] = `
 <div
   className="inloco-wizard"
 >
-  Test Children Content
+  <div
+    className="inloco-wizard__content"
+  >
+    <TransitionGroup
+      animation="slide up"
+      duration={500}
+    >
+      <WizardStep
+        key=".0"
+      >
+        Step 1 Content
+      </WizardStep>
+    </TransitionGroup>
+  </div>
+  <WizardFooter
+    currentStep={0}
+    onChangeStep={[MockFunction]}
+    prop1="prop1Value"
+    steps={
+      Array [
+        "Step 1",
+        "Step 2",
+        "Step 3",
+      ]
+    }
+  />
+</div>
+`;
+
+exports[`Wizard should render wizard with the given step as the current step 1`] = `
+<div
+  className="inloco-wizard"
+>
+  <div
+    className="inloco-wizard__content"
+  >
+    <TransitionGroup
+      animation="slide up"
+      duration={500}
+    >
+      <WizardStep
+        key=".1"
+      >
+        Step 2 Content
+      </WizardStep>
+    </TransitionGroup>
+  </div>
+  <WizardFooter
+    currentStep={1}
+    onChangeStep={[MockFunction]}
+    prop1="prop1Value"
+    steps={
+      Array [
+        "Step 1",
+        "Step 2",
+        "Step 3",
+      ]
+    }
+  />
 </div>
 `;

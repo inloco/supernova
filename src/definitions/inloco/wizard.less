@@ -12,17 +12,44 @@
 @import (multiple) '../../theme.config';
 
 /*--------------
+    Variables
+---------------*/
+
+@footerHeight: 68px;
+
+/*--------------
+    Wizard
+---------------*/
+
+.inloco-wizard {
+  min-height: 100%;
+}
+
+/*--------------
+    Wizard Content
+---------------*/
+
+.inloco-wizard__content {
+  margin-bottom: @footerHeight;
+}
+
+/*--------------
     Wizard Footer
 ---------------*/
 
 .inloco-wizard__footer {
   align-items: center;
   background-color: #fff;
+  bottom: 0;
   box-shadow: 0 -2px 3px -2px fade(@n600, 5%);
   display: flex;
-  height: 68px;
+  flex-shrink: 0;
+  height: @footerHeight;
   justify-content: space-between;
+  left: 0;
   padding: 0 32px;
+  position: fixed;
+  width: 100%;
 
   .ui.breadcrumb {
     .section {

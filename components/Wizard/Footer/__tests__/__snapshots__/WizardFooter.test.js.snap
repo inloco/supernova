@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`WizardFooter should render wizard with given content 1`] = `
+exports[`WizardFooter should render the given step as the current step 1`] = `
 <div
   className="inloco-wizard__footer"
 >
   <Breadcrumb>
     <BreadcrumbSection
-      className="inloco-wizard__footer-step--current"
+      className=""
     >
       Step 1
     </BreadcrumbSection>
@@ -17,7 +17,7 @@ exports[`WizardFooter should render wizard with given content 1`] = `
       />
     </BreadcrumbDivider>
     <BreadcrumbSection
-      className=""
+      className="inloco-wizard__footer-step--current"
     >
       Step 2
     </BreadcrumbSection>
@@ -43,13 +43,13 @@ exports[`WizardFooter should render wizard with given content 1`] = `
 </div>
 `;
 
-exports[`WizardFooter when the current step changes should render the new step as the current step 1`] = `
+exports[`WizardFooter should render wizard with given content 1`] = `
 <div
   className="inloco-wizard__footer"
 >
   <Breadcrumb>
     <BreadcrumbSection
-      className=""
+      className="inloco-wizard__footer-step--current"
     >
       Step 1
     </BreadcrumbSection>
@@ -60,7 +60,7 @@ exports[`WizardFooter when the current step changes should render the new step a
       />
     </BreadcrumbDivider>
     <BreadcrumbSection
-      className="inloco-wizard__footer-step--current"
+      className=""
     >
       Step 2
     </BreadcrumbSection>
