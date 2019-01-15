@@ -24,3 +24,17 @@
 .ui.warning.icon.input > i.icon {
   color: @yellow;
 }
+
+.ui.labeled.input {
+  border: 1px solid @borderColor;
+  border-radius: 3px;
+  height: 40px;
+
+  &> .label {
+    height: auto;
+  }
+
+  &> input {
+    border: none;
+  }
+}
