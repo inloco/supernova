@@ -7,6 +7,7 @@
 @labelFontSize: 12px;
 @labelFontWeight: 400;
 @labelColor: rgba(97,98,99, .88);
+@labelMargin: 0 0 8px;
 
 @inputFocusBoxShadow: 0 0 0px 1px rgba(62, 73, 101, .5);
 @inputTransition:
