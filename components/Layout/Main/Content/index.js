@@ -4,17 +4,19 @@ import React, { Component } from 'react'
 
 class MainContent extends Component {
   static propTypes = {
+    as: PropTypes.oneOfType([PropTypes.string, PropTypes.Component]),
     children: PropTypes.node.isRequired,
     className: PropTypes.string
   }
 
   render() {
-    const { children, className, ...otherProps } = this.props
+    const { as, children, className, ...otherProps } = this.props
     const classes = cx('inloco-layout__main-content', className)
+    const ElementType = this.props.as || 'div'
     return (
-      <div className={classes} {...otherProps}>
+      <ElementType className={classes} {...otherProps}>
         {children}
-      </div>
+      </ElementType>
     )
   }
 }

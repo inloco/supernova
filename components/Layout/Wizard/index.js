@@ -10,11 +10,13 @@ export class LayoutWizard extends Component {
     className: PropTypes.string,
     children: PropTypes.node.isRequired,
     initialStepIndex: PropTypes.number,
+    mainContentProps: PropTypes.object,
     steps: PropTypes.arrayOf(PropTypes.string).isRequired
   }
 
   static defaultProps = {
-    initialStepIndex: 0
+    initialStepIndex: 0,
+    mainContentProps: {}
   }
 
   state = {
@@ -26,6 +28,7 @@ export class LayoutWizard extends Component {
       children,
       className,
       initialStepIndex,
+      mainContentProps,
       steps,
       ...otherProps
     } = this.props
@@ -43,7 +46,7 @@ export class LayoutWizard extends Component {
             </div>
           </Layout.HeaderTitle>
         </Layout.Header>
-        <Layout.MainContent>
+        <Layout.MainContent {...mainContentProps}>
           <Wizard
             className={classes}
             currentStep={currentStep}
