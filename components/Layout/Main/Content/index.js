@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 
 class MainContent extends Component {
   static propTypes = {
-    as: PropTypes.oneOfType([PropTypes.string, PropTypes.Component]),
+    as: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
     children: PropTypes.node.isRequired,
     className: PropTypes.string
   }
