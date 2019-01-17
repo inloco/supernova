@@ -1,17 +1,21 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import { Button, Checkbox, Form } from '../../components'
+import { Button, Checkbox, Input, Form } from '../../components'
 
 storiesOf('Form', module).add('basic', () => (
   <Form>
     <Form.Field>
       <label>First Name</label>
-      <input placeholder="First Name" />
+      <Input placeholder="First Name" />
     </Form.Field>
     <Form.Field>
       <label>Last Name</label>
-      <input placeholder="Last Name" />
+      <Input placeholder="Last Name" />
+    </Form.Field>
+    <Form.Field>
+      <label>Website</label>
+      <Input placeholder="Website" label="https://" />
     </Form.Field>
     <Form.Field>
       <Checkbox className="blue" label="I agree to the Terms and Conditions" />

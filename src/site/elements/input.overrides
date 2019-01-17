@@ -35,7 +35,8 @@
     height: auto;
   }
 
-  &> input {
+  &> input,
+  &> input[type="text"] {
     border: none;
   }
 }
