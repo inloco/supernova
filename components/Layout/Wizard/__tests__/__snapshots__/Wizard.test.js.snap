@@ -22,6 +22,7 @@ exports[`LayoutWizard should render layout wizard content for the first step by 
       currentStep={0}
       footerProps={Object {}}
       onChangeStep={[Function]}
+      onStepChange={[MockFunction]}
       steps={
         Array [
           "Step 1",
@@ -58,6 +59,58 @@ exports[`LayoutWizard should render layout wizard content for the given initial 
       currentStep={1}
       footerProps={Object {}}
       onChangeStep={[Function]}
+      onStepChange={[MockFunction]}
+      steps={
+        Array [
+          "Step 1",
+          "Step 2",
+          "Step 3",
+        ]
+      }
+    >
+      Test Child Content
+    </Wizard>
+  </MainContent>
+</Fragment>
+`;
+
+exports[`LayoutWizard when the current step changes should render the wizard at the new current step 1`] = `
+<Fragment>
+  <Header>
+    <HeaderTitle>
+      <div
+        className="inloco-layout__wizard-title"
+      >
+        <div
+          className="inloco-layout__wizard-title-number"
+        >
+          3
+        </div>
+        Step 3
+      </div>
+    </HeaderTitle>
+  </Header>
+  <MainContent>
+    <Wizard
+      className="inloco-layout__wizard customTestClass"
+      currentStep={2}
+      footerProps={Object {}}
+      onChangeStep={[Function]}
+      onStepChange={
+        [MockFunction] {
+          "calls": Array [
+            Array [
+              2,
+            ],
+          ],
+          "results": Array [
+            Object {
+              "isThrow": false,
+              "value": undefined,
+            },
+          ],
+        }
+      }
       steps={
         Array [
           "Step 1",

@@ -11,6 +11,7 @@ export class LayoutWizard extends Component {
     children: PropTypes.node.isRequired,
     initialStepIndex: PropTypes.number,
     mainContentProps: PropTypes.object,
+    onStepChange: PropTypes.func,
     steps: PropTypes.arrayOf(PropTypes.string).isRequired
   }
 
@@ -61,6 +62,8 @@ export class LayoutWizard extends Component {
   }
 
   handleChangeStep = newStep => {
+    const { onStepChange } = this.props
+    onStepChange && onStepChange(newStep)
     this.setState({ currentStep: newStep })
   }
 }
