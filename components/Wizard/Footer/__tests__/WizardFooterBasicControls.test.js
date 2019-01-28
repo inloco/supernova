@@ -26,6 +26,18 @@ describe('WizardFooterBasicControls', () => {
     })
   })
 
+  describe('when the "showBackOnFirstStep" prop is true', () => {
+    describe('when the current step is the first step', () => {
+      it('should render "cancel", "previous" and "next" buttons', () => {
+        const wrapper = buildWrapper({
+          currentStep: 0,
+          showBackOnFirstStep: true
+        })
+        expect(wrapper).toMatchSnapshot()
+      })
+    })
+  })
+
   describe('when the current step is the last step', () => {
     it('should render "cancel", "previous" and "finish" buttons', () => {
       const wrapper = buildWrapper({ currentStep: 2 })

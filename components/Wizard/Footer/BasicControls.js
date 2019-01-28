@@ -17,6 +17,7 @@ class WizardFooterBasicControls extends Component {
     onChangeStep: PropTypes.func.isRequired,
     onFinish: PropTypes.func,
     onSave: PropTypes.func,
+    showBackOnFirstStep: PropTypes.bool,
     showSaveButton: PropTypes.bool,
     totalSteps: PropTypes.number.isRequired
   }
@@ -38,6 +39,7 @@ class WizardFooterBasicControls extends Component {
       onCancel,
       onFinish,
       onSave,
+      showBackOnFirstStep,
       showSaveButton,
       totalSteps
     } = this.props
@@ -45,7 +47,7 @@ class WizardFooterBasicControls extends Component {
     return (
       <React.Fragment>
         <Button onClick={onCancel}>{labels.cancel}</Button>
-        {currentStep > 0 && (
+        {(currentStep > 0 || showBackOnFirstStep) && (
           <Button onClick={this.handlePrevious}>{labels.prev}</Button>
         )}
         {showSaveButton &&

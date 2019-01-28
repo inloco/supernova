@@ -26,6 +26,32 @@ exports[`WizardFooterBasicControls should render "cancel", "previous" and "next"
 </Fragment>
 `;
 
+exports[`WizardFooterBasicControls when the "showBackOnFirstStep" prop is true when the current step is the first step should render "cancel", "previous" and "next" buttons 1`] = `
+<Fragment>
+  <Button
+    as="button"
+    role="button"
+  >
+    Cancel
+  </Button>
+  <Button
+    as="button"
+    onClick={[Function]}
+    role="button"
+  >
+    Previous
+  </Button>
+  <Button
+    as="button"
+    className="blue"
+    onClick={[Function]}
+    role="button"
+  >
+    Next
+  </Button>
+</Fragment>
+`;
+
 exports[`WizardFooterBasicControls when the "showSaveButton" prop is set to "true" should render "cancel", "previous", "save" and "next" buttons 1`] = `
 <Fragment>
   <Button
