@@ -29,6 +29,7 @@ export class LayoutWizard extends Component {
       children,
       className,
       initialStepIndex,
+      onStepChange,
       mainContentProps,
       steps,
       ...otherProps
