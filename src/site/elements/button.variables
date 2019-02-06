@@ -8,7 +8,7 @@
 @verticalPadding: 0;
 @horizontalPadding: 12px;
 
-@textColor: @gray900;
+@textColor: @gray800;
 
 @fontWeight: 500;
 @basicFontWeight: @fontWeight;
@@ -21,7 +21,7 @@
 @hoverBoxShadow: none;
 @hoverColor: inherit;
 
-@downColor: inherit;
+@downColor: @gray900;
 @downBackgroundColor: fade(@n600, 20%);
 
 @focusColor: inherit;
