@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
-import { Button } from 'semantic-ui-react'
+import { Button, ButtonGroup } from 'semantic-ui-react'
 
 storiesOf('Button', module)
   .add('primary', () => (
@@ -97,6 +97,16 @@ storiesOf('Button', module)
         onClick={action('clicked green')}
         icon="cloud"
       />
+    </React.Fragment>
+  ))
+  .add('secondary', () => (
+    <React.Fragment>
+      <Button>Enabled</Button>
+      <br />
+      <br />
+      <Button disabled>Disabled</Button>
+      <br />
+      <br />
     </React.Fragment>
   ))
   .add('subtle', () => (
