@@ -8,6 +8,8 @@
 @verticalPadding: 0;
 @horizontalPadding: 12px;
 
+@textColor: @gray900;
+
 @fontWeight: 500;
 @basicFontWeight: @fontWeight;
 @fontSpacing: 0.33px;
@@ -18,9 +20,15 @@
 
 @hoverBoxShadow: none;
 @hoverColor: inherit;
+
+@downColor: inherit;
+@downBackgroundColor: fade(@n600, 20%);
+
 @focusColor: inherit;
 @focusBoxShadow: inset 0 0 0px 1px rgba(62, 73, 101, .2) !important;
+
 @coloredBoxShadow: none;
+
 @medium: 14px;
 
 @backgroundColor: rgba(62, 73, 101, .08);

@@ -107,6 +107,18 @@ storiesOf('Button', module)
       <Button disabled>Disabled</Button>
       <br />
       <br />
+      <Button icon="cloud" content="Icon with text" />
+      <br />
+      <br />
+      <Button icon="cloud" content="Icon with text disabled" disabled />
+      <br />
+      <br />
+      <Button icon="cloud" />
+      <br />
+      <br />
+      <Button icon="cloud" disabled />
+      <br />
+      <br />
     </React.Fragment>
   ))
   .add('subtle', () => (

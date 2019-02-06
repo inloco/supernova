@@ -6,6 +6,10 @@
   letter-spacing: @fontSpacing;
 }
 
+.ui.button:not(:active):not(.blue):not(.green):not(.pink) > .icon:not(.button) {
+  color: @gray600;
+}
+
 .ui.secondary.button:hover {
   box-shadow: @hoverBoxShadow !important; 
 }
