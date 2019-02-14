@@ -91,8 +91,40 @@ storiesOf('Layout', module).add('wizard', () => (
           </Placeholder>
         </Wizard.Step>
 
-        <Wizard.Step>Step 2 Content</Wizard.Step>
-        <Wizard.Step>Step 3 Content</Wizard.Step>
+        <Wizard.Step>
+          Step 2 Content
+          <Placeholder fluid>
+            <Placeholder.Paragraph>
+              <Placeholder.Line />
+              <Placeholder.Line />
+              <Placeholder.Line />
+              <Placeholder.Line />
+            </Placeholder.Paragraph>
+            <Placeholder.Paragraph>
+              <Placeholder.Line />
+              <Placeholder.Line />
+              <Placeholder.Line />
+              <Placeholder.Line />
+            </Placeholder.Paragraph>
+          </Placeholder>
+        </Wizard.Step>
+        <Wizard.Step>
+          Step 3 Content
+          <Placeholder fluid>
+            <Placeholder.Paragraph>
+              <Placeholder.Line />
+              <Placeholder.Line />
+              <Placeholder.Line />
+              <Placeholder.Line />
+            </Placeholder.Paragraph>
+            <Placeholder.Paragraph>
+              <Placeholder.Line />
+              <Placeholder.Line />
+              <Placeholder.Line />
+              <Placeholder.Line />
+            </Placeholder.Paragraph>
+          </Placeholder>
+        </Wizard.Step>
       </Layout.Wizard>
     </Layout.Main>
   </Layout>

@@ -41,7 +41,7 @@ export class Wizard extends Component {
     return (
       <div className={classes} {...otherProps}>
         <div className="inloco-wizard__content">
-          <Transition.Group animation="slide up">
+          <Transition.Group animation="fly up" duration={500}>
             {React.Children.toArray(children)[currentStep]}
           </Transition.Group>
         </div>
