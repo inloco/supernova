@@ -2,8 +2,13 @@
 
 exports[`FormValidatorMessage should render the message 1`] = `
 <div
-  className="inloco-form-validator__field test-class"
+  className="inloco-form-validator__message test-class"
 >
+  <Icon
+    as="i"
+    className="error"
+    size="big"
+  />
   Custom message
 </div>
 `;
