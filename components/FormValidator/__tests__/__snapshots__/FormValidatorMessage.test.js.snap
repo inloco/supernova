@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormValidatorMessage should render the message 1`] = `
+<div
+  className="inloco-form-validator__field test-class"
+>
+  Custom message
+</div>
+`;

@@ -4,6 +4,8 @@ import React, { Component } from 'react'
 import { Form } from 'semantic-ui-react'
 
 import FormValidatorContext from './Context'
+import FormValidatorField from './Field'
+import FormValidatorMessage from './Message'
 
 export class FormValidator extends Component {
   static propTypes = {
@@ -16,6 +18,8 @@ export class FormValidator extends Component {
   }
 
   static Context = FormValidatorContext
+  static Field = FormValidatorField
+  static Message = FormValidatorMessage
 
   state = {
     errors: {}
@@ -93,7 +97,7 @@ export class FormValidator extends Component {
 
   runRules(fieldNames) {
     const errorsArray = fieldNames.map(this.runRule)
-    const success = errorsArray.filter(error => !!error).length > 0
+    const success = errorsArray.filter(error => !!error).length === 0
 
     const errors = {}
     fieldNames.forEach(
