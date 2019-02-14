@@ -8,7 +8,7 @@ exports[`Wizard should render wizard with the first step as the current step by 
     className="inloco-wizard__content"
   >
     <TransitionGroup
-      animation="slide up"
+      animation="fly up"
       duration={500}
     >
       <WizardStep
@@ -41,7 +41,7 @@ exports[`Wizard should render wizard with the given step as the current step 1`]
     className="inloco-wizard__content"
   >
     <TransitionGroup
-      animation="slide up"
+      animation="fly up"
       duration={500}
     >
       <WizardStep

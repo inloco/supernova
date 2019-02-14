@@ -1,3 +1,32 @@
 /*******************************
          Site Overrides
 *******************************/
+
+.transition[class*="fly up"].in {
+  animation-name: flyInUp;
+}
+
+.transition[class*="fly up"].out {
+  animation-name: flyOutUp;
+}
+
+@keyframes flyInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 1500px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes flyOutUp {
+  0% {
+    transform: translate3d(0, 0px, 0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(0, -1500px, 0);
+  }
+}
