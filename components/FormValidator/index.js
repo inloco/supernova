@@ -13,7 +13,7 @@ export class FormValidator extends Component {
     className: PropTypes.string,
     onSubmit: PropTypes.func,
     onSubmitSuccess: PropTypes.func,
-    rules: PropTypes.object.isRequired,
+    validate: PropTypes.func.isRequired,
     value: PropTypes.object.isRequired
   }
 
@@ -30,7 +30,7 @@ export class FormValidator extends Component {
       children,
       className,
       onSubmitSuccess,
-      rules,
+      validate,
       value,
       ...otherProps
     } = this.props
@@ -64,8 +64,9 @@ export class FormValidator extends Component {
     const { onSubmit, onSubmitSuccess } = this.props
     onSubmit && onSubmit(...args)
 
-    const success = this.validateAll()
-    if (success && onSubmitSuccess) {
+    const errors = this.validate()
+    this.setState({ errors })
+    if (!errors && onSubmitSuccess) {
       onSubmitSuccess()
     }
   }
@@ -74,44 +75,23 @@ export class FormValidator extends Component {
     const { errors } = this.state
 
     const fieldsWithError = this.getFieldsWithError()
-    const { errors: newErrors } = this.runRules(fieldsWithError)
+    const newErrors = this.validate()
 
-    const haveErrorsChanged = fieldsWithError.some(
-      fieldName => errors[fieldName] !== newErrors[fieldName]
-    )
+    let haveErrorsChanged = false
+    fieldsWithError.forEach(fieldName => {
+      if (errors[fieldName] !== newErrors[fieldName]) {
+        errors[fieldName] = newErrors[fieldName]
+        haveErrorsChanged = true
+      }
+    })
     if (haveErrorsChanged) {
-      this.setState({ errors: newErrors })
+      this.setState({ errors })
     }
   }
 
-  runRule = fieldName => {
-    const { rules, value } = this.props
-    const rule = rules[fieldName]
-
-    if (!rule.validate(value[fieldName])) {
-      return typeof rule.message === 'function'
-        ? rule.message({ fieldName })
-        : rule.message
-    }
-  }
-
-  runRules(fieldNames) {
-    const errorsArray = fieldNames.map(this.runRule)
-    const success = errorsArray.filter(error => !!error).length === 0
-
-    const errors = {}
-    fieldNames.forEach(
-      (fieldName, index) => (errors[fieldName] = errorsArray[index])
-    )
-
-    return { errors, success }
-  }
-
-  validateAll() {
-    const allFields = Object.keys(this.props.rules)
-    const { errors, success } = this.runRules(allFields)
-    this.setState({ errors })
-    return success
+  validate() {
+    const { validate, value } = this.props
+    return validate(value)
   }
 }
 

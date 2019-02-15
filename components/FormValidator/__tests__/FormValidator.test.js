@@ -10,15 +10,15 @@ const buildWrapper = props =>
       className="test-class"
       onSubmit={jest.fn()}
       onSubmitSuccess={jest.fn()}
-      rules={{
-        name: {
-          message: 'Name is required',
-          validate: value => value
-        },
-        age: {
-          message: 'Age should be an integer',
-          validate: value => Number.isInteger(value)
+      validate={({ age, name }) => {
+        const errors = {}
+        if (!name) {
+          errors.name = 'Name is required'
         }
+        if (!Number.isInteger(age)) {
+          errors.age = 'Age should be an integer'
+        }
+        return errors
       }}
       value={{
         age: 29

@@ -28,7 +28,6 @@ exports[`FormValidator when the form is submitted should render a context provid
     value={
       Object {
         "errors": Object {
-          "age": undefined,
           "name": "Name is required",
         },
       }
@@ -69,7 +68,6 @@ exports[`FormValidator when the form is submitted when the "value" changes shoul
     value={
       Object {
         "errors": Object {
-          "age": undefined,
           "name": "Name is required",
         },
       }

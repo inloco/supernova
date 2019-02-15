@@ -4,23 +4,22 @@ import { action } from '@storybook/addon-actions'
 
 import { Button, Checkbox, Input, FormValidator } from '../../components'
 
-const RULES = {
-  firstName: {
-    message: 'The first name is required.',
-    validate: value => value
-  },
-  lastName: {
-    message: 'The last name is required.',
-    validate: value => value
-  },
-  website: {
-    message: 'The website is required and must have at least one dot (".").',
-    validate: value => value && value.includes('.')
-  },
-  terms: {
-    message: 'The terms must be accepted.',
-    validate: value => value
+const validate = ({ firstName, lastName, website, terms }) => {
+  const errors = {}
+  if (!firstName) {
+    errors.firstName = 'The first name is required.'
   }
+  if (!lastName) {
+    errors.lastName = 'The last name is required.'
+  }
+  if (!website || !website.includes('.')) {
+    errors.website =
+      'The website is required and must have at least one dot (".").'
+  }
+  if (!terms) {
+    errors.terms = 'The terms must be accepted.'
+  }
+  return errors
 }
 
 class ExampleForm extends Component {
@@ -32,7 +31,7 @@ class ExampleForm extends Component {
     const { value } = this.state
     return (
       <FormValidator
-        rules={RULES}
+        validate={validate}
         value={value}
         onSubmitSuccess={action('Valid form submission!')}>
         <FormValidator.Field name="firstName">
