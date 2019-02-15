@@ -60,6 +60,9 @@
     }
   },
   "jest": {
+    "testMatch": [
+      "<rootDir>/components/**/?(*.)(spec|test).js?(x)"
+    ],
     "reporters": [
       "default",
       [
