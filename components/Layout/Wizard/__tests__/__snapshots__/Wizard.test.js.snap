@@ -72,6 +72,78 @@ exports[`LayoutWizard should render layout wizard content for the given initial 
 </Fragment>
 `;
 
+exports[`LayoutWizard when the component is "controlled" should render the wizard at the given current step 1`] = `
+<Fragment>
+  <Header>
+    <HeaderTitle>
+      <div
+        className="inloco-layout__wizard-title"
+      >
+        <div
+          className="inloco-layout__wizard-title-number"
+        >
+          2
+        </div>
+        Step 2
+      </div>
+    </HeaderTitle>
+  </Header>
+  <MainContent>
+    <Wizard
+      className="inloco-layout__wizard customTestClass"
+      currentStep={1}
+      footerProps={Object {}}
+      onChangeStep={[Function]}
+      steps={
+        Array [
+          "Step 1",
+          "Step 2",
+          "Step 3",
+        ]
+      }
+    >
+      Test Child Content
+    </Wizard>
+  </MainContent>
+</Fragment>
+`;
+
+exports[`LayoutWizard when the component is "controlled" when the step changes in the <Wizard /> component should keep rendering the wizard at the step specified by the "currentStep" prop 1`] = `
+<Fragment>
+  <Header>
+    <HeaderTitle>
+      <div
+        className="inloco-layout__wizard-title"
+      >
+        <div
+          className="inloco-layout__wizard-title-number"
+        >
+          2
+        </div>
+        Step 2
+      </div>
+    </HeaderTitle>
+  </Header>
+  <MainContent>
+    <Wizard
+      className="inloco-layout__wizard customTestClass"
+      currentStep={1}
+      footerProps={Object {}}
+      onChangeStep={[Function]}
+      steps={
+        Array [
+          "Step 1",
+          "Step 2",
+          "Step 3",
+        ]
+      }
+    >
+      Test Child Content
+    </Wizard>
+  </MainContent>
+</Fragment>
+`;
+
 exports[`LayoutWizard when the current step changes should render the wizard at the new current step 1`] = `
 <Fragment>
   <Header>

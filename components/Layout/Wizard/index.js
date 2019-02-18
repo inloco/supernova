@@ -9,6 +9,7 @@ export class LayoutWizard extends Component {
   static propTypes = {
     className: PropTypes.string,
     children: PropTypes.node.isRequired,
+    currentStep: PropTypes.number,
     initialStepIndex: PropTypes.number,
     mainContentProps: PropTypes.object,
     onStepChange: PropTypes.func,
@@ -24,17 +25,22 @@ export class LayoutWizard extends Component {
     currentStep: this.props.initialStepIndex
   }
 
+  isControlled = this.props.currentStep !== undefined
+
   render() {
     const {
       children,
       className,
+      currentStep: currentStepProp,
       initialStepIndex,
       onStepChange,
       mainContentProps,
       steps,
       ...otherProps
     } = this.props
-    const { currentStep } = this.state
+    const currentStep = this.isControlled
+      ? currentStepProp
+      : this.state.currentStep
     const classes = cx('inloco-layout__wizard', className)
     return (
       <React.Fragment>
@@ -65,7 +71,10 @@ export class LayoutWizard extends Component {
   handleChangeStep = newStep => {
     const { onStepChange } = this.props
     onStepChange && onStepChange(newStep)
-    this.setState({ currentStep: newStep })
+
+    if (!this.isControlled) {
+      this.setState({ currentStep: newStep })
+    }
   }
 }
 
