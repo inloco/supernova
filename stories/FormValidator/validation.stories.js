@@ -7,17 +7,19 @@ import { Button, Checkbox, Input, FormValidator } from '../../components'
 const validate = ({ firstName, lastName, website, terms }) => {
   const errors = {}
   if (!firstName) {
-    errors.firstName = 'The first name is required.'
+    errors.firstName = 'Required field.'
   }
   if (!lastName) {
-    errors.lastName = 'The last name is required.'
+    errors.lastName = 'Required field.'
   }
   if (!website || !website.includes('.')) {
-    errors.website =
-      'The website is required and must have at least one dot (".").'
+    errors.website = [
+      'Required field. ',
+      'The website must have at least one dot (".").'
+    ]
   }
   if (!terms) {
-    errors.terms = 'The terms must be accepted.'
+    errors.terms = 'Required field.'
   }
   return errors
 }

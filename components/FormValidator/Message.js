@@ -6,7 +6,10 @@ import { Icon } from 'semantic-ui-react'
 export class FormValidatorMessage extends Component {
   static propTypes = {
     className: PropTypes.string,
-    message: PropTypes.string
+    message: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.arrayOf(PropTypes.string)
+    ])
   }
 
   render() {

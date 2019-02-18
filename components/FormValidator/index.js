@@ -78,7 +78,7 @@ export class FormValidator extends Component {
 
     let haveErrorsChanged = false
     fieldsWithError.forEach(fieldName => {
-      if (errors[fieldName] !== newErrors[fieldName]) {
+      if (errors[fieldName] && !newErrors[fieldName]) {
         errors[fieldName] = newErrors[fieldName]
         haveErrorsChanged = true
       }
