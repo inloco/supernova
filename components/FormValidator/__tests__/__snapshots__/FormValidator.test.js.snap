@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormValidator should render form and context provider with no errors at first 1`] = `
+<Form
+  as="form"
+  className="inloco-form-validator test-class"
+  onSubmit={[Function]}
+>
+  <ContextProvider
+    value={
+      Object {
+        "errors": Object {},
+      }
+    }
+  >
+    Test Children Content
+  </ContextProvider>
+</Form>
+`;
+
+exports[`FormValidator when the form is submitted should render a context provider with the validation errors 1`] = `
+<Form
+  as="form"
+  className="inloco-form-validator test-class"
+  onSubmit={[Function]}
+>
+  <ContextProvider
+    value={
+      Object {
+        "errors": Object {
+          "name": "Name is required",
+        },
+      }
+    }
+  >
+    Test Children Content
+  </ContextProvider>
+</Form>
+`;
+
+exports[`FormValidator when the form is submitted when the "value" changes should clear existing errors that were resolved 1`] = `
+<Form
+  as="form"
+  className="inloco-form-validator test-class"
+  onSubmit={[Function]}
+>
+  <ContextProvider
+    value={
+      Object {
+        "errors": Object {
+          "name": undefined,
+        },
+      }
+    }
+  >
+    Test Children Content
+  </ContextProvider>
+</Form>
+`;
+
+exports[`FormValidator when the form is submitted when the "value" changes should not show new errors 1`] = `
+<Form
+  as="form"
+  className="inloco-form-validator test-class"
+  onSubmit={[Function]}
+>
+  <ContextProvider
+    value={
+      Object {
+        "errors": Object {
+          "name": "Name is required",
+        },
+      }
+    }
+  >
+    Test Children Content
+  </ContextProvider>
+</Form>
+`;

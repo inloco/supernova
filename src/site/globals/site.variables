@@ -89,7 +89,7 @@
 @greenFocus       : #A2C204;
 @greenDown        : #98B200;
 
-@red        : @alertRed;
+@red        : @alertRed; // RGB: 217, 36, 0
 @yellow     : @alertYellow;
 
 @linkColor           : @blue;

@@ -1,3 +1,49 @@
 /*******************************
          Site Overrides
 *******************************/
+
+/*--------------
+    Error
+---------------*/
+
+.ui.form .fields.error .field label,
+.ui.form .field.error label,
+.ui.form .fields.error .field .input,
+.ui.form .field.error .input {
+  color: @labelColor !important;
+}
+
+.ui.form .field.error input {
+  color: @inputColor !important;
+}
+
+.ui.form .field.error .ui.labeled.input {
+  border: 1px solid @formErrorBorder;
+
+  input {
+    border: none;
+
+    &:focus {
+      box-shadow: @inputErrorFocusBoxShadow;
+    }
+  }
+}
+
+.inloco-form-validator {
+  .inloco-form-validator__field.field {
+    margin-bottom: 12px;
+  }
+}
+
+.inloco-form-validator__message {
+  align-items: center;
+  color: @red;
+  display: flex;
+  font-size: 11px;
+  height: 24px;
+  line-height: 1em;
+
+  .icon {
+    margin-right: 6px;
+  }
+}

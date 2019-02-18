@@ -4,13 +4,32 @@
 
 @rowDistance: 24px;
 
+@inputColor: @textColor;
+
 @labelFontSize: 12px;
 @labelFontWeight: 400;
 @labelColor: rgba(97,98,99, .88);
 @labelMargin: 0 0 8px;
 
-@inputFocusBoxShadow: 0 0 0px 1px rgba(62, 73, 101, .5);
+@inputFocusBoxShadow: 0 0 0px 1px fade(@n600, 50%);
 @inputTransition:
     color .2s cubic-bezier(.64,0,.35,1),
     border-color .2s cubic-bezier(.64,0,.35,1),
     box-shadow .2s cubic-bezier(.64,0,.35,1);
+
+/*--------------
+    Error
+---------------*/
+
+@inputErrorPlaceholderColor: @inputPlaceholderColor;
+@inputErrorPlaceholderFocusColor: @inputPlaceholderColor;
+
+@formErrorColor: @red;
+
+@formErrorBackground: @gray00;
+@inputErrorFocusBackground: @formErrorBackground;
+
+@formErrorBorder: fade(@red, 50%);
+@inputErrorFocusBorder: @formErrorBorder;
+
+@inputErrorFocusBoxShadow: 0 0 0px 1px fade(@red, 50%);

@@ -1,4 +1,5 @@
 export * from 'semantic-ui-react'
+export * from './FormValidator'
 export * from './RemovableLabel'
 export * from './Layout'
 export * from './Wizard'
