@@ -51,13 +51,12 @@ export class FormValidator extends Component {
     }
   }
 
-  getFieldsWithError() {
-    const { errors } = this.state
+  getFieldsWithError(errors = this.state.errors) {
     return Object.keys(errors).filter(fieldName => errors[fieldName])
   }
 
-  hasErrors() {
-    return this.getFieldsWithError().length > 0
+  hasErrors(errors) {
+    return this.getFieldsWithError(errors).length > 0
   }
 
   handleSubmit = (...args) => {
@@ -66,7 +65,7 @@ export class FormValidator extends Component {
 
     const errors = this.validate()
     this.setState({ errors })
-    if (!errors && onSubmitSuccess) {
+    if (!this.hasErrors(errors) && onSubmitSuccess) {
       onSubmitSuccess()
     }
   }
@@ -91,7 +90,7 @@ export class FormValidator extends Component {
 
   validate() {
     const { validate, value } = this.props
-    return validate(value)
+    return validate(value) || {}
   }
 }
 

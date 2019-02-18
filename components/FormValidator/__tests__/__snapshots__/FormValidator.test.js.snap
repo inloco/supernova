@@ -18,7 +18,7 @@ exports[`FormValidator should render form and context provider with no errors at
 </Form>
 `;
 
-exports[`FormValidator when the form is submitted should render a context provider with the validation errors 1`] = `
+exports[`FormValidator when the form is submitted with errors should render a context provider with the validation errors 1`] = `
 <Form
   as="form"
   className="inloco-form-validator test-class"
@@ -38,7 +38,7 @@ exports[`FormValidator when the form is submitted should render a context provid
 </Form>
 `;
 
-exports[`FormValidator when the form is submitted when the "value" changes should clear existing errors that were resolved 1`] = `
+exports[`FormValidator when the form is submitted with errors when the "value" changes should clear existing errors that were resolved 1`] = `
 <Form
   as="form"
   className="inloco-form-validator test-class"
@@ -58,7 +58,7 @@ exports[`FormValidator when the form is submitted when the "value" changes shoul
 </Form>
 `;
 
-exports[`FormValidator when the form is submitted when the "value" changes should not show new errors 1`] = `
+exports[`FormValidator when the form is submitted with errors when the "value" changes should not show new errors 1`] = `
 <Form
   as="form"
   className="inloco-form-validator test-class"

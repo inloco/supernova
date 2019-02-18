@@ -33,7 +33,7 @@ describe('FormValidator', () => {
     expect(buildWrapper()).toMatchSnapshot()
   })
 
-  describe('when the form is submitted', () => {
+  describe('when the form is submitted with errors', () => {
     let wrapper
 
     beforeEach(() => {
@@ -64,6 +64,24 @@ describe('FormValidator', () => {
         wrapper.setProps({ value: { age: 'String age?' } })
         expect(wrapper).toMatchSnapshot()
       })
+    })
+  })
+
+  describe('when the form is submitted without errors', () => {
+    let wrapper
+
+    beforeEach(() => {
+      wrapper = buildWrapper({
+        value: { name: 'Maira', age: 29 }
+      })
+      wrapper.find(Form).simulate('submit')
+    })
+
+    it('should call the "onSubmitSuccess" prop', () => {
+      const {
+        props: { onSubmitSuccess }
+      } = wrapper.instance()
+      expect(onSubmitSuccess).toHaveBeenCalled()
     })
   })
 })
