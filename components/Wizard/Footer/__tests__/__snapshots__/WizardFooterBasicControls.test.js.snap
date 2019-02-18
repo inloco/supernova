@@ -5,6 +5,7 @@ exports[`WizardFooterBasicControls should render "cancel", "previous" and "next"
   <Button
     as="button"
     role="button"
+    type="button"
   >
     Cancel
   </Button>
@@ -12,6 +13,7 @@ exports[`WizardFooterBasicControls should render "cancel", "previous" and "next"
     as="button"
     onClick={[Function]}
     role="button"
+    type="button"
   >
     Previous
   </Button>
@@ -20,6 +22,7 @@ exports[`WizardFooterBasicControls should render "cancel", "previous" and "next"
     className="blue"
     onClick={[Function]}
     role="button"
+    type="submit"
   >
     Next
   </Button>
@@ -31,6 +34,7 @@ exports[`WizardFooterBasicControls when the "showBackOnFirstStep" prop is true w
   <Button
     as="button"
     role="button"
+    type="button"
   >
     Cancel
   </Button>
@@ -38,6 +42,7 @@ exports[`WizardFooterBasicControls when the "showBackOnFirstStep" prop is true w
     as="button"
     onClick={[Function]}
     role="button"
+    type="button"
   >
     Previous
   </Button>
@@ -46,6 +51,7 @@ exports[`WizardFooterBasicControls when the "showBackOnFirstStep" prop is true w
     className="blue"
     onClick={[Function]}
     role="button"
+    type="submit"
   >
     Next
   </Button>
@@ -57,6 +63,7 @@ exports[`WizardFooterBasicControls when the "showSaveButton" prop is set to "tru
   <Button
     as="button"
     role="button"
+    type="button"
   >
     Cancel
   </Button>
@@ -64,12 +71,14 @@ exports[`WizardFooterBasicControls when the "showSaveButton" prop is set to "tru
     as="button"
     onClick={[Function]}
     role="button"
+    type="button"
   >
     Previous
   </Button>
   <Button
     as="button"
     role="button"
+    type="submit"
   >
     Save
   </Button>
@@ -78,6 +87,7 @@ exports[`WizardFooterBasicControls when the "showSaveButton" prop is set to "tru
     className="blue"
     onClick={[Function]}
     role="button"
+    type="submit"
   >
     Next
   </Button>
@@ -89,6 +99,7 @@ exports[`WizardFooterBasicControls when the current step is the first step shoul
   <Button
     as="button"
     role="button"
+    type="button"
   >
     Cancel
   </Button>
@@ -97,6 +108,7 @@ exports[`WizardFooterBasicControls when the current step is the first step shoul
     className="blue"
     onClick={[Function]}
     role="button"
+    type="submit"
   >
     Next
   </Button>
@@ -108,6 +120,7 @@ exports[`WizardFooterBasicControls when the current step is the last step should
   <Button
     as="button"
     role="button"
+    type="button"
   >
     Cancel
   </Button>
@@ -115,6 +128,7 @@ exports[`WizardFooterBasicControls when the current step is the last step should
     as="button"
     onClick={[Function]}
     role="button"
+    type="button"
   >
     Previous
   </Button>
@@ -122,6 +136,7 @@ exports[`WizardFooterBasicControls when the current step is the last step should
     as="button"
     className="blue"
     role="button"
+    type="submit"
   >
     Finish
   </Button>

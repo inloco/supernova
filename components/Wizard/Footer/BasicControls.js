@@ -46,19 +46,27 @@ class WizardFooterBasicControls extends Component {
     const isLastStep = currentStep === totalSteps - 1
     return (
       <React.Fragment>
-        <Button onClick={onCancel}>{labels.cancel}</Button>
+        <Button onClick={onCancel} type="button">
+          {labels.cancel}
+        </Button>
         {(currentStep > 0 || showBackOnFirstStep) && (
-          <Button onClick={this.handlePrevious}>{labels.prev}</Button>
+          <Button onClick={this.handlePrevious} type="button">
+            {labels.prev}
+          </Button>
         )}
         {showSaveButton &&
-          !isLastStep && <Button onClick={onSave}>{labels.save}</Button>}
+          !isLastStep && (
+            <Button onClick={onSave} type="submit">
+              {labels.save}
+            </Button>
+          )}
         {!isLastStep && (
-          <Button className="blue" onClick={this.handleNext}>
+          <Button className="blue" onClick={this.handleNext} type="submit">
             {labels.next}
           </Button>
         )}
         {isLastStep && (
-          <Button className="blue" onClick={onFinish}>
+          <Button className="blue" onClick={onFinish} type="submit">
             {labels.finish}
           </Button>
         )}
