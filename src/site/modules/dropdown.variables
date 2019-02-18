@@ -36,9 +36,10 @@
     Items
 -----------------------*/
 
-@itemDivider: none; 
+@itemDivider: none;
 @selectionItemDivider: @itemDivider;
 @itemPadding: 12px 12px;
+@itemLineHeight: 20px;
 @selectionItemPadding: @itemPadding;
 
 /*----------------------

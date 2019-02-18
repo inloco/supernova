@@ -7,12 +7,12 @@
 
 @resultsBorderRadius: 3px;
 @resultsBorder: none;
-@resultPadding: 10px 12px;
+@resultPadding: 12px;
 @resultsWidth: 100%;
 @resultsBoxShadow: 0 0 0 1px rgba(227, 228, 229, 0.45), 0 4px 6px 0 fade(@n600, 16%);
 
 @resultDivider: none;
-@resultLineHeight: 16px;
+@resultLineHeight: 20px;
 
 @resultTitleFontWeight: normal;
 
