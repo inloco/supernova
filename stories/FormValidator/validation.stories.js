@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import { storiesOf } from '@storybook/react'
-import { action } from '@storybook/addon-actions'
 
-import { Button, Checkbox, Input, FormValidator } from '../../components'
+import { Button, Checkbox, Form, Input } from '../../components'
 
 const validate = ({ firstName, lastName, website, terms }) => {
   const errors = {}
@@ -26,33 +25,31 @@ const validate = ({ firstName, lastName, website, terms }) => {
 
 class ExampleForm extends Component {
   state = {
+    messages: validate({}),
     value: {}
   }
 
   render() {
-    const { value } = this.state
+    const { messages } = this.state
     return (
-      <FormValidator
-        validate={validate}
-        value={value}
-        onSubmitSuccess={action('Valid form submission!')}>
-        <FormValidator.Field name="firstName">
+      <Form>
+        <Form.ValidatedField message={messages.firstName}>
           <label>First Name</label>
           <Input
             placeholder="First Name"
             name="firstName"
             onChange={this.handleChange}
           />
-        </FormValidator.Field>
-        <FormValidator.Field name="lastName">
+        </Form.ValidatedField>
+        <Form.ValidatedField message={messages.lastName}>
           <label>Last Name</label>
           <Input
             placeholder="Last Name"
             name="lastName"
             onChange={this.handleChange}
           />
-        </FormValidator.Field>
-        <FormValidator.Field name="website">
+        </Form.ValidatedField>
+        <Form.ValidatedField message={messages.website}>
           <label>Website</label>
           <Input
             placeholder="Website"
@@ -60,28 +57,32 @@ class ExampleForm extends Component {
             name="website"
             onChange={this.handleChange}
           />
-        </FormValidator.Field>
-        <FormValidator.Field name="terms">
+        </Form.ValidatedField>
+        <Form.ValidatedField message={messages.terms}>
           <Checkbox
             className="blue"
             label="I agree to the Terms and Conditions"
             name="terms"
             onChange={this.handleChange}
           />
-        </FormValidator.Field>
+        </Form.ValidatedField>
         <Button type="submit">Submit</Button>
-      </FormValidator>
+      </Form>
     )
   }
 
   handleChange = (event, data) => {
-    this.setState(({ value }) => ({
-      value: {
+    this.setState(({ value }) => {
+      const newValue = {
         ...value,
         [data.name]: data.value || data.checked
       }
-    }))
+      return {
+        messages: validate(newValue),
+        value: newValue
+      }
+    })
   }
 }
 
-storiesOf('FormValidator', module).add('basic', () => <ExampleForm />)
+storiesOf('Form', module).add('validation', () => <ExampleForm />)

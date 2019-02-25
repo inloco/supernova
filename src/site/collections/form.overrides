@@ -14,6 +14,10 @@
     Error
 ---------------*/
 
+.ui.form .field.error {
+  position: relative;
+}
+
 .ui.form .fields.error .field label,
 .ui.form .field.error label,
 .ui.form .fields.error .field .input,
@@ -37,12 +41,6 @@
   }
 }
 
-.inloco-form-validator {
-  .inloco-form-validator__field.field {
-    margin-bottom: 12px;
-  }
-}
-
 .inloco-form-validator__message {
   align-items: center;
   color: @red;
@@ -50,6 +48,7 @@
   font-size: 11px;
   height: 24px;
   line-height: 1em;
+  position: absolute;
 
   .icon {
     margin-right: 6px;
