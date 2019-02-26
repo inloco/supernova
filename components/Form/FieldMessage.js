@@ -1,9 +1,9 @@
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
-import { Icon } from 'semantic-ui-react'
+import { Icon, Form } from 'semantic-ui-react'
 
-export class FormValidatorMessage extends Component {
+export class FormFieldMessage extends Component {
   static propTypes = {
     className: PropTypes.string,
     message: PropTypes.oneOfType([
@@ -24,4 +24,6 @@ export class FormValidatorMessage extends Component {
   }
 }
 
-export default FormValidatorMessage
+Form.FieldMessage = FormFieldMessage
+
+export default FormFieldMessage

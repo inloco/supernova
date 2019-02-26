@@ -1,18 +1,18 @@
 import { shallow } from 'enzyme'
 import React from 'react'
 
-import FormValidatorMessage from '../Message'
+import FormFieldMessage from '../FieldMessage'
 
 const buildWrapper = props =>
   shallow(
-    <FormValidatorMessage
+    <FormFieldMessage
       className="test-class"
       message="Custom message"
       {...props}
     />
   )
 
-describe('FormValidatorMessage', () => {
+describe('FormFieldMessage', () => {
   it('should render the message', () => {
     expect(buildWrapper()).toMatchSnapshot()
   })
