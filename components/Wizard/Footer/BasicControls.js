@@ -6,6 +6,7 @@ import { Button } from 'semantic-ui-react'
 class WizardFooterBasicControls extends Component {
   static propTypes = {
     currentStep: PropTypes.number.isRequired,
+    disableSubmit: PropTypes.bool,
     labels: PropTypes.shape({
       cancel: PropTypes.string,
       prev: PropTypes.string,
@@ -35,6 +36,7 @@ class WizardFooterBasicControls extends Component {
   render() {
     const {
       currentStep,
+      disableSubmit,
       labels,
       onCancel,
       onFinish,
@@ -56,17 +58,25 @@ class WizardFooterBasicControls extends Component {
         )}
         {showSaveButton &&
           !isLastStep && (
-            <Button onClick={onSave} type="submit">
+            <Button onClick={onSave} type="submit" disabled={disableSubmit}>
               {labels.save}
             </Button>
           )}
         {!isLastStep && (
-          <Button className="blue" onClick={this.handleNext} type="submit">
+          <Button
+            className="blue"
+            onClick={this.handleNext}
+            type="submit"
+            disabled={disableSubmit}>
             {labels.next}
           </Button>
         )}
         {isLastStep && (
-          <Button className="blue" onClick={onFinish} type="submit">
+          <Button
+            className="blue"
+            onClick={onFinish}
+            type="submit"
+            disabled={disableSubmit}>
             {labels.finish}
           </Button>
         )}

@@ -19,6 +19,11 @@ describe('WizardFooterBasicControls', () => {
     expect(buildWrapper()).toMatchSnapshot()
   })
 
+  it('should disable the "next" button if "disableSubmit" is true', () => {
+    const wrapper = buildWrapper({ disableSubmit: true })
+    expect(wrapper).toMatchSnapshot()
+  })
+
   describe('when the current step is the first step', () => {
     it('should render "cancel" and "next" buttons', () => {
       const wrapper = buildWrapper({ currentStep: 0 })
@@ -51,11 +56,24 @@ describe('WizardFooterBasicControls', () => {
       button.simulate('click')
       expect(onFinish).toHaveBeenCalled()
     })
+
+    it('should disable the "finish" button if "disableSubmit" is true', () => {
+      const wrapper = buildWrapper({ currentStep: 2, disableSubmit: true })
+      expect(wrapper).toMatchSnapshot()
+    })
   })
 
   describe('when the "showSaveButton" prop is set to "true"', () => {
     it('should render "cancel", "previous", "save" and "next" buttons', () => {
       const wrapper = buildWrapper({ showSaveButton: true })
+      expect(wrapper).toMatchSnapshot()
+    })
+
+    it('should disable the "next" and "save" buttons if "disableSubmit" is true', () => {
+      const wrapper = buildWrapper({
+        showSaveButton: true,
+        disableSubmit: true
+      })
       expect(wrapper).toMatchSnapshot()
     })
 
