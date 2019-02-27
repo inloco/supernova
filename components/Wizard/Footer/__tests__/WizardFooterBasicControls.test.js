@@ -19,8 +19,19 @@ describe('WizardFooterBasicControls', () => {
     expect(buildWrapper()).toMatchSnapshot()
   })
 
-  it('should disable the "next" button if "disableSubmit" is true', () => {
-    const wrapper = buildWrapper({ disableSubmit: true })
+  it('should render custom buttons when given', () => {
+    const wrapper = buildWrapper({
+      buttons: {
+        [WizardFooterBasicControls.Buttons.CANCEL]: 'Custom Cancel',
+        [WizardFooterBasicControls.Buttons.PREVIOUS]: {
+          className: 'customPreviousClass',
+          content: 'Custom Previous'
+        },
+        [WizardFooterBasicControls.Buttons.NEXT]: (
+          <Button className="customNextClass">Custom Next</Button>
+        )
+      }
+    })
     expect(wrapper).toMatchSnapshot()
   })
 
@@ -56,24 +67,11 @@ describe('WizardFooterBasicControls', () => {
       button.simulate('click')
       expect(onFinish).toHaveBeenCalled()
     })
-
-    it('should disable the "finish" button if "disableSubmit" is true', () => {
-      const wrapper = buildWrapper({ currentStep: 2, disableSubmit: true })
-      expect(wrapper).toMatchSnapshot()
-    })
   })
 
   describe('when the "showSaveButton" prop is set to "true"', () => {
     it('should render "cancel", "previous", "save" and "next" buttons', () => {
       const wrapper = buildWrapper({ showSaveButton: true })
-      expect(wrapper).toMatchSnapshot()
-    })
-
-    it('should disable the "next" and "save" buttons if "disableSubmit" is true', () => {
-      const wrapper = buildWrapper({
-        showSaveButton: true,
-        disableSubmit: true
-      })
       expect(wrapper).toMatchSnapshot()
     })
 

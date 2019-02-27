@@ -3,16 +3,23 @@ import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import { Button } from 'semantic-ui-react'
 
+const Buttons = {
+  CANCEL: 'cancel',
+  PREVIOUS: 'previous',
+  SAVE: 'save',
+  NEXT: 'next',
+  FINISH: 'finish'
+}
+
 class WizardFooterBasicControls extends Component {
   static propTypes = {
     currentStep: PropTypes.number.isRequired,
-    disableSubmit: PropTypes.bool,
-    labels: PropTypes.shape({
-      cancel: PropTypes.string,
-      prev: PropTypes.string,
-      save: PropTypes.string,
-      next: PropTypes.string,
-      finish: PropTypes.string
+    buttons: PropTypes.shape({
+      [Buttons.CANCEL]: PropTypes.any,
+      [Buttons.PREVIOUS]: PropTypes.any,
+      [Buttons.SAVE]: PropTypes.any,
+      [Buttons.NEXT]: PropTypes.any,
+      [Buttons.FINISH]: PropTypes.any
     }),
     onCancel: PropTypes.func,
     onChangeStep: PropTypes.func.isRequired,
@@ -24,20 +31,21 @@ class WizardFooterBasicControls extends Component {
   }
 
   static defaultProps = {
-    labels: {
-      cancel: 'Cancel',
-      prev: 'Previous',
-      save: 'Save',
-      next: 'Next',
-      finish: 'Finish'
+    buttons: {
+      [Buttons.CANCEL]: 'Cancel',
+      [Buttons.PREVIOUS]: 'Previous',
+      [Buttons.SAVE]: 'Save',
+      [Buttons.NEXT]: 'Next',
+      [Buttons.FINISH]: 'Finish'
     }
   }
+
+  static Buttons = Buttons
 
   render() {
     const {
       currentStep,
-      disableSubmit,
-      labels,
+      buttons,
       onCancel,
       onFinish,
       onSave,
@@ -48,38 +56,48 @@ class WizardFooterBasicControls extends Component {
     const isLastStep = currentStep === totalSteps - 1
     return (
       <React.Fragment>
-        <Button onClick={onCancel} type="button">
-          {labels.cancel}
-        </Button>
-        {(currentStep > 0 || showBackOnFirstStep) && (
-          <Button onClick={this.handlePrevious} type="button">
-            {labels.prev}
-          </Button>
-        )}
+        {Button.create(buttons[Buttons.CANCEL], {
+          autoGenerateKey: false,
+          defaultProps: {
+            onClick: onCancel,
+            type: 'button'
+          }
+        })}
+        {(currentStep > 0 || showBackOnFirstStep) &&
+          Button.create(buttons[Buttons.PREVIOUS], {
+            autoGenerateKey: false,
+            defaultProps: {
+              onClick: this.handlePrevious,
+              type: 'button'
+            }
+          })}
         {showSaveButton &&
-          !isLastStep && (
-            <Button onClick={onSave} type="submit" disabled={disableSubmit}>
-              {labels.save}
-            </Button>
-          )}
-        {!isLastStep && (
-          <Button
-            className="blue"
-            onClick={this.handleNext}
-            type="submit"
-            disabled={disableSubmit}>
-            {labels.next}
-          </Button>
-        )}
-        {isLastStep && (
-          <Button
-            className="blue"
-            onClick={onFinish}
-            type="submit"
-            disabled={disableSubmit}>
-            {labels.finish}
-          </Button>
-        )}
+          !isLastStep &&
+          Button.create(buttons[Buttons.SAVE], {
+            autoGenerateKey: false,
+            defaultProps: {
+              onClick: onSave,
+              type: 'submit'
+            }
+          })}
+        {!isLastStep &&
+          Button.create(buttons[Buttons.NEXT], {
+            autoGenerateKey: false,
+            defaultProps: {
+              className: 'blue',
+              onClick: this.handleNext,
+              type: 'submit'
+            }
+          })}
+        {isLastStep &&
+          Button.create(buttons[Buttons.FINISH], {
+            autoGenerateKey: false,
+            defaultProps: {
+              className: 'blue',
+              onClick: onFinish,
+              type: 'submit'
+            }
+          })}
       </React.Fragment>
     )
   }
