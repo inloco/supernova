@@ -6,6 +6,9 @@
 
 @inputColor: @textColor;
 
+@inputLineHeight: 20px;
+@inputPadding: 9px 10px;
+
 @labelFontSize: 12px;
 @labelFontWeight: 400;
 @labelColor: rgba(97,98,99, .88);
