@@ -1,7 +1,7 @@
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
-import { Dropdown, Popup } from 'semantic-ui-react'
+import { Dropdown } from 'semantic-ui-react'
 
 import { normalizeIconProp } from '../../../utils/icons'
 
@@ -33,36 +33,23 @@ class SidebarSubmenuDropdown extends Component {
       activeSubMenu: active
     })
 
-    const dropdown = (
-      <Dropdown
-        ref={this.dropdownRef}
-        className={classes}
-        item
-        icon={normalizeIconProp(icon)}
-        onOpen={this.handleOpen}
-        onClose={this.handleClose}
-        {...otherProps}>
-        <Dropdown.Menu style={this.getMenuStyle()}>
-          <Dropdown.Header content={content} />
-          {React.Children.map(children, child =>
-            React.cloneElement(child, { dropdown: true })
-          )}
-        </Dropdown.Menu>
-      </Dropdown>
-    )
-
-    // We don't want to keep showing the tooltip when the dropdown is
-    // open. This css class is the simplest way of achieving that.
-    const popupClasses = cx({ 'inloco-popup--hidden': open })
     return (
-      <Popup
-        className={popupClasses}
-        inverted
-        size="tiny"
-        position="right center"
-        content={content}
-        trigger={dropdown}
-      />
+      <div onMouseEnter={this.handleOpen} onMouseLeave={this.handleClose}>
+        <Dropdown
+          ref={this.dropdownRef}
+          className={classes}
+          item
+          icon={normalizeIconProp(icon)}
+          open={this.state.open}
+          {...otherProps}>
+          <Dropdown.Menu style={this.getMenuStyle()}>
+            <Dropdown.Header content={content} />
+            {React.Children.map(children, child =>
+              React.cloneElement(child, { dropdown: true })
+            )}
+          </Dropdown.Menu>
+        </Dropdown>
+      </div>
     )
   }
 
@@ -80,6 +67,7 @@ class SidebarSubmenuDropdown extends Component {
   getMenuStyle = () => {
     const dropdownComponent = this.dropdownRef.current
     const dropdownElement = dropdownComponent && dropdownComponent.ref
+
     return this.state.open && dropdownElement
       ? { top: dropdownElement.getBoundingClientRect().top }
       : null

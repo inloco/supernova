@@ -14,6 +14,6 @@
   }
 }
 
-.inloco-popup--hidden.ui.popup {
-  display: none !important;
+.inloco-layout__sidebar-submenu .menu.transition.visible {
+  margin-left: 0 !important;
 }
