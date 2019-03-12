@@ -51,6 +51,6 @@
   position: absolute;
 
   .icon {
-    margin-right: 6px;
+    margin-right: 4px;
   }
 }
