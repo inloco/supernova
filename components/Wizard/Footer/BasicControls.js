@@ -63,14 +63,6 @@ class WizardFooterBasicControls extends Component {
             type: 'button'
           }
         })}
-        {(currentStep > 0 || showBackOnFirstStep) &&
-          Button.create(buttons[Buttons.PREVIOUS], {
-            autoGenerateKey: false,
-            defaultProps: {
-              onClick: this.handlePrevious,
-              type: 'button'
-            }
-          })}
         {showSaveButton &&
           !isLastStep &&
           Button.create(buttons[Buttons.SAVE], {
@@ -78,6 +70,14 @@ class WizardFooterBasicControls extends Component {
             defaultProps: {
               onClick: onSave,
               type: 'submit'
+            }
+          })}
+        {(currentStep > 0 || showBackOnFirstStep) &&
+          Button.create(buttons[Buttons.PREVIOUS], {
+            autoGenerateKey: false,
+            defaultProps: {
+              onClick: this.handlePrevious,
+              type: 'button'
             }
           })}
         {!isLastStep &&
