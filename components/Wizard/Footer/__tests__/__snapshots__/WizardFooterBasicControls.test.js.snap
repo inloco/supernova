@@ -90,16 +90,16 @@ exports[`WizardFooterBasicControls when the "showSaveButton" prop is set to "tru
   />
   <Button
     as="button"
+    content="Save"
+    role="button"
+    type="submit"
+  />
+  <Button
+    as="button"
     content="Previous"
     onClick={[Function]}
     role="button"
     type="button"
-  />
-  <Button
-    as="button"
-    content="Save"
-    role="button"
-    type="submit"
   />
   <Button
     as="button"

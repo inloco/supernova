@@ -78,7 +78,7 @@ describe('WizardFooterBasicControls', () => {
     it('should call the "onSave" prop when the "save" button is clicked', () => {
       const onSave = jest.fn()
       const wrapper = buildWrapper({ showSaveButton: true, onSave })
-      const button = wrapper.find(Button).at(2)
+      const button = wrapper.find(Button).at(1)
       button.simulate('click')
       expect(onSave).toHaveBeenCalled()
     })
