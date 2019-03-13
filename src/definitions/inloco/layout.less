@@ -17,7 +17,7 @@
 
 .inloco-layout {
   display: flex;
-  background-color: @gray50;
+  background-color: #f6f8f9;
   flex-direction: column;
   height: 100vh;
   overflow-y: auto;
@@ -34,7 +34,7 @@
 @sidebarWidth: 65px;
 
 .inloco-layout__sidebar.ui.vertical.menu {
-  border-right: 1px solid fade(@n600, 7%);
+  border-right: 1px solid fade(@n600, 15%);
   border-radius: 0;
   box-shadow: 2px 0 3px -2px fade(@n600, 5%);
   display: flex;
@@ -212,12 +212,13 @@
   align-items: center;
   border: none;
   border-radius: 0;
-  box-shadow: 0 2px 3px -2px fade(@n600, 5%);
+  box-shadow: 0 2px 3px -2px fade(@n600, 15%);
   flex-shrink: 0;
   grid-area: topbar;
   height: 64px;
   margin: 0 0 0 64px;
   order: 0;
+  background: #f6f8f9;
 
   .menu.right {
     .ui.item.dropdown {

@@ -126,8 +126,8 @@
 --------------------*/
 
 /* Used on inputs, textarea etc */
-@focusedFormBorderColor: rgba(62, 73, 101, .25);
-@inputPlaceholderFocusColor: rgba(62, 73, 101, .25);
+@focusedFormBorderColor: fade(@n600, 25%);
+@inputPlaceholderFocusColor: fade(@n600, 25%);
 @focusedFormMutedBorderColor: rgba(34, 36, 38, .35);
 
 /*-------------------
