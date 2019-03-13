@@ -49,6 +49,11 @@ class SidebarSubmenuDropdown extends Component {
           {...otherProps}>
           <Dropdown.Menu style={this.getMenuStyle()}>
             <Dropdown.Header content={content} />
+            {/**
+             * This invisible element helps to avoid the mouseleave trigger when
+             * the user tries to move the mouse from the trigger to
+             */}
+            <div className="inloco-layout__sidebar-submenu-invisible-item" />
             {React.Children.map(children, child =>
               React.cloneElement(child, { dropdown: true })
             )}

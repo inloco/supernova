@@ -13,7 +13,3 @@
     right: -3px;
   }
 }
-
-.inloco-layout__sidebar-submenu .menu.transition.visible {
-  margin-left: 0 !important;
-}
