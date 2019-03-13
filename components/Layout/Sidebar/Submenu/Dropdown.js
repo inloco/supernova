@@ -1,7 +1,7 @@
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
-import { Dropdown, Popup } from 'semantic-ui-react'
+import { Dropdown } from 'semantic-ui-react'
 
 import { normalizeIconProp } from '../../../utils/icons'
 
@@ -14,9 +14,11 @@ class SidebarSubmenuDropdown extends Component {
   }
 
   state = {
-    open: false
+    openWithHover: false,
+    openWithClick: false
   }
 
+  wrapperRef = React.createRef()
   dropdownRef = React.createRef()
 
   render() {
@@ -28,42 +30,45 @@ class SidebarSubmenuDropdown extends Component {
       content,
       ...otherProps
     } = this.props
-    const { open } = this.state
     const classes = cx('inloco-layout__sidebar-submenu-dropdown', className, {
       activeSubMenu: active
     })
 
-    const dropdown = (
-      <Dropdown
-        ref={this.dropdownRef}
-        className={classes}
-        item
-        icon={normalizeIconProp(icon)}
-        onOpen={this.handleOpen}
-        onClose={this.handleClose}
-        {...otherProps}>
-        <Dropdown.Menu style={this.getMenuStyle()}>
-          <Dropdown.Header content={content} />
-          {React.Children.map(children, child =>
-            React.cloneElement(child, { dropdown: true })
-          )}
-        </Dropdown.Menu>
-      </Dropdown>
-    )
-
-    // We don't want to keep showing the tooltip when the dropdown is
-    // open. This css class is the simplest way of achieving that.
-    const popupClasses = cx({ 'inloco-popup--hidden': open })
     return (
-      <Popup
-        className={popupClasses}
-        inverted
-        size="tiny"
-        position="right center"
-        content={content}
-        trigger={dropdown}
-      />
+      <div
+        ref={this.wrapperRef}
+        onClick={this.handleClick}
+        onMouseEnter={this.handleMouseEnter}
+        onMouseLeave={this.handleMouseLeave}>
+        <Dropdown
+          item
+          ref={this.dropdownRef}
+          open={this.isMenuOpen()}
+          className={classes}
+          icon={normalizeIconProp(icon)}
+          {...otherProps}>
+          <Dropdown.Menu style={this.getMenuStyle()}>
+            <Dropdown.Header content={content} />
+            {/**
+             * This invisible element helps to avoid the mouseleave trigger when
+             * the user tries to move the mouse from the trigger to
+             */}
+            <div className="inloco-layout__sidebar-submenu-invisible-item" />
+            {React.Children.map(children, child =>
+              React.cloneElement(child, { dropdown: true })
+            )}
+          </Dropdown.Menu>
+        </Dropdown>
+      </div>
     )
+  }
+
+  componentDidMount() {
+    document.addEventListener('click', this.handleOutsideClick, true)
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('click', this.handleOutsideClick, true)
   }
 
   /**
@@ -80,17 +85,47 @@ class SidebarSubmenuDropdown extends Component {
   getMenuStyle = () => {
     const dropdownComponent = this.dropdownRef.current
     const dropdownElement = dropdownComponent && dropdownComponent.ref
-    return this.state.open && dropdownElement
+
+    return this.isMenuOpen() && dropdownElement
       ? { top: dropdownElement.getBoundingClientRect().top }
       : null
   }
 
-  handleOpen = () => {
-    this.setState({ open: true })
+  handleClick = () => {
+    if (this.state.openWithClick) {
+      return this.closeMenu()
+    }
+
+    return this.setState({ openWithClick: true })
   }
 
-  handleClose = () => {
-    this.setState({ open: false })
+  handleOutsideClick = event => {
+    const { current: wrapper } = this.wrapperRef
+    const isAnOutsideClick = wrapper && !wrapper.contains(event.target)
+
+    if (!isAnOutsideClick) {
+      return this.handleClick()
+    }
+
+    if (this.isMenuOpen()) {
+      return this.closeMenu()
+    }
+  }
+
+  handleMouseEnter = () => {
+    this.setState({ openWithHover: true })
+  }
+
+  handleMouseLeave = () => {
+    this.setState({ openWithHover: false })
+  }
+
+  closeMenu = () => {
+    this.setState({ openWithClick: false, openWithHover: false })
+  }
+
+  isMenuOpen = () => {
+    return this.state.openWithHover || this.state.openWithClick
   }
 }
 
