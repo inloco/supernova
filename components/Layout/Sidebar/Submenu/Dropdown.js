@@ -14,9 +14,11 @@ class SidebarSubmenuDropdown extends Component {
   }
 
   state = {
-    open: false
+    openWithHover: false,
+    openWithClick: false
   }
 
+  wrapperRef = React.createRef()
   dropdownRef = React.createRef()
 
   render() {
@@ -28,19 +30,22 @@ class SidebarSubmenuDropdown extends Component {
       content,
       ...otherProps
     } = this.props
-    const { open } = this.state
     const classes = cx('inloco-layout__sidebar-submenu-dropdown', className, {
       activeSubMenu: active
     })
 
     return (
-      <div onMouseEnter={this.handleOpen} onMouseLeave={this.handleClose}>
+      <div
+        ref={this.wrapperRef}
+        onClick={this.handleClick}
+        onMouseEnter={this.handleMouseEnter}
+        onMouseLeave={this.handleMouseLeave}>
         <Dropdown
-          ref={this.dropdownRef}
-          className={classes}
           item
+          ref={this.dropdownRef}
+          open={this.isMenuOpen()}
+          className={classes}
           icon={normalizeIconProp(icon)}
-          open={this.state.open}
           {...otherProps}>
           <Dropdown.Menu style={this.getMenuStyle()}>
             <Dropdown.Header content={content} />
@@ -51,6 +56,14 @@ class SidebarSubmenuDropdown extends Component {
         </Dropdown>
       </div>
     )
+  }
+
+  componentDidMount() {
+    document.addEventListener('click', this.handleOutsideClick, true)
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('click', this.handleOutsideClick, true)
   }
 
   /**
@@ -68,17 +81,46 @@ class SidebarSubmenuDropdown extends Component {
     const dropdownComponent = this.dropdownRef.current
     const dropdownElement = dropdownComponent && dropdownComponent.ref
 
-    return this.state.open && dropdownElement
+    return this.isMenuOpen() && dropdownElement
       ? { top: dropdownElement.getBoundingClientRect().top }
       : null
   }
 
-  handleOpen = () => {
-    this.setState({ open: true })
+  handleClick = () => {
+    if (this.state.openWithClick) {
+      return this.closeMenu()
+    }
+
+    return this.setState({ openWithClick: true })
   }
 
-  handleClose = () => {
-    this.setState({ open: false })
+  handleOutsideClick = event => {
+    const { current: wrapper } = this.wrapperRef
+    const isAnOutsideClick = wrapper && !wrapper.contains(event.target)
+
+    if (!isAnOutsideClick) {
+      return this.handleClick()
+    }
+
+    if (this.isMenuOpen()) {
+      return this.closeMenu()
+    }
+  }
+
+  handleMouseEnter = () => {
+    this.setState({ openWithHover: true })
+  }
+
+  handleMouseLeave = () => {
+    this.setState({ openWithHover: false })
+  }
+
+  closeMenu = () => {
+    this.setState({ openWithClick: false, openWithHover: false })
+  }
+
+  isMenuOpen = () => {
+    return this.state.openWithHover || this.state.openWithClick
   }
 }
 
