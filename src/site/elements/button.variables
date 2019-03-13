@@ -25,27 +25,27 @@
 @downBackgroundColor: fade(@n600, 20%);
 
 @focusColor: inherit;
-@focusBoxShadow: inset 0 0 0px 1px rgba(62, 73, 101, .2) !important;
+@focusBoxShadow: inset 0 0 0px 1px fade(@n600, 20%) !important;
 
 @coloredBoxShadow: none;
 
 @medium: 14px;
 
-@backgroundColor: rgba(62, 73, 101, .08);
+@backgroundColor: fade(@n600, .08);
 @backgroundImage: none;
 @coloredBackgroundImage: none;
 @basicColoredBorderSize: 0;
 @borderBoxShadow: 0px 0px 0px 0px transparent;
-@hoverBackgroundColor: rgba(62, 73, 101, .12);
+@hoverBackgroundColor: fade(@n600, 12%);
 
-@secondaryColor: rgba(62,73,101,0.08);
-@secondaryColorHover: rgba(62,73,101,0.12);
-@secondaryColorFocus: rgba(62,73,101,0.12);
-@secondaryColorDown:  rgba(62,73,101,0.2);
+@secondaryColor: fade(@n600,0.08);
+@secondaryColorHover: fade(@n600, 12%);
+@secondaryColorFocus: fade(@n600, 12%);
+@secondaryColorDown:  fade(@n600, 2%);
 
-@basicHoverBackground: rgba(62,73,101,0.08);
-@basicFocusBackground: rgba(62,73,101,0.08);
-@basicDownBackground: rgba(62,73,101,0.12);
+@basicHoverBackground: fade(@n600, 8%);
+@basicFocusBackground: fade(@n600, 8%);
+@basicDownBackground: fade(@n600, 12%);
 
 @iconButtonOpacity: unset;
 @iconFontSize: 20px;
