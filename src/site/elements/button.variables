@@ -31,17 +31,17 @@
 
 @medium: 14px;
 
-@backgroundColor: fade(@n600, .08);
+@backgroundColor: fade(@n600, 8%);
 @backgroundImage: none;
 @coloredBackgroundImage: none;
 @basicColoredBorderSize: 0;
 @borderBoxShadow: 0px 0px 0px 0px transparent;
 @hoverBackgroundColor: fade(@n600, 12%);
 
-@secondaryColor: fade(@n600,0.08);
+@secondaryColor: fade(@n600, 8%);
 @secondaryColorHover: fade(@n600, 12%);
 @secondaryColorFocus: fade(@n600, 12%);
-@secondaryColorDown:  fade(@n600, 2%);
+@secondaryColorDown:  fade(@n600, 20%);
 
 @basicHoverBackground: fade(@n600, 8%);
 @basicFocusBackground: fade(@n600, 8%);
