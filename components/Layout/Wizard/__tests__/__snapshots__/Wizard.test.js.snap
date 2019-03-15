@@ -72,6 +72,47 @@ exports[`LayoutWizard should render layout wizard content for the given initial 
 </Fragment>
 `;
 
+exports[`LayoutWizard when the "headerExtra" prop is given should should render the given node inside the header controls 1`] = `
+<Fragment>
+  <Header>
+    <HeaderTitle>
+      <div
+        className="inloco-layout__wizard-title"
+      >
+        <div
+          className="inloco-layout__wizard-title-number"
+        >
+          1
+        </div>
+        Step 1
+      </div>
+    </HeaderTitle>
+    <HeaderControls>
+      <div>
+        Header Extra
+      </div>
+    </HeaderControls>
+  </Header>
+  <MainContent>
+    <Wizard
+      className="inloco-layout__wizard customTestClass"
+      currentStep={0}
+      footerProps={Object {}}
+      onChangeStep={[Function]}
+      steps={
+        Array [
+          "Step 1",
+          "Step 2",
+          "Step 3",
+        ]
+      }
+    >
+      Test Child Content
+    </Wizard>
+  </MainContent>
+</Fragment>
+`;
+
 exports[`LayoutWizard when the component is "controlled" should render the wizard at the given current step 1`] = `
 <Fragment>
   <Header>

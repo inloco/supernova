@@ -10,6 +10,7 @@ export class LayoutWizard extends Component {
     className: PropTypes.string,
     children: PropTypes.node.isRequired,
     currentStep: PropTypes.number,
+    headerExtra: PropTypes.node,
     initialStepIndex: PropTypes.number,
     mainContentProps: PropTypes.object,
     onStepChange: PropTypes.func,
@@ -32,6 +33,7 @@ export class LayoutWizard extends Component {
       children,
       className,
       currentStep: currentStepProp,
+      headerExtra,
       initialStepIndex,
       onStepChange,
       mainContentProps,
@@ -53,6 +55,9 @@ export class LayoutWizard extends Component {
               {steps[currentStep]}
             </div>
           </Layout.HeaderTitle>
+          {headerExtra && (
+            <Layout.HeaderControls>{headerExtra}</Layout.HeaderControls>
+          )}
         </Layout.Header>
         <Layout.MainContent {...mainContentProps}>
           <Wizard

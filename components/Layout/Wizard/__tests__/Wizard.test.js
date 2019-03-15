@@ -25,6 +25,13 @@ describe('LayoutWizard', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
+  describe('when the "headerExtra" prop is given', () => {
+    it('should should render the given node inside the header controls', () => {
+      const wrapper = buildWrapper({ headerExtra: <div>Header Extra</div> })
+      expect(wrapper).toMatchSnapshot()
+    })
+  })
+
   describe('when the current step changes', () => {
     let wrapper
 
