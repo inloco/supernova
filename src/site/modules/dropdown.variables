@@ -9,6 +9,15 @@
 @borderRadius: 3px;
 @borderColor: fade(@n600, 25%);
 @textCursorSpacing: 0;
+
+@itemColor: @textColor;
+
+@hoveredItemColor: @textColor;
+@hoveredItemBackground: fade(@n600, 4%);
+
+@selectedColor: @textColor;
+@selectedBackground: fade(@n600, 6%);
+
 @selectionIconOpacity: unset;
 @selectionIconVerticalPadding: 6px;
 @selectionIconHorizontalPadding: 12px;
