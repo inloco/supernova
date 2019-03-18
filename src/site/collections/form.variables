@@ -36,3 +36,7 @@
 @inputErrorFocusBorder: @formErrorBorder;
 
 @inputErrorFocusBoxShadow: 0 0 0px 1px fade(@red, 50%);
+
+@dropdownErrorSelectedBackground: fade(@n600, 6%);
+@dropdownErrorActiveBackground: @dropdownErrorSelectedBackground;
+@dropdownErrorHoverBackground: fade(@n600, 4%);

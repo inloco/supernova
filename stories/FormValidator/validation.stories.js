@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { storiesOf } from '@storybook/react'
 
-import { Button, Checkbox, Form, Input } from '../../components'
+import { Button, Checkbox, Dropdown, Form, Input } from '../../components'
 
-const validate = ({ firstName, lastName, website, terms }) => {
+const validate = ({ firstName, lastName, website, jobType, terms }) => {
   const errors = {}
   if (!firstName) {
     errors.firstName = 'Required field.'
@@ -16,6 +16,9 @@ const validate = ({ firstName, lastName, website, terms }) => {
       'Required field. ',
       'The website must have at least one dot (".").'
     ]
+  }
+  if (!jobType) {
+    errors.jobType = 'Required field.'
   }
   if (!terms) {
     errors.terms = 'Required field.'
@@ -56,6 +59,21 @@ class ExampleForm extends Component {
             label="https://"
             name="website"
             onChange={this.handleChange}
+          />
+        </Form.ValidatedField>
+        <Form.ValidatedField message={messages.jobType}>
+          <label>Job Type</label>
+          <Dropdown
+            placeholder="Job Type"
+            name="jobType"
+            onChange={this.handleChange}
+            options={[
+              { text: 'Company Employee', value: 1 },
+              { text: 'Freelancer', value: 2 }
+            ]}
+            selectOnBlur={false}
+            selectOnNavigation={false}
+            selection
           />
         </Form.ValidatedField>
         <Form.ValidatedField message={messages.terms}>

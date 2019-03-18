@@ -41,6 +41,15 @@
   }
 }
 
+.ui.form .field.error .ui.dropdown .text {
+  background-color: transparent;
+  color: @textColor;
+
+  &.default {
+    color: fade(@textColor, 40%);
+  }
+}
+
 .inloco-form-validator__message {
   align-items: center;
   color: @red;
