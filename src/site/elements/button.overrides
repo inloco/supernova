@@ -14,6 +14,12 @@
   box-shadow: @hoverBoxShadow !important; 
 }
 
+.ui.basic.blue.button, 
+.ui.basic.green.button,  
+.ui.basic.pink.button {
+  font-weight: @basicFontWeight;
+}
+
 .ui.basic.blue.button:hover, 
 .ui.basic.green.button:hover,  
 .ui.basic.pink.button:hover {

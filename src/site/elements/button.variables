@@ -11,7 +11,7 @@
 @textColor: @gray800;
 
 @fontWeight: 500;
-@basicFontWeight: @fontWeight;
+@basicFontWeight: 400;
 @fontSpacing: 0.33px;
 @lineHeight: 36px;
 
