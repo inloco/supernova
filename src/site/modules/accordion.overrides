@@ -7,6 +7,7 @@
   align-items: center;
   font-family: Icons;
   justify-content: center;
+  margin-right: -7px;
 
   &:before {
     content: '\E313';
