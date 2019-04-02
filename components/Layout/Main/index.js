@@ -12,9 +12,9 @@ class Main extends Component {
     const { children, className, ...otherProps } = this.props
     const classes = cx('inloco-layout__main', className)
     return (
-      <div className={classes} {...otherProps}>
+      <main className={classes} {...otherProps}>
         {children}
-      </div>
+      </main>
     )
   }
 }
