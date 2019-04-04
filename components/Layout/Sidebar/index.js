@@ -8,7 +8,7 @@ import SidebarContext from './SidebarContext'
 
 class Sidebar extends Component {
   static propTypes = {
-    children: PropTypes.node.isRequired,
+    children: PropTypes.node,
     headerTitle: PropTypes.string
   }
 
