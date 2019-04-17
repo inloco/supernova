@@ -101,11 +101,12 @@ class SidebarSubmenuDropdown extends Component {
 
   handleOutsideClick = event => {
     const { current: wrapper } = this.wrapperRef
+    const optionClass = 'inloco-layout__sidebar-item'
     const isAnOutsideClick = wrapper && !wrapper.contains(event.target)
-    const isAnOptionClick =
-      !isAnOutsideClick &&
-      event.target.classList.contains('inloco-layout__sidebar-item')
-    const isAMenuTriggerClick = !isAnOutsideClick && !isAnOptionClick
+    const isTargetAnOption =
+      event.target.classList.contains(optionClass) ||
+      event.target.parentElement.classList.contains(optionClass)
+    const isAMenuTriggerClick = !isAnOutsideClick && !isTargetAnOption
 
     if (isAMenuTriggerClick) {
       return this.handleClick()
