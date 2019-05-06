@@ -214,7 +214,7 @@ i.icon.dashboard:before { content: '\e871'}
 i.icon.data.usage:before { content: '\e1af'}
 i.icon.date.range:before { content: '\e916'}
 i.icon.dehaze:before { content: '\e3c7'}
-i.icon.delete:before { content: '\e872'}
+i.icon.delete:before { content: '\e5cd'}
 i.icon.delete.forever:before { content: '\e92b'}
 i.icon.delete.sweep:before { content: '\e16c'}
 i.icon.description:before { content: '\e873'}
