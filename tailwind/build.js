@@ -3,7 +3,7 @@ var gulp = require('gulp'),
   rename = require('gulp-rename'),
   tailwindcss = require('tailwindcss')
 
-module.exports = function(callback) {
+module.exports = function() {
   console.info('Building Tailwind')
 
   return gulp
@@ -11,7 +11,4 @@ module.exports = function(callback) {
     .pipe(postcss([tailwindcss('tailwind/config.js'), require('autoprefixer')]))
     .pipe(rename('tailwind.css'))
     .pipe(gulp.dest('dist'))
-    .on('end', function() {
-      console.info('Finish building Tailwind')
-    })
 }
