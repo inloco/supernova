@@ -2,7 +2,7 @@ var _ = require('lodash')
 
 module.exports = {
   prefix: '',
-  important: false,
+  important: true,
   separator: ':',
   theme: {
     screens: {
@@ -96,7 +96,11 @@ module.exports = {
       '48': '48px'
     },
 
-    backgroundColor: theme => _.pick(theme('colors'), ['gray.50', 'white']),
+    backgroundColor: theme => ({
+      white: theme('colors').white,
+      gray: { 50: theme('colors').gray['50'] }
+    }),
+
     //TODO: yellow-50, green-50, red-50, space-900
 
     backgroundPosition: {
@@ -280,7 +284,9 @@ module.exports = {
     stroke: {
       current: 'currentColor'
     },
-    textColor: theme => _.pick(theme('colors'), ['gray.800', 'gray.900']), //A REDEFINIR,
+    textColor: theme => ({
+      gray: _.pick(theme('colors.gray'), ['800', '900'])
+    }),
     width: theme => ({
       auto: 'auto',
       ...theme('spacing'),
