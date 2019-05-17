@@ -38,8 +38,7 @@ module.exports = function(callback) {
 
   tasks.push('build-javascript')
   tasks.push('build-css')
-  tasks.push('build-tailwind-css')
   tasks.push('build-assets')
 
-  runSequence(tasks, callback)
+  runSequence(tasks, 'build-tailwind-css', callback)
 }
