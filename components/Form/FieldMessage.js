@@ -17,7 +17,6 @@ export class FormFieldMessage extends Component {
     const classes = cx('inloco-form-validator__message', className)
     return (
       <div className={classes} {...otherProps}>
-        {message && <Icon className="error" size="big" />}
         {message}
       </div>
     )
