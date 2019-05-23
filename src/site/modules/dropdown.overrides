@@ -59,3 +59,19 @@
 .ui.dropdown.warning:focus {
   box-shadow: @warningBoxShadow;
 }
+
+.ui.multiple.dropdown .ui.label {
+  display: inline-flex;
+  justify-content: center;
+  padding-right: 4px;
+}
+
+.ui.multiple.dropdown i.icon.delete {
+  font-size: 18px;
+  margin-left: 4px;
+}
+
+/* Changes dropdown label to show close icon instead of delete icon */
+.ui.multiple.dropdown i.icon.delete:before {
+  content: '\e5cd'
+}
