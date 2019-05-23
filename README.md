@@ -66,7 +66,7 @@ git push origin master --tags
 ```
 5. Publish to npm (you'll need to be logged in as **In Loco** for that):
 ```sh
-npm publish
+npm publish --access public
 ```
 
 ### Deploying Storybook
