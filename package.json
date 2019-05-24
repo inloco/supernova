@@ -1,6 +1,6 @@
 {
-  "name": "supernova-inloco",
-  "version": "3.0.0-beta.91",
+  "name": "@inloco/supernova",
+  "version": "3.0.0",
   "description": "Semantic-UI Toolkit - In Loco theme",
   "files": [
     "dist"
@@ -19,11 +19,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com:inloco/supernova-inloco.git"
+    "url": "git+ssh://git@github.com:inloco/supernova.git"
   },
   "author": "In Loco Team",
   "license": "ISC",
-  "homepage": "https://github.com/inloco/supernova-inloco",
+  "homepage": "https://inloco.github.io/supernova",
   "dependencies": {
     "classnames": "^2.2.6",
     "prop-types": "^15.6.2",
@@ -34,7 +34,6 @@
   "devDependencies": {
     "@storybook/react": "^3.4.11",
     "@storybook/storybook-deployer": "^2.3.0",
-    "autoprefixer": "^9.5.1",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
@@ -43,15 +42,12 @@
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.7.1",
     "enzyme-to-json": "^3.3.5",
-    "gulp-concat": "^2.6.1",
-    "gulp-postcss": "^8.0.0",
     "husky": "^1.1.3",
     "jest": "^23.6.0",
     "jest-junit": "^6.0.0",
     "prettier": "^1.14.3",
     "pretty-quick": "^1.8.0",
-    "semantic-ui": "^2.4.2",
-    "tailwindcss": "^1.0.1"
+    "semantic-ui": "^2.4.2"
   },
   "prettier": {
     "singleQuote": true,
