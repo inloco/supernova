@@ -56,6 +56,6 @@
   color: @red;
   display: flex;
   font-size: 12px;
-  height: 24px;
   line-height: 1em;
+  margin-top: 4px;
 }
