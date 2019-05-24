@@ -18,6 +18,7 @@
   position: relative;
 }
 
+
 .ui.form .fields.error .field label,
 .ui.form .field.error label,
 .ui.form .fields.error .field .input,
@@ -54,12 +55,7 @@
   align-items: center;
   color: @red;
   display: flex;
-  font-size: 11px;
+  font-size: 12px;
   height: 24px;
   line-height: 1em;
-  position: absolute;
-
-  .icon {
-    margin-right: 4px;
-  }
 }
