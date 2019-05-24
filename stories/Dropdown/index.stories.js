@@ -13,16 +13,36 @@ storiesOf('Dropdown', module)
     <Dropdown placeholder="Select Friend" selection options={friendOptions} />
   ))
   .add('selection error', () => (
-    <Dropdown placeholder="Select Friend" selection error options={friendOptions} />
+    <Dropdown
+      placeholder="Select Friend"
+      selection
+      error
+      options={friendOptions}
+    />
   ))
   .add('selection warning', () => (
-    <Dropdown placeholder="Select Friend" selection className='warning' options={friendOptions} />
+    <Dropdown
+      placeholder="Select Friend"
+      selection
+      className="warning"
+      options={friendOptions}
+    />
   ))
   .add('search', () => (
-    <Dropdown placeholder="Select Friend" selection search options={friendOptions} />
+    <Dropdown
+      placeholder="Select Friend"
+      selection
+      search
+      options={friendOptions}
+    />
   ))
   .add('disabled', () => (
-    <Dropdown placeholder="Select Friend" selection options={friendOptions} disabled />
+    <Dropdown
+      placeholder="Select Friend"
+      selection
+      options={friendOptions}
+      disabled
+    />
   ))
   .add('header', () => (
     <Dropdown
@@ -32,5 +52,14 @@ storiesOf('Dropdown', module)
       header={<Dropdown.Header content="My Header" />}
       selectOnBlur={false}
       selectOnNavigation={false}
+    />
+  ))
+  .add('multiple', () => (
+    <Dropdown
+      placeholder="Select Friends"
+      selection
+      options={friendOptions}
+      multiple
+      search
     />
   ))
