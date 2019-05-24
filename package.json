@@ -19,11 +19,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com:inloco/supernova-inloco.git"
+    "url": "git+ssh://git@github.com:inloco/supernova.git"
   },
   "author": "In Loco Team",
   "license": "ISC",
-  "homepage": "https://github.com/inloco/supernova-inloco",
+  "homepage": "https://inloco.github.io/supernova",
   "dependencies": {
     "classnames": "^2.2.6",
     "prop-types": "^15.6.2",
