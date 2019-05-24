@@ -1,7 +1,7 @@
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
-import { Icon, Form } from 'semantic-ui-react'
+import { Form } from 'semantic-ui-react'
 
 export class FormFieldMessage extends Component {
   static propTypes = {
@@ -15,6 +15,11 @@ export class FormFieldMessage extends Component {
   render() {
     const { className, message, ...otherProps } = this.props
     const classes = cx('inloco-form-validator__message', className)
+
+    if (!message) {
+      return null
+    }
+
     return (
       <div className={classes} {...otherProps}>
         {message}
