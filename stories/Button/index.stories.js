@@ -1,41 +1,40 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
+import { boolean, text, withKnobs } from '@storybook/addon-knobs/react'
 import { Button, ButtonGroup } from 'semantic-ui-react'
 
 storiesOf('Button', module)
-  .add('primary', () => (
-    <React.Fragment>
-      <Button className="blue" onClick={action('clicked blue')}>
-        Blue
-      </Button>
-      <br />
-      <br />
-      <Button className="pink" onClick={action('clicked pink')}>
-        Pink
-      </Button>
-      <br />
-      <br />
-      <Button className="green" onClick={action('clicked green')}>
-        Green
-      </Button>
-      <br />
-      <br />
-      <Button disabled className="blue" onClick={action('clicked blue')}>
-        Blue Disabled
-      </Button>
-      <br />
-      <br />
-      <Button disabled className="pink" onClick={action('clicked pink')}>
-        Pink Disabled
-      </Button>
-      <br />
-      <br />
-      <Button disabled className="green" onClick={action('clicked green')}>
-        Green Disabled
-      </Button>
-    </React.Fragment>
-  ))
+  .addDecorator(withKnobs)
+  .add('primary', () => {
+    const disabled = boolean('disabled')
+    return (
+      <React.Fragment>
+        <Button
+          disabled={disabled}
+          className="blue"
+          onClick={action('clicked blue')}>
+          Blue
+        </Button>
+        <br />
+        <br />
+        <Button
+          disabled={disabled}
+          className="pink"
+          onClick={action('clicked pink')}>
+          Pink
+        </Button>
+        <br />
+        <br />
+        <Button
+          disabled={disabled}
+          className="green"
+          onClick={action('clicked green')}>
+          Green
+        </Button>
+      </React.Fragment>
+    )
+  })
   .add('primary icon', () => (
     <React.Fragment>
       <Button
