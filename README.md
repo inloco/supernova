@@ -79,9 +79,9 @@ npm publish --access public
 
 ### Deploying Storybook
 
-After releasing a new version, it's important to also update the Storybook running in our gh page to display the new changes.
+After releasing a new version, our gh page with Storybook is automatically.
 
-This can be done by running a simple yarn script:
+In case it's necessary to do this manually though, just run this simple yarn script:
 
 ```sh
 yarn deploy:storybook
