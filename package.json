@@ -8,13 +8,13 @@
   "main": "./dist/index.js",
   "scripts": {
     "build:css": "gulp build",
-    "build:storybook": "yarn build:css && build-storybook -o .out",
+    "build:storybook": "yarn build:css && build-storybook -o .out -s public",
     "deploy:storybook": "yarn build:storybook && storybook-to-ghpages",
     "test": "jest",
     "test:watch": "jest --watch",
     "prepublishOnly": "npm run build:css && npm run build",
     "build": "babel ./components -d ./dist",
-    "storybook": "start-storybook -p 9001 -c .storybook",
+    "storybook": "start-storybook -p 9001 -s public",
     "watch:css": "gulp watch"
   },
   "repository": {
@@ -32,13 +32,14 @@
     "semantic-ui-react": "^0.83.0"
   },
   "devDependencies": {
-    "@storybook/react": "^3.4.11",
-    "@storybook/storybook-deployer": "^2.3.0",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "@storybook/addon-actions": "^5.1.1",
+    "@storybook/addons": "^5.1.1",
+    "@storybook/react": "^5.0.11",
     "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
+    "babel-loader": "^8.0.6",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.7.1",
     "enzyme-to-json": "^3.3.5",
