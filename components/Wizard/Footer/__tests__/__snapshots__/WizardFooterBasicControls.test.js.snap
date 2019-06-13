@@ -5,14 +5,12 @@ exports[`WizardFooterBasicControls should render "cancel", "previous" and "next"
   <Button
     as="button"
     content="Cancel"
-    role="button"
     type="button"
   />
   <Button
     as="button"
     content="Previous"
     onClick={[Function]}
-    role="button"
     type="button"
   />
   <Button
@@ -20,7 +18,6 @@ exports[`WizardFooterBasicControls should render "cancel", "previous" and "next"
     className="blue"
     content="Next"
     onClick={[Function]}
-    role="button"
     type="submit"
   />
 </Fragment>
@@ -31,7 +28,6 @@ exports[`WizardFooterBasicControls should render custom buttons when given 1`] =
   <Button
     as="button"
     content="Custom Cancel"
-    role="button"
     type="button"
   />
   <Button
@@ -39,14 +35,12 @@ exports[`WizardFooterBasicControls should render custom buttons when given 1`] =
     className="customPreviousClass"
     content="Custom Previous"
     onClick={[Function]}
-    role="button"
     type="button"
   />
   <Button
     as="button"
     className="blue customNextClass"
     onClick={[Function]}
-    role="button"
     type="submit"
   >
     Custom Next
@@ -59,14 +53,12 @@ exports[`WizardFooterBasicControls when the "showBackOnFirstStep" prop is true w
   <Button
     as="button"
     content="Cancel"
-    role="button"
     type="button"
   />
   <Button
     as="button"
     content="Previous"
     onClick={[Function]}
-    role="button"
     type="button"
   />
   <Button
@@ -74,7 +66,6 @@ exports[`WizardFooterBasicControls when the "showBackOnFirstStep" prop is true w
     className="blue"
     content="Next"
     onClick={[Function]}
-    role="button"
     type="submit"
   />
 </Fragment>
@@ -85,20 +76,17 @@ exports[`WizardFooterBasicControls when the "showSaveButton" prop is set to "tru
   <Button
     as="button"
     content="Cancel"
-    role="button"
     type="button"
   />
   <Button
     as="button"
     content="Save"
-    role="button"
     type="submit"
   />
   <Button
     as="button"
     content="Previous"
     onClick={[Function]}
-    role="button"
     type="button"
   />
   <Button
@@ -106,7 +94,6 @@ exports[`WizardFooterBasicControls when the "showSaveButton" prop is set to "tru
     className="blue"
     content="Next"
     onClick={[Function]}
-    role="button"
     type="submit"
   />
 </Fragment>
@@ -117,7 +104,6 @@ exports[`WizardFooterBasicControls when the current step is the first step shoul
   <Button
     as="button"
     content="Cancel"
-    role="button"
     type="button"
   />
   <Button
@@ -125,7 +111,6 @@ exports[`WizardFooterBasicControls when the current step is the first step shoul
     className="blue"
     content="Next"
     onClick={[Function]}
-    role="button"
     type="submit"
   />
 </Fragment>
@@ -136,21 +121,18 @@ exports[`WizardFooterBasicControls when the current step is the last step should
   <Button
     as="button"
     content="Cancel"
-    role="button"
     type="button"
   />
   <Button
     as="button"
     content="Previous"
     onClick={[Function]}
-    role="button"
     type="button"
   />
   <Button
     as="button"
     className="blue"
     content="Finish"
-    role="button"
     type="submit"
   />
 </Fragment>
