@@ -9,6 +9,7 @@ exports[`Wizard should render wizard with the first step as the current step by 
   >
     <TransitionGroup
       animation="fly up"
+      as={Symbol(react.fragment)}
       duration={500}
     >
       <WizardStep
@@ -42,6 +43,7 @@ exports[`Wizard should render wizard with the given step as the current step 1`]
   >
     <TransitionGroup
       animation="fly up"
+      as={Symbol(react.fragment)}
       duration={500}
     >
       <WizardStep
