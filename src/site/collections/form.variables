@@ -2,7 +2,7 @@
     User Variable Overrides
 *******************************/
 
-@rowDistance: 24px;
+@rowDistance: 32px;
 
 @inputColor: @textColor;
 

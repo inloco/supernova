@@ -11,7 +11,7 @@
 @paragraphMargin: 1em 0em;
 
 /* Field */
-@fieldMargin: 0em 0em 1em;
+@fieldMargin: 0em 0em 32px;
 
 /* Form Label */
 @labelFontSize: @relative11px;
