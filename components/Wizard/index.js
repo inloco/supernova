@@ -1,7 +1,6 @@
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
-import { Transition } from 'semantic-ui-react'
 
 import { Layout } from '../Layout'
 import WizardFooter from './Footer'
@@ -41,9 +40,7 @@ export class Wizard extends Component {
     return (
       <div className={classes} {...otherProps}>
         <div className="inloco-wizard__content">
-          <Transition.Group animation="fly up" duration={500}>
-            {React.Children.toArray(children)[currentStep]}
-          </Transition.Group>
+          {React.Children.toArray(children)[currentStep]}
         </div>
         <WizardFooter
           currentStep={currentStep}
