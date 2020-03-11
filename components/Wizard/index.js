@@ -2,7 +2,6 @@ import cx from 'classnames'
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 
-import { Layout } from '../Layout'
 import WizardFooter from './Footer'
 import WizardFooterBasicControls from './Footer/BasicControls'
 import WizardStep from './Step'
