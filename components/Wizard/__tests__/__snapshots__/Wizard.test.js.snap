@@ -7,17 +7,11 @@ exports[`Wizard should render wizard with the first step as the current step by 
   <div
     className="inloco-wizard__content"
   >
-    <TransitionGroup
-      animation="fly up"
-      as={Symbol(react.fragment)}
-      duration={500}
+    <WizardStep
+      key=".0"
     >
-      <WizardStep
-        key=".0"
-      >
-        Step 1 Content
-      </WizardStep>
-    </TransitionGroup>
+      Step 1 Content
+    </WizardStep>
   </div>
   <WizardFooter
     currentStep={0}
@@ -41,17 +35,11 @@ exports[`Wizard should render wizard with the given step as the current step 1`]
   <div
     className="inloco-wizard__content"
   >
-    <TransitionGroup
-      animation="fly up"
-      as={Symbol(react.fragment)}
-      duration={500}
+    <WizardStep
+      key=".1"
     >
-      <WizardStep
-        key=".1"
-      >
-        Step 2 Content
-      </WizardStep>
-    </TransitionGroup>
+      Step 2 Content
+    </WizardStep>
   </div>
   <WizardFooter
     currentStep={1}
